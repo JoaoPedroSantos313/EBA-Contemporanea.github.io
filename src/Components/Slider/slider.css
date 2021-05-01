@@ -1,0 +1,61 @@
+.slider{
+    display: flex;
+    
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 0px;
+    padding-top: 2%;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.slide{
+    position: relative;
+    min-width: 100%;
+    height: 80%;
+    transition: 0.5s;;
+    overflow: hidden;
+}
+
+#goLeft{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 10%;
+    height: 100%;
+    background: none;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    color: whitesmoke;
+}
+
+#goLeft:hover{
+    background: rgba(255, 255, 255, 0.356);
+    cursor: pointer;
+    color: black;
+}
+       
+
+#goRight{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 10%;
+    height: 100%;
+    background: none;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+}
+
+#goRight:hover{
+    background: rgba(255, 255, 255, 0.356);
+    cursor: pointer;
+    color: black;
+}

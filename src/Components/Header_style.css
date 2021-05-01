@@ -1,0 +1,149 @@
+body, ul, li, p{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	font-family: Arial;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+.container_{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding-top: 3%;
+}	
+
+#logo{
+	position: relative;
+	margin-right: 20px;
+	width: 160px;
+}
+
+#logo2{
+	position: relative;
+	margin-right: 20px;
+	width: 160px;
+}
+
+a #logo2{
+	display: none;
+}
+
+a:hover #logo{
+	animation-delay: 0.1s;
+	animation: logoanimation 0.3s ease-out forwards;
+} 
+
+a:hover #logo2{
+	display: block;
+}
+
+@keyframes logoanimation {
+	0%{
+		opacity: 100%;
+		transform: translateX(-10px);
+	}
+	25%{
+		opacity: 75%;
+		transform: translateX(-20px);
+		
+	}
+	50%{
+		opacity: 50%;
+		transform: translateX(-40px);
+	}
+	75%{
+		opacity: 25%;
+		transform: translateX(-49px);
+	}
+	100%{
+		opacity: 0%;
+		display: none;
+		transform: translateX(-53px);
+	}
+}
+
+#fb{
+	width: 8px;
+	margin-left: 80px;
+	transition: translateY 1s;
+}
+
+#fb:hover{
+	transform: translateY(-5px);
+	color: violet;
+}
+
+#insta{
+	width: 18px;
+	margin-left: 25px;
+}
+
+#insta:hover{
+	transform: translateY(-5px);
+}
+
+/*Menu*/
+#menu_header{
+	display: flex;
+	justify-content: center;
+
+	margin-top: 0,8%;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+#menu_header li a{
+	font-family: 'lucida sans unicode';
+	font-size: 14px;
+
+	display: block;
+	text-align: center;
+	
+	padding: 18px;
+	padding-top: 0px;
+    padding-bottom: 0px;
+	color:#333333;
+}
+
+#menu_header ul li{
+	visibility: hidden;
+}
+
+#menu_header li:hover li{
+	visibility: visible;
+}
+
+#menu_header a:hover{
+	color:#D60000;
+}
+
+#menu_header ul ul li{
+	float: none;
+	border-bottom: solid 1px #ccc;
+}
+
+#menu_header ul li a{
+	background-color: white;
+	text-align: center;
+	padding: 7px 7px 7px 7px;
+	margin: 0px;
+	box-shadow: 2px 0px 1px rgba(50, 50, 50, 0.77);
+}
+
+#faixa{
+	display: inline;
+	height: 10px;
+	width: 100%;
+	color:  #D60000; ;
+	border: none;
+	background-color: #D60000; ;
+	margin: 0px;
+}
+
