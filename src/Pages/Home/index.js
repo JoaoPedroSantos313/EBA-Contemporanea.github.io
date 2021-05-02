@@ -20,7 +20,7 @@ export default class Home extends Component{
                     </div>
                         
                     <Link to="/projeto"> 
-                        <button className='botao'>
+                        <button className='botao_sobre'>
                             saiba mais
                         </button>
                     </Link>
@@ -34,7 +34,7 @@ export default class Home extends Component{
                 <section className='sabermais'>
 
                     <Link to="/cidade universitaria"> 
-                        <button className='botao'>
+                        <button className='botao_cidadeu'>
                             saiba mais
                         </button>
                     </Link>

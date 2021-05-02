@@ -40,7 +40,49 @@ export default function Artistas(){
                                  image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
                     />
                 </div> 
-            </div>        
+            </div>    
+
+            <div className="row">
+               <div className='col-sm'> 
+                    <Card_artist icon={'icon_pasta.png'}
+                                 title= "Alexandre Vogler"
+                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                    />
+                </div> 
+                <div className='col-sm'>
+                    <Card_artist icon={'icon_pasta.png'}
+                                 title= "Beatriz Pimenta"
+                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                    />
+                </div>   
+                <div className='col-sm'>
+                    <Card_artist icon={'icon_pasta.png'}
+                                 title= "Beatriz Pimenta"
+                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                    />
+                </div> 
+            </div>  
+
+               <div className="row">
+               <div className='col-sm'> 
+                    <Card_artist icon={'icon_pasta.png'}
+                                 title= "Alexandre Vogler"
+                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                    />
+                </div> 
+                <div className='col-sm'>
+                    <Card_artist icon={'icon_pasta.png'}
+                                 title= "Beatriz Pimenta"
+                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                    />
+                </div>   
+                <div className='col-sm'>
+                    <Card_artist icon={'icon_pasta.png'}
+                                 title= "Beatriz Pimenta"
+                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                    />
+                </div> 
+            </div>     
             </section>  
         </>
     ) 

@@ -93,10 +93,8 @@ a:hover #logo2{
 #menu_header{
 	display: flex;
 	justify-content: center;
-
-	margin-top: 0,8%;
-	padding-bottom: 0px;
-	padding-top: 0px;
+	padding-bottom: 0%;
+	margin-bottom: 0%;
 }
 
 #menu_header li a{
@@ -108,7 +106,7 @@ a:hover #logo2{
 	
 	padding: 18px;
 	padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 0%;
 	color:#333333;
 }
 
@@ -122,6 +120,7 @@ a:hover #logo2{
 
 #menu_header a:hover{
 	color:#D60000;
+	text-decoration: none;
 }
 
 #menu_header ul ul li{

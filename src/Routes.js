@@ -24,8 +24,8 @@ const Routes = () => {
                 <Route path="/projeto" component={Projeto} />
                 <Route path="/contato" component={Contato} />
                 <Route path="/artistas" component={Artistas} />
-                <Route path="/artistas" component={Artista_pag1} />
-                <Route path="/artistas" component={Artista_pag2} />
+                <Route path="/artistas_pag1" component={Artista_pag1} />
+                <Route path="/artistas_pag2" component={Artista_pag2} />
                 <Route path="/publicacoes" component={Publicacoes} />
                 <Route path="/pesquisadores" component={Pesquisadores} />
                 <Route path="/cidade universitaria" component={CidadeUniversitaria} />
