@@ -1,5 +1,6 @@
 import Abc_filter from '../../Components/abc_filter'
 import Card_artist from '../../Components/card_artist';
+
 import './artistas.css';
 
 export default function Artistas(){

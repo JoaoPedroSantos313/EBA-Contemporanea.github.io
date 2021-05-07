@@ -1,12 +1,9 @@
 .card_title{
+    margin-left: -8%;
     margin-top: 2%;
-    margin-left: 2%;
 
     font-size: 18px;
     font-weight: bold;
-
-    display: flex;
-    flex-direction: row;
 
     width: 80%;
     height: 15%;
@@ -24,15 +21,18 @@
 }
 
 .card_title:hover{
-    width: 90%;
+    width: 85%;
     color: #D60000;
     text-decoration: none;
 }
 
+.card_title a:hover{
+    text-decoration: none;
+}
+
 .card_title img{
-    display: flex;
     width: 15%;
-    margin-right: 10%;
+    margin-right: 8%;
 }
 
 .card_image{
