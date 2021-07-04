@@ -2,11 +2,15 @@ import React, {Component} from 'react';
 import Home_post from '../../Components/home_post';
 import Slider from '../../Components/Slider';
 import { Link } from 'react-router-dom';
+import img1 from '../../Components/Slider/Imgs/img1.jpg'
+import img2 from '../../Components/Slider/Imgs/img2.jpg'
+import img3 from '../../Components/Slider/Imgs/img3.jpg'
 import './Home.css';
 
 export default class Home extends Component{
 
     render(){
+        
         return(
             <section className="home_main">
                
@@ -28,7 +32,7 @@ export default class Home extends Component{
                 </section>
 
                 <section className='sabermais'>
-                    <Slider/>
+                    <Slider img_slider={[img1,img2,img3]}/>
                 </section>
             
                 <section className='sabermais'>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Slider from '../Slider';
 import './artista_modelpage1.css';
+
 
 class artista_modelpage1 extends Component{
     
@@ -15,6 +17,8 @@ class artista_modelpage1 extends Component{
                 ondevive: props.info.ondevive,
                 graduacao: props.info.graduacao,
                 profissao: props.info.profissao,
+                atalhonavegacao: props.info.atalhonavegacao,
+                detalhestitulo: props.info.detalhestitulo,
                 curriculolattes: props.info.curriculolattes,
                 dissertacao: props.info.dissertacao,
                 tese: props.info.tese,
@@ -23,54 +27,88 @@ class artista_modelpage1 extends Component{
                 site: props.info.site,
                 youtube: props.info.youtube
         };
+        
     }
-  
+    
     render(){
         return(
             <>           
             <div className='artista_banner'>
             </div>
             
-            <section className="artista_main">
-            
-                <h1>{this.state.title}</h1>
-
-            <div className="row">
-                <div className='col-sm'> 
-                    <img src={this.state.foto}></img>
+            <section className="artista_main">      
+                <div className="artista_main_title">
+                    <h1>{this.state.title}</h1>
                 </div>
+               
+                <div className='row artista_body1'>
+                    <div className='col-sm P_foto'> 
+                        <img src={this.state.foto}></img>
+                    </div>
 
-                <div className='col-sm'> 
-                    <h1>{this.state.artistname}</h1>
-                    <h1>{this.state.local}</h1>
-                    <h1>{this.state.ondevive}</h1>
-                    {this.state.graduacao.map(i =>
-                        <h1>{i}</h1>
-                    )}
-                    <h1>{this.state.profissao}</h1>
-                </div>
+                    <div className='col-sm Info_main'> 
+                        <h2>{this.state.artistname}</h2>
+                        <h3>{this.state.local}</h3>
+                        <h3>{this.state.ondevive}</h3>
+                        {this.state.graduacao.map(i =>
+                            <h3>{i}</h3>
+                        )}
+                        <h3>{this.state.profissao}</h3>
+                    </div>
 
-                <div className='col-sm'> 
-                    <button><img src="link.png"/></button><h1>{this.state.curriculolattes}</h1>
-                    <button><img src="link.png"/></button><h1>{this.state.dissertacao}</h1>
-                    <button><img src="link.png"/></button> <h1>{this.state.tese}</h1>
-                    <button><img src={this.state.site}/></button>
-                    <button><img src={this.state.youtube}/></button>
-                </div>           
+                    <div className='col-sm Links_main'> 
+                    
+                    <h2>{this.state.atalhonavegacao}</h2>
+                    
+                    <div className='flex AtalhodeNavegacao'> 
+                        <button><img src="I_E_Arrow.png"/></button>
+                        <button><img src="I_Menu.png"/></button>
+                        <button><img src="I_D_Arrow.png"/></button>
+                    </div> 
+
+                    <hr/>
+                        <h2>{this.state.detalhestitulo}</h2>   
+
+                        <div className='flex'> 
+                            <button><img src="link.png"/></button>
+                            <h3 className='mx-2'>{this.state.curriculolattes}</h3>
+                        </div> 
+                        
+                        <div className='flex'> 
+                            <button><img src="link.png"/></button>
+                            <h3 className='mx-2'>{this.state.dissertacao}</h3>
+                        </div> 
+                        
+                        <div className='flex'> 
+                            <button><img src="link.png"/></button>
+                            <h3 className='mx-2'>{this.state.tese}</h3>
+                        </div>
+                        
+                        <div className='flex SocialMedia'> 
+                            <button><img src={this.state.youtube}/></button>
+                            <button><img src={this.state.site}/></button>
+                        </div>
+                    </div>        
                 </div>   
 
-                <div>
+                <div className='Biografia_main'>
                     <h1>Biografia</h1>
                     <p>{this.state.biografia}</p>
                 </div>
 
-                <div>
+                <div className='Carrossel_Artistas'>
                     <h1>Seleção de Obras</h1>
-                    {this.state.galeria.map(i =>
-                        <img src={i}></img>
-                    )}
-            </div>
+                    <Slider img_slider={this.state.galeria}/>
+                </div>
                 
+                <div className='row buttonNext'>
+                    <div className='col-sm'>
+                        <h1>Página 1/2</h1>
+                    </div>
+                    <div className='col-sm'>
+                        <button >Próxima página do Arquivo <img src="I_D_Arrow.png"/></button>
+                    </div>
+                </div>
             </section>
             </>
         )

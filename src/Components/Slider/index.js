@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import ImgComp from './ImgComp';
 import './slider.css';
-import img1 from './Imgs/img1.jpg'
-import img2 from './Imgs/img2.jpg'
-import img3 from './Imgs/img3.jpg'
 
-function Slider(){
+function Slider({img_slider}){
+    
 
-    let sliderArr = [<ImgComp src={img1}/>,
-                     <ImgComp src={img2}/>,
-                     <ImgComp src={img3}/>];
+    let sliderArr = [];
+
+    img_slider.map(img=>{
+        sliderArr.push(<ImgComp src={img}/>)
+    })
+
     const [x, setX] = useState(0)
    
     const goLeft = () => {
@@ -22,7 +23,7 @@ function Slider(){
     return(
         <div className="slider">
             
-            { sliderArr.map((item,index)=>{
+            {sliderArr.map((item,index)=>{
                 return(
                     <div key={index} className="slide" style={{transform: `translateX(${x}%)`}}>
                         {item}
