@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Slider from '../Slider';
 import './artista_modelpage1.css';
 
@@ -10,7 +11,6 @@ class artista_modelpage1 extends Component{
         super(props);
             this.state = {
                 banner: props.info.banner,
-                title: props.info.title,
                 foto: props.info.foto,
                 artistname: props.info.artistname,
                 local: props.info.local,
@@ -37,9 +37,6 @@ class artista_modelpage1 extends Component{
             </div>
             
             <section className="artista_main">      
-                <div className="artista_main_title">
-                    <h1>{this.state.title}</h1>
-                </div>
                
                 <div className='row artista_body1'>
                     <div className='col-sm P_foto'> 
@@ -105,15 +102,17 @@ class artista_modelpage1 extends Component{
                     <div className='col-sm'>
                         <h1>Página 1/2</h1>
                     </div>
+                   
                     <div className='col-sm'>
-                        <button >Próxima página do Arquivo <img src="I_D_Arrow.png"/></button>
+                        <Link to="/artistas_pag2">
+                            <button >Próxima página do Arquivo <img src="I_D_Arrow.png"/></button>
+                        </Link>
                     </div>
                 </div>
             </section>
             </>
         )
     }
-    
 }
 
 export default artista_modelpage1;
