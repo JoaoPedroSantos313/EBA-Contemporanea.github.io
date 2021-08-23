@@ -11,6 +11,7 @@ import Projeto from './Pages/Projeto';
 import Contato from './Pages/Contato';
 import Home from './Pages/Home';
 import EBA from './Pages/EBA';
+import AtrocidadesMaravilhosas from './Pages/Coletivos/AtrocidadesMaravilhosas';
 
 const Routes = () => {
     return(
@@ -29,6 +30,7 @@ const Routes = () => {
                 <Route path="/publicacoes" component={Publicacoes} />
                 <Route path="/pesquisadores" component={Pesquisadores} />
                 <Route path="/cidade universitaria" component={CidadeUniversitaria} />
+                <Route path="/AtrocidadesMaravilhosas" component={AtrocidadesMaravilhosas} />
             </Switch>
 
             <Footer/>

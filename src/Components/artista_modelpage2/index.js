@@ -9,12 +9,12 @@ class artista_modelpage2 extends Component{
 
         super(props);
             this.state = {
-                banner: props.info.banner,
                 title: props.info.title,
                 outrostextos: props.info.outrostextos,
                 entrevistasdestaque: props.info.entrevistasdestaque,
                 galeriascomerciais: props.info.galeriascomerciais,
-                eventoscoletivos: props.info.eventoscoletivos,
+                eventoscoletivo1: props.info.eventoscoletivo1,
+                eventoscoletivo2: props.info.eventoscoletivo2,
                 premiosresidencias: props.info.premiosresidencias
         };
         
@@ -39,50 +39,58 @@ class artista_modelpage2 extends Component{
                     <h1>Outros Textos</h1>
                     {this.state.outrostextos.map(i =>
                         <div className="textblockarrange">
-                            <button><img src="link.png"/></button>
-                            <h3>{i}</h3>
+                            <button onClick={() => { window.location.href = i.url }}><img src="link.png"/></button>
+                            <h3>{i.title}</h3>
                         </div>
                     )}
                 </div>
 
                 <div className='EntrevistasDestaque_main buttonBody'>
-                    <h1>Entrevistas em Destaque</h1>
+                    <h1>Entrevistas em Destaque</h1>                    
                     {this.state.entrevistasdestaque.map(i =>
                         <div className="textblockarrange">
-                            <button><img src="link.png"/></button>
-                            <h3>{i}</h3>
+                           <button onClick={() => { window.location.href = i.url }}><img src="link.png"/></button>
+                            <h3>{i.title}</h3>
                         </div>
                     )}
                 </div>
 
                 <div className='OutrasInformacoes_main buttonBody'>
+                <div className='row mx-1 my-3'>
                     <h1>Ourtas Informações</h1>
-                    <div>
+                    <button className='mx-3 my-1'><img src="I_B_Arrow.png"/></button>
+                </div>
+                    <div className='GC mx-1'>
                         <h1>Galerias Comerciais</h1>
                         {this.state.galeriascomerciais.map(i =>
                             <div className="textblockarrange">
-                                <button><img src="link.png"/></button>
-                                <h3>{i}</h3>
+                                <button onClick={() => { window.location.href = i.url }}><img src="link.png"/></button>
+                                <h3>{i.title}</h3>
                             </div>
                         )}
                     </div>
 
-                    <div>
+                    <div className='EC mx-1'>
                         <h1>Eventos / Coletivos</h1>
-                        {this.state.eventoscoletivos.map(i =>
+                            <div className="textblockarrange">
+                            <Link to="/AtrocidadesMaravilhosas">
+                                <button><img src="link.png"/></button>
+                            </Link>
+                                <h3>{this.state.eventoscoletivo1}</h3>
+                            </div>
+
                             <div className="textblockarrange">
                                 <button><img src="link.png"/></button>
-                                <h3>{i}</h3>
+                                <h3>{this.state.eventoscoletivo1}</h3>
                             </div>
-                        )}
                     </div>
 
-                    <div>
+                    <div className='PR mx-1'>
                         <h1>Prêmios e Residências</h1>
                         {this.state.premiosresidencias.map(i =>
                             <div className="textblockarrange">
-                                <button><img src="link.png"/></button>
-                                <h3>{i}</h3>
+                                <button onClick={() => { window.location.href = i.url }}><img src="link.png"/></button>
+                                <h3>{i.title}</h3>
                             </div>
                         )}
                     </div>
