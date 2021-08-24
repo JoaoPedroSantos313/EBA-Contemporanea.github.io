@@ -26,9 +26,9 @@ class coletivo_modelpage extends Component{
             <div className='coletivoBanner'>
             </div>
             
-            <section className="artista_main2 bodyText">   
+            <section className="coletivo_main2 bodyText">   
             
-                <div className="artista_main2_title buttonBack my-4">   
+                <div className="coletivo_main2_title buttonBack my-4">   
                     <h2>Participantes</h2>
 
                     <Link to="/artistas_pag1">
@@ -38,25 +38,25 @@ class coletivo_modelpage extends Component{
 
                 <div>
                     {this.state.participantes.map(i =>
-                        <div>
+                        <div className='my-4'>
                            <a href={i.url}><h3>{i.title}</h3></a>
                         </div>
                     )}
                 </div>
 
-                <div className='OutrosTextos_main buttonBody'>
+                <div className='ColetivoSobre_main buttonBody'>
                     <h1>Sobre</h1>
-                    <h3>{this.state.sobre_title}</h3>
+                    <h3 className='my-4'>{this.state.sobre_title}</h3>
                     <p>{this.state.sobre}</p>
-                    <h3>{this.state.sobre_assing}</h3>
+                    <h3 className='my-4'>{this.state.sobre_assing}</h3>
                 </div>
 
-                <div className='EntrevistasDestaque_main buttonBody'>
+                <div className='ColetivoGaleria_main buttonBody'>
                     <h1>Galeria</h1>                    
                     <Slider img_slider={this.state.galeria}/>
                 </div>
 
-                <div className='OutrasInformacoes_main buttonBody'>
+                <div className='ColetivosLinks_main buttonBody'>
                 <div className='mx-1 my-3'>
                     <h1>Links</h1>
                     {this.state.links.map(i =>

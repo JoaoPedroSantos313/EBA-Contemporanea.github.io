@@ -7,12 +7,47 @@ export default function AtrocidadesMaravilhosas(){
         title:'Atrocidades Maravilhosas',
         participantes: [
             {
-                title: 'Roberto',
+                title: 'Adriano Melhem',
                 url: 'https://www.amazon.com.br/progress-tracker/package/ref=ppx_od_dt_b_track_package?_encoding=UTF8&itemId=mmnilrornomsqn&orderId=702-2696184-9853001&vt=ORDER_DETAILS',
             }, 
 
             {
-                title: 'Evelyn',
+                title: 'Alexandre Vogler',
+                url: 'https://www.amazon.com.br/progress-tracker/package/ref=ppx_od_dt_b_track_package?_encoding=UTF8&itemId=mmnilrornomsqn&orderId=702-2696184-9853001&vt=ORDER_DETAILS',
+            }, 
+
+            {
+                title: 'Ana Paula Cardoso',
+                url: 'https://www.amazon.com.br/progress-tracker/package/ref=ppx_od_dt_b_track_package?_encoding=UTF8&itemId=mmnilrornomsqn&orderId=702-2696184-9853001&vt=ORDER_DETAILS',
+            }, 
+
+            {
+                title: 'André Amaral',
+                url: 'https://www.amazon.com.br/progress-tracker/package/ref=ppx_od_dt_b_track_package?_encoding=UTF8&itemId=mmnilrornomsqn&orderId=702-2696184-9853001&vt=ORDER_DETAILS',
+            }, 
+
+            {
+                title: 'Arthur Leandro',
+                url: 'https://www.amazon.com.br/progress-tracker/package/ref=ppx_od_dt_b_track_package?_encoding=UTF8&itemId=mmnilrornomsqn&orderId=702-2696184-9853001&vt=ORDER_DETAILS',
+            }, 
+
+            {
+                title: 'Clara Zúñiga',
+                url: 'https://www.amazon.com.br/progress-tracker/package/ref=ppx_od_dt_b_track_package?_encoding=UTF8&itemId=mmnilrornomsqn&orderId=702-2696184-9853001&vt=ORDER_DETAILS',
+            }, 
+
+            {
+                title: 'Cláudia Leão',
+                url: 'https://www.amazon.com.br/progress-tracker/package/ref=ppx_od_dt_b_track_package?_encoding=UTF8&itemId=mmnilrornomsqn&orderId=702-2696184-9853001&vt=ORDER_DETAILS',
+            }, 
+
+            {
+                title: 'Ducha',
+                url: 'https://www.amazon.com.br/progress-tracker/package/ref=ppx_od_dt_b_track_package?_encoding=UTF8&itemId=mmnilrornomsqn&orderId=702-2696184-9853001&vt=ORDER_DETAILS',
+            }, 
+
+            {
+                title: 'Edson Barrus',
                 url: 'https://www.amazon.com.br/progress-tracker/package/ref=ppx_od_dt_b_track_package?_encoding=UTF8&itemId=mmnilrornomsqn&orderId=702-2696184-9853001&vt=ORDER_DETAILS',
             }, 
         ],

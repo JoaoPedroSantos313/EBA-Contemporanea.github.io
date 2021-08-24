@@ -31,13 +31,13 @@ export default function Artistas(){
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Beatriz Pimenta"
+                                 title= "Antonio Gonzaga A."
                                  image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Beatriz Pimenta"
+                                 title= "Alexandre Sá"
                                  image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
                     />
                 </div> 
@@ -46,28 +46,28 @@ export default function Artistas(){
             <div className="row">
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Alexandre Vogler"
+                                 title= "Alvaro Seixas"
                                  image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Beatriz Pimenta"
+                                 title= "Ana Holck"
                                  image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Beatriz Pimenta"
+                                 title= "Analu Cunha"
                                  image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
                     />
                 </div> 
             </div>  
 
-               <div className="row">
+            <div className="row">
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Alexandre Vogler"
+                                 title= "Angelo Venosa"
                                  image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
                     />
                 </div> 
@@ -79,11 +79,36 @@ export default function Artistas(){
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Beatriz Pimenta"
+                                 title= "bruno Miguel"
                                  image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
                     />
                 </div> 
+                
             </div>     
+
+            <div className="row">
+               <div className='col-sm'> 
+                    <Card_artist icon={'icon_pasta.png'}
+                                 title= "Carlos Contente"
+                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                    />
+                </div> 
+                <div className='col-sm'>
+                    <Card_artist icon={'icon_pasta.png'}
+                                 title= "Carolina Ponte"
+                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                    />
+                </div>   
+                <div className='col-sm'>
+                    <Card_artist icon={'icon_pasta.png'}
+                                 title= "Antonio Gonzaga Amador"
+                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                    />
+                </div> 
+                
+            </div>   
+
+            
             </section>  
         </>
     ) 
