@@ -1,5 +1,35 @@
-.artista_main2{
+.coletivo_main{
     margin: 0px 19.5%;
+}
+
+.row{
+    margin: 2%;
+}
+
+.LimitWidth {
+    max-width: 29%;
+    margin-left: 1.8%;
+    margin-right: 3%;
+}
+
+.Espaco{
+    display: flex;
+    flex-direction: row;
+    margin-top: 6%;
+}
+
+.Espaco h3{
+    margin-left: 8%;
+}
+
+.EspacoPersonalizado{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3.8%;
+}
+
+.EspacoPersonalizado h3{
+    margin-left: 3%;
 }
 
 .coletivoBanner {
@@ -10,12 +40,21 @@
     display: block;
 }
 
-.artista_main2_title{
+.coletivo_main_title{
     display: flex;
     flex-direction: row;
 }
 
-.artista_main2_title h2{
+.coletivo_main h1{
+    justify-content: right;
+    
+    font-family: 'lucida sans unicode';
+    font-weight: bold;
+    font-size: 20px;
+    color: #333333;
+}
+
+.coletivo_main_title h2{
    margin-top: 0.3%;
 
    font-size: 20px;
@@ -26,55 +65,51 @@
    color: #333333;
 }
 
-.artista_main2 h1{
-    justify-content: right;
-    
+.coletivo_main h3{
+    font-size: 20px;
+ 
     font-family: 'lucida sans unicode';
-    font-weight: bold;
     font-size: 20px;
     color: #333333;
+ }
 
-    margin: 0px;
-    margin-bottom: 2%;
+.ColetivoSobre_main{
+    font-kerning: normal;
+    font-size: 20px ;
+   
+    word-break: normal;
+    
+    color: #1b1b1b;
+    margin-top: 6%;
+   
+    text-align: justify;
+    line-height: 31px;
 }
 
-.OutrosTextos_main{
+.ColetivoGaleria_main{
     margin-top: 10%;
 }
 
-.EntrevistasDestaque_main{
-    margin-top: 10%;
-}
-
-.OutrasInformacoes_main{
+.ColetivosLinks_main{
     margin-top: 10%;
     margin-bottom: 7%;
 }
 
-.textblockarrange{
+.Participantes_main{
     display: flex;
     flex-direction: row;
-
-    border-style: none;
-    background-color: rgb(250, 250, 250);
-    box-shadow: 0px -1px 2px 0px rgba(171, 170, 170, 0.34);
-
-    margin-bottom: 3%;
-    padding: 1%;
-    padding-bottom: 0%;
-}
-
-.bodyText h3{
     flex-wrap: wrap;
-
+    
     font-family: 'lucida sans unicode';
     font-size: 18px;
     color: #333333;
-
-    margin-left: 1%;
 }
 
-.buttonBody button{
+.NomesParticipantes{
+   padding: 10px 10px 4px 0px;
+}
+
+.c_buttonBody button{
    width: 2.5%;
    height: 2.5%;
 
@@ -88,21 +123,17 @@
    cursor: pointer;
 }
 
-.buttonBody button img{
+.c_buttonBody button img{
     display: flex;
     width: 20px;
  }
 
-.buttonBody button:hover{
+.c_buttonBody button:hover{
      width: 3%;
      background-image: url();
  }
 
-.buttonNext2{
-    margin-top: 4%;
-}
-
-.buttonBack button{
+.c_buttonBack button{
     width: 60%;
     
     font-family: 'lucida sans unicode';
@@ -116,35 +147,12 @@
     background: none;
 }
 
-.buttonBack img{
+.c_buttonBack img{
     width: 8%;
     margin-right: 4%;
     margin-bottom: 2%;
 }
 
-.buttonBack h1{
-    font-size: 16px;
-}
-
-.buttonNext2 button{   
-   width: 60%;
-
-   font-family: 'lucida sans unicode';
-   font-weight: bold;
-   font-size: 16px;
-   color: #333333;
-
-   margin-left: 42%;
-   padding: 0%;
-
-   border-style: none;
-   background: none;
-}
-
-.buttonNext2 img{
-    width: 5%;
-}
-
-.buttonNext2 h1{
+.c_buttonBack h1{
     font-size: 16px;
 }

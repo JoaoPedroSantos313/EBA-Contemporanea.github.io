@@ -26,19 +26,19 @@ export default function Artistas(){
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Alexandre Vogler"
-                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                                 image={'https://static.wixstatic.com/media/8b4bc0_f799a1879db44a80aa49eef8368c141b~mv2.jpg'}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Antonio Gonzaga A."
-                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                                 title= "Antonio Gonzaga Amador"
+                                 image={'ANTONIO_AMADOR_OBRA2.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Alexandre Sá"
-                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
                     />
                 </div> 
             </div>    
@@ -47,19 +47,19 @@ export default function Artistas(){
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Alvaro Seixas"
-                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Ana Holck"
-                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Analu Cunha"
-                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
                     />
                 </div> 
             </div>  
@@ -68,19 +68,19 @@ export default function Artistas(){
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Angelo Venosa"
-                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Beatriz Pimenta"
-                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "bruno Miguel"
-                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
                     />
                 </div> 
                 
@@ -90,19 +90,19 @@ export default function Artistas(){
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Carlos Contente"
-                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Carolina Ponte"
-                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Antonio Gonzaga Amador"
-                                 image={'https://www.bambui.ifmg.edu.br/portal_padrao_joomla/joomla/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png'}
+                                 title= "Carolina Ponte"
+                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
                     />
                 </div> 
                 
