@@ -8,19 +8,7 @@ class pesquisadores extends Component{
 
         super(props);
             this.state = {
-                coordenador: props.info.coordenador,
-                card_coordenador: props.info.card_coordenador,
-               
-                bolsistasAtuais: props.info.bolsistasAtuais,
-                card_bolsistasAtuais: props.info.card_bolsistasAtuais,
-                
-                bolsistasAtnteriores: props.info.bolsistasAtnteriores,
-                card_bolsistasAtnteriores: props.info.card_bolsistasAtnteriores,
-               
-                voluntarios: props.info.voluntarios,
-                card_voluntarios: props.info.card_voluntarios,
-
-                participacoes: props.info.participacoes,
+                card_pesquisadores: props.info.card_pesquisadores,
                 card_participacoescol1: props.info.card_participacoescol1,
                 card_participacoescol2: props.info.card_participacoescol2
         };
@@ -31,92 +19,33 @@ class pesquisadores extends Component{
             <>                 
             <section className="Pesquisadores_main bodyText">   
             
-            <div className='Coordenador_main Pesquisadores_buttonBody'>
-                    <div className="Pesquisadores_card"> 
-                        <h1>{this.state.coordenador}</h1>
-                    </div>
-
-                    {this.state.card_coordenador.map(i =>
+            <div className='Coordenador_main'>
+                {this.state.card_pesquisadores.map(i =>
+                    <> 
+                        {i.cargo_pesquisadores && (
+                        <div className="Cargo_card"> 
+                            <h1>{i.cargo_pesquisadores}</h1>
+                        </div>
+                        )}   
+                    
                         <div className="Pesquisadores_card">
-                            <img src={i.photo}/>
-                            
+                            <img  className="Img_pesquisadores" src={i.photo}/>
                             <div>
                                 <h1 className="mx-3">{i.name}</h1>
                                 <p className="mx-3">{i.about}</p> 
-                                <button className="mx-3" onClick={() => { window.location.href = i.url }}><img src="cl.png"/></button>
-                                <button className="mx-3" onClick={() => { window.location.href = i.url2 }}><img src="A.png"/></button> 
+                                <button className="Pesquisadores_buttonBody mx-3" onClick={() => { window.location.href = i.url }}><img src="cl.png"/></button>
+                                <button className="Pesquisadores_buttonBody mx-3" onClick={() => { window.location.href = i.url2 }}><img src="A.png"/></button> 
                             </div>
                         </div>
+                    </>
                     )}
              </div>
 
-             <div className='Coordenador_main Pesquisadores_buttonBody'>
-                   
-
-                    {this.state.card_bolsistasAtuais.map(i =>
-                       <> 
-                        <div className="Pesquisadores_card"> 
-                            <h1>{this.state.bolsistasAtuais}</h1>
-                        </div>
-                        
-                        <div className="Pesquisadores_card">
-                            <img src={i.photo}/>
-                           
-                            <div>
-                                <h1 className="mx-3">{i.name}</h1>
-                                <p className="mx-3">{i.about}</p> 
-                                <button className="mx-3" onClick={() => { window.location.href = i.url }}><img src="cl.png"/></button>
-                                <button className="mx-3" onClick={() => { window.location.href = i.url2 }}><img src="A.png"/></button> 
-                            </div>
-                        </div>
-                        </>
-                    )}
+             <div className="Cargo_card"> 
+                    <h1>Participações</h1>
              </div>
-
-             <div className='Coordenador_main Pesquisadores_buttonBody'>
-                    <div className="Pesquisadores_card"> 
-                        <h1>{this.state.bolsistasAtnteriores}</h1>
-                    </div>
-
-                    {this.state.card_bolsistasAtnteriores.map(i =>
-                        <div className="Pesquisadores_card">
-                            <img src={i.photo}/>
-                            
-                            <div>
-                                <h1 className="mx-3">{i.name}</h1>
-                                <p className="mx-3">{i.about}</p> 
-                                <button className="mx-3" onClick={() => { window.location.href = i.url }}><img src="cl.png"/></button>
-                                <button className="mx-3" onClick={() => { window.location.href = i.url2 }}><img src="A.png"/></button> 
-                            </div>
-                        </div>
-                    )}
-             </div>
-
-             <div className='Coordenador_main Pesquisadores_buttonBody'>
-                    <div className="Pesquisadores_card"> 
-                        <h1>{this.state.voluntarios}</h1>
-                    </div>
-
-                    {this.state.card_voluntarios.map(i =>
-                        <div className="Pesquisadores_card">
-                            <img src={i.photo}/>
-                            
-                            <div>
-                                <h1 className="mx-3">{i.name}</h1>
-                                <p className="mx-3">{i.about}</p> 
-                                <button className="mx-3" onClick={() => { window.location.href = i.url }}><img src="cl.png"/></button>
-                                <button className="mx-3" onClick={() => { window.location.href = i.url2 }}><img src="A.png"/></button> 
-                            </div>
-                        </div>
-                    )}
-             </div>
-
-
-             <div className="Pesquisadores_card"> 
-                        <h1>{this.state.participacoes}</h1>
-            </div>
              <div className='Coordenador_main Pesquisadores_buttonBody row' >
-                    <div className="col-sm"> 
+                <div className="col-sm"> 
                     
                     {this.state.card_participacoescol1.map(i =>
                         <div className="Pesquisadores_card">
@@ -140,8 +69,6 @@ class pesquisadores extends Component{
 
                 </div>
              </div>
-                
-
             </section>
             </>
         )

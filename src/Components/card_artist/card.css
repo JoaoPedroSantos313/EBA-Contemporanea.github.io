@@ -15,13 +15,13 @@
     border-style: none;
     background-color: white;
 
-    transition: 0.5s;
+    transition: ease all 0.5s;
     outline: none;
     cursor: pointer;
 }
 
 .card_title:hover{
-    width: 85%;
+    transform: scaleX(1.1);
     color: #D60000;
     text-decoration: none;
 }
@@ -56,13 +56,9 @@
     border-style: none;
     box-shadow: 0px -2px 2px 0px rgba(171, 170, 170, 0.34);
 
-    transition: 0.6s;
+    transition: ease all 0.5s;
     outline: none;
     cursor: pointer;
-}
-
-.card_image:hover{
-    width: 68%;
 }
 
 .card_image img{
