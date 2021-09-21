@@ -18,11 +18,16 @@ class card_artist extends Component{
             <>
             <div className='card_label'>
             <Link to="/artistas_pag1"> 
-                <button className='card_title'><img src={this.state.icon}></img> {this.state.title}</button>
+                <button className='card_title'>
+                    <img src={this.state.icon}></img> 
+                    {this.state.title}
+                </button>
             </Link>
             
             <Link to="/artistas_pag1"> 
-                <button className='card_image'><img src={this.state.image}></img></button>
+                <button className='card_image'>
+                    <img src={this.state.image}></img>
+                </button>
             </Link>
             </div>
             </>

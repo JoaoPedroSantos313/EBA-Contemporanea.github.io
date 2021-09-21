@@ -100,9 +100,6 @@ export default function pesquisadores(){
                 name:"Cynthia Seage",
             },
             {
-                name:"Maíza França",
-            },
-            {
                 name:"Lucas Henrique Guimarães",
             },
             {

@@ -44,25 +44,25 @@ class pesquisadores extends Component{
              <div className="Cargo_card"> 
                     <h1>Participações</h1>
              </div>
-             <div className='Coordenador_main Pesquisadores_buttonBody row' >
+             <div className='Coordenador_main row' >
                 <div className="col-sm"> 
                     
                     {this.state.card_participacoescol1.map(i =>
-                        <div className="Pesquisadores_card">
+                        <div className="Participacoes_card">
                             <div>
-                                <h1 className="mx-3">{i.name}</h1>
+                                <h1 className="mx-3 my-2">{i.name}</h1>
                             </div>
                         </div>
                     )}
 
-                </div>
+             </div>
 
                 <div className="col-sm"> 
                     
                     {this.state.card_participacoescol2.map(i =>
-                        <div className="Pesquisadores_card">
+                        <div className="Participacoes_card">
                             <div>
-                                <h1 className="mx-3">{i.name}</h1>
+                                <h1 className="mx-3 my-2">{i.name}</h1>
                             </div>
                         </div>
                     )}

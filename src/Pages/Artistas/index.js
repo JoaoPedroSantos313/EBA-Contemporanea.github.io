@@ -25,20 +25,20 @@ export default function Artistas(){
             <div className="row">
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Alexandre Vogler"
-                                 image={'https://static.wixstatic.com/media/8b4bc0_f799a1879db44a80aa49eef8368c141b~mv2.jpg'}
+                                 title= "Agrippina R. Manhattan"
+                                 image={'AGRIPPINA_R_MANHATTAN_PIC.png'}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Antonio Gonzaga Amador"
-                                 image={'ANTONIO_AMADOR_OBRA2.png'}
+                                 title= "Alexandre Vogler"
+                                 image={'ALEXANDRE_VOGLER_PIC.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Alexandre Sá"
-                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
+                                 title= "Andréa Hygino"
+                                 image={'ANDREA_HYGNO_PIC.png'}
                     />
                 </div> 
             </div>    
@@ -46,20 +46,20 @@ export default function Artistas(){
             <div className="row">
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Alvaro Seixas"
-                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
+                                 title= "Antonio Gonzaga Amador"
+                                 image={'ANTONIO_AMADOR_PIC.png'}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Ana Holck"
-                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
+                                 title= "Beatriz Pimenta"
+                                 image={'BEATRIZ_PIMENTA_PIC.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Analu Cunha"
-                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
+                                 title= "Camila Braga"
+                                 image={'CAMILA_BRAGA_PIC.png'}
                     />
                 </div> 
             </div>  
@@ -67,20 +67,20 @@ export default function Artistas(){
             <div className="row">
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Angelo Venosa"
-                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
+                                 title= "Carlos Contente"
+                                 image={'CARLOS_CONTENTE_PIC.png'}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Beatriz Pimenta"
-                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
+                                 title= "Guga Ferraz"
+                                 image={'GUGA_FERRAZ_PIC.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "bruno Miguel"
-                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
+                                 title= "Marcos Cardoso"
+                                 image={'MARCOS_CARDOSO_PIC.png'}
                     />
                 </div> 
                 
@@ -89,20 +89,20 @@ export default function Artistas(){
             <div className="row">
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Carlos Contente"
-                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
+                                 title= "Mery Horta"
+                                 image={'MERY_HORTA_PIC.png'}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Carolina Ponte"
-                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
+                                 title= "Panmela Castro"
+                                 image={'PANMELA_CASTRO_PIC.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Carolina Ponte"
-                                 image={'https://static.wixstatic.com/media/8b4bc0_3c8b995516ae477f84e931065c7d754c~mv2.png'}
+                                 title= "Paula Scamparini"
+                                 image={'PAULA_SCAMPARINI_PIC.png'}
                     />
                 </div> 
                 
