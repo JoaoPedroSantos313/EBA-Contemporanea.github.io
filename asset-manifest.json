@@ -1,18 +1,16 @@
 {
   "files": {
-    "main.css": "/EBAContemporanea/static/css/main.310e0f0d.css",
-    "main.js": "/EBAContemporanea/static/js/main.9b14e16f.js",
-    "static/js/377.e5665017.chunk.js": "/EBAContemporanea/static/js/377.e5665017.chunk.js",
+    "main.css": "/EBAContemporanea/static/css/main.16244b7d.css",
+    "main.js": "/EBAContemporanea/static/js/main.38371aa3.js",
     "static/media/img3.jpg": "/EBAContemporanea/static/media/img3.c64de897e7bcc1f19102.jpg",
     "static/media/img1.jpg": "/EBAContemporanea/static/media/img1.f90ddf8939aab8a5a8aa.jpg",
     "static/media/img2.jpg": "/EBAContemporanea/static/media/img2.f90459d7de02f0a43460.jpg",
     "index.html": "/EBAContemporanea/index.html",
-    "main.310e0f0d.css.map": "/EBAContemporanea/static/css/main.310e0f0d.css.map",
-    "main.9b14e16f.js.map": "/EBAContemporanea/static/js/main.9b14e16f.js.map",
-    "377.e5665017.chunk.js.map": "/EBAContemporanea/static/js/377.e5665017.chunk.js.map"
+    "main.16244b7d.css.map": "/EBAContemporanea/static/css/main.16244b7d.css.map",
+    "main.38371aa3.js.map": "/EBAContemporanea/static/js/main.38371aa3.js.map"
   },
   "entrypoints": [
-    "static/css/main.310e0f0d.css",
-    "static/js/main.9b14e16f.js"
+    "static/css/main.16244b7d.css",
+    "static/js/main.38371aa3.js"
   ]
 }
