@@ -6,19 +6,19 @@ export default function Artista_pag1(){
    
     const informacoes={
         banner:'',
-        foto:'https://static.wixstatic.com/media/8b4bc0_9ffd147fc9c1490088c89002622734a0~mv2.png/v1/fill/w_241,h_325,al_c,q_85,usm_0.66_1.00_0.01/imagem.webp',
-        artistname:"Alexandre Vogler",
-        local:"Nasceu no Rio de Janeiro",
-        ondevive:"Vive e trabalha no Rio de Janeiro",
-        graduacao:['Graduado em Pintura (1992-1996)','Mestre em Artes Visuais (1998-2000)','Doutor em Artes Visuais (2014-2019)'],
+        foto:'ADass/ADass_p.jpg',
+        artistname:"Angélica Dass",
+        local:"Nasceu no Rio de Janeiro.",
+        ondevive:"Vive e trabalha em Madrid, Espanha.",
+        graduacao:['Graduação em Artes Cênicas - Indumentária(2003 - 2006)'],
         atalhonavegacao: "Atalho de Navegação",
-        profissao:"Professor do Instituto de Artes da Uerj (desde 2002)",
+        profissao:"",
         detalhestitulo: "Detalhes Acadêmicos",
         curriculolattes:"Currículo Lattes",
         dissertacao:"Dissertações",
         tese:"Tese",
-        biografia:"Alexandre Volger é formado em Pintura pela EBA-UFRJ (1996), além de ser mestre (2000) e doutor (2019) em Linguagens Visuais pelo PPGAV-UFRJ. Na década de 1990 fez parte do Atelier 491 em Santa Teresa. Como parte de seu projeto de mestrado, que investiga a percepção da imagem pelo espectador em movimento, idealizou a ação coletiva Atrocidades Maravilhosas no ano 2000. Entre 2001 e 2002 coproduziu o evento Zona Franca, na Fundição Progresso. Entre outros coletivos que integrou, estão o Rradial e o Tupinambá Lambido (em atividade). Como parte de sua pesquisa de doutorado (Monumento-contra-monumento), desenvolveu em um espaço ocioso do galpão do PPGAV-UFRJ o Horto que voa, uma agrofloresta com 50 espécies plantadas, que também abrange o projeto MACAs: esculturas/mobiliários que agenciam a fruição de elementos naturais naquele ambiente. Vogler desenvolve desde 2000 trabalhos em contexto público e sistemas de comunicação. Atualmente é professor no Instituto de Artes da Uerj. (TF)",
-        galeria:['https://static.wixstatic.com/media/8b4bc0_66bdf6e9fd124f7ba3bfe41d3dcf60cf~mv2.jpg', 'https://static.wixstatic.com/media/8b4bc0_82ccb9875e4249df822792886c3454e5~mv2.jpg'],
+        biografia:"Angélica Dass tem formação em Indumentária pela EBA-UFRJ e Estilismo pelo SENAI, possui mestrado em Jornalismo pela UNED e em Fotografia pela Escola EFTI na Espanha. Artista Visual, pesquisadora e humanitária nascida no Brasil, porém vive e trabalha na Espanha, Dass é reconhecida e premiada no mundo inteiro, tendo realizado residências e exposições em lugares como Itália, Suiça, EUA, Holanda, Equador, Irlanda, índia, Nigéria, Croácia, entre outros. O trabalho de Dass mescla sua prática como fotógrafa e ativista social, dessa combinação que surgiu o Humanæ, projeto que vem sendo desenvolvido desde 2012 onde a artista documenta, por meio de retratos, as diversas colorações de pele presentes no mundo, para além das denominações que vão do “preto” ao “branco”. O Humanæ, que atualmente conta com mais de 4000 fotografias de pessoas de 20 países diferentes, pode ser considerado o trabalho que caracteriza toda a obra de Dass, sempre propondo um diálogo sobre as questões sociais globais de maneira educativa e acessível.",
+        galeria:['ADass/angelica_dass_obra1.jpg','ADass/angelica_dass_obra2.jpg','ADass/angelica_dass_obra3.jpg','ADass/angelica_dass_obra4.jpg','ADass/angelica_dass_obra5.jpg','ADass/angelica_dass_obra6.jpg'],
         youtube:"yt.png",
         site:"site.png"
     }

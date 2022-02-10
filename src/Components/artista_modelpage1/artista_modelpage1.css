@@ -16,11 +16,12 @@ hr{
 }
 
 .artista_banner {
-    background-image: url(https://static.wixstatic.com/media/8b4bc0_66bdf6e9fd124f7ba3bfe41d3dcf60cf~mv2.jpg/v1/fill/w_1583,h_320,al_c,q_85,usm_0.66_1.00_0.01/8b4bc0_66bdf6e9fd124f7ba3bfe41d3dcf60cf~mv2.webp);
+    background-image: url(https://i.postimg.cc/1txqNwhH/b-angelica-Dass.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     height: 303px;
     display: block;
+    margin-bottom: 50px;
 }
 
 .artista_main{

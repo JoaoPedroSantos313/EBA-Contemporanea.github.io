@@ -70,6 +70,12 @@ export default function Artista_pag2(){
                 title:"Indicado ao PIPA em 2011, 2012, 2014 e 2016",
                 url:"https://www.premiopipa.com/pag/artistas/alexandre-vogler/",
             },
+        ],
+        producaoartistica:[
+            {
+                title:"https://vimeo.com/user14348595",
+                url:"https://www.youtube.com/watch?v=kxN79ZH-lA8",
+            },
         ]
     }
 

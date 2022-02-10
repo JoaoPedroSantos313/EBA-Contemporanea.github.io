@@ -63,3 +63,9 @@
     width: 110%;
 }
 
+.card_image:hover{
+    transform: scaleX(1.02);
+    color: #D60000;
+    text-decoration: none;
+}
+

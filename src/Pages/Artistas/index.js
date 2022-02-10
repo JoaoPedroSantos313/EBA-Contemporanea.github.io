@@ -26,19 +26,19 @@ export default function Artistas(){
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Agrippina R. Manhattan"
-                                 image={'AGRIPPINA_R_MANHATTAN_PIC.png'}
+                                 image={'AGRIPPINA_R_MANHATTAN_PIC2.png'}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Alexandre Vogler"
-                                 image={'ALEXANDRE_VOGLER_PIC.png'}
+                                 image={'ALEXANDRE_VOGLER_PIC2.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Andréa Hygino"
-                                 image={'ANDREA_HYGNO_PIC.png'}
+                                 title= "Ana Holck"
+                                 image={'ANA_HOLCK_PIC.png'}
                     />
                 </div> 
             </div>    
@@ -46,20 +46,20 @@ export default function Artistas(){
             <div className="row">
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Antonio Gonzaga Amador"
-                                 image={'ANTONIO_AMADOR_PIC.png'}
+                                 title= "Andréa Hygino"
+                                 image={'ANDREA_HYGNO_PIC2.png'}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Beatriz Pimenta"
-                                 image={'BEATRIZ_PIMENTA_PIC.png'}
+                                 title= "Angélica Dass"
+                                 image={'ANGELICA_DASS_PIC.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Camila Braga"
-                                 image={'CAMILA_BRAGA_PIC.png'}
+                                 title= "Antonio Amador"
+                                 image={'ANTONIO_AMADOR_PIC2.png'}
                     />
                 </div> 
             </div>  
@@ -67,20 +67,20 @@ export default function Artistas(){
             <div className="row">
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Carlos Contente"
-                                 image={'CARLOS_CONTENTE_PIC.png'}
+                                 title= "Beatriz Pimenta"
+                                 image={'BEATRIZ_PIMENTA_PIC2.png'}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Guga Ferraz"
-                                 image={'GUGA_FERRAZ_PIC.png'}
+                                 title= "Guga Ferraz_____"
+                                 image={'GUGA_FERRAZ_PIC2.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Marcos Cardoso"
-                                 image={'MARCOS_CARDOSO_PIC.png'}
+                                 image={'MARCOS_CARDOSO_PIC2.png'}
                     />
                 </div> 
                 
@@ -89,20 +89,20 @@ export default function Artistas(){
             <div className="row">
                <div className='col-sm'> 
                     <Card_artist icon={'icon_pasta.png'}
-                                 title= "Mery Horta"
-                                 image={'MERY_HORTA_PIC.png'}
+                                 title= "Mery Horta______"
+                                 image={'MERY_HORTA_PIC2.png'}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Panmela Castro"
-                                 image={'PANMELA_CASTRO_PIC.png'}
+                                 image={'PANMELA_CASTRO_PIC2.png'}
                     />
                 </div>   
                 <div className='col-sm'>
                     <Card_artist icon={'icon_pasta.png'}
                                  title= "Paula Scamparini"
-                                 image={'PAULA_SCAMPARINI_PIC.png'}
+                                 image={'PAULA_SCAMPARINI_PIC2.png'}
                     />
                 </div> 
                 

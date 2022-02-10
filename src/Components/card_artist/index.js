@@ -25,9 +25,7 @@ class card_artist extends Component{
             </Link>
             
             <Link to="/artistas_pag1"> 
-                <button className='card_image'>
-                    <img src={this.state.image}></img>
-                </button>
+               <img className='card_image' src={this.state.image}></img>
             </Link>
             </div>
             </>

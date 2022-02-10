@@ -2,12 +2,13 @@
     margin: 0px 19.5%;
 }
 
-.coletivoBanner {
-    background-image: url(https://static.wixstatic.com/media/8b4bc0_c41ed87641a64271b488350d234e0c41~mv2.png/v1/fill/w_1291,h_284,al_c,q_90/8b4bc0_c41ed87641a64271b488350d234e0c41~mv2.webp);
+.artista_bannerpg2 {
+    background-image: url(https://i.postimg.cc/1txqNwhH/b-angelica-Dass.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     height: 303px;
     display: block;
+    margin-bottom: 20px;
 }
 
 .artista_main2_title{

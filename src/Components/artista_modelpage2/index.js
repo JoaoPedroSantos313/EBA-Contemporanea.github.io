@@ -15,7 +15,8 @@ class artista_modelpage2 extends Component{
                 galeriascomerciais: props.info.galeriascomerciais,
                 eventoscoletivo1: props.info.eventoscoletivo1,
                 eventoscoletivo2: props.info.eventoscoletivo2,
-                premiosresidencias: props.info.premiosresidencias
+                premiosresidencias: props.info.premiosresidencias,
+                producaoartistica:props.info.producaoartistica
         };
         
     }
@@ -23,15 +24,15 @@ class artista_modelpage2 extends Component{
     render(){
         return(
             <>     
-            <div className='artista_banner'>
+            <div className='artista_bannerpg2'>
             </div>
             
             <section className="artista_main2 bodyText">   
             
                 <div className="artista_main2_title buttonBack">   
-                    <h2>{this.state.title} Página 2</h2>
+                    <h2 className="mt-4">{this.state.title} Página 2</h2>
                     <Link to="/artistas_pag1">
-                        <button><img src="I_E_Arrow.png"/>Voltar</button>
+                        <button className="mt-4"><img src="I_E_Arrow.png"/>Voltar</button>
                     </Link>
                 </div>
 
@@ -57,10 +58,11 @@ class artista_modelpage2 extends Component{
 
                 <div className='OutrasInformacoes_main buttonBody'>
                 <div className='row mx-1 my-3'>
-                    <h1>Ourtas Informações</h1>
+                    <h1>Outras Informações</h1>
                     <button className='mx-3 my-1'><img src="I_B_Arrow.png"/></button>
                 </div>
-                    <div className='GC mx-1'>
+                   
+                <div className='GC mx-1'>
                         <h1>Galerias Comerciais</h1>
                         {this.state.galeriascomerciais.map(i =>
                             <div className="textblockarrange">
@@ -69,7 +71,7 @@ class artista_modelpage2 extends Component{
                             </div>
                         )}
                     </div>
-
+                    
                     <div className='EC mx-1'>
                         <h1>Eventos / Coletivos</h1>
                             <div className="textblockarrange">
@@ -88,6 +90,16 @@ class artista_modelpage2 extends Component{
                     <div className='PR mx-1'>
                         <h1>Prêmios e Residências</h1>
                         {this.state.premiosresidencias.map(i =>
+                            <div className="textblockarrange">
+                                <button onClick={() => { window.location.href = i.url }}><img src="link.png"/></button>
+                                <h3>{i.title}</h3>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className='PR mx-1'>
+                        <h1>Podução Artística</h1>
+                        {this.state.producaoartistica.map(i =>
                             <div className="textblockarrange">
                                 <button onClick={() => { window.location.href = i.url }}><img src="link.png"/></button>
                                 <h3>{i.title}</h3>

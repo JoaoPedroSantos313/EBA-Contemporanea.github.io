@@ -59,7 +59,11 @@ class artista_modelpage1 extends Component{
                     
                     <div className='flex AtalhodeNavegacao'> 
                         <button><img src="I_E_Arrow.png"/></button>
-                        <button><img src="I_Menu.png"/></button>
+                        <button> 
+                            <Link to="/artistas">
+                                <img src="I_Menu.png"/>
+                            </Link>
+                        </button>
                         <button><img src="I_D_Arrow.png"/></button>
                     </div> 
 
@@ -91,6 +95,7 @@ class artista_modelpage1 extends Component{
                 <div className='Biografia_main'>
                     <h1>Biografia</h1>
                     <p>{this.state.biografia}</p>
+                    <p className='mt-2'>Autor: Clarelis R.</p>
                 </div>
 
                 <div className='Carrossel_Artistas'>
