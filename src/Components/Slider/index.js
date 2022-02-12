@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ImgComp from './ImgComp';
 import './slider.css';
 
-function Slider({img_slider}){
-    
-
-    let sliderArr = [];
-
-    img_slider.map(img=>{
-        sliderArr.push(<ImgComp src={img}/>)
-    })
+const Slider = ({ img_slider }) => {
+    const sliderArr = img_slider?.map(i => <ImgComp src={i.img}/>)
 
     const [x, setX] = useState(0)
    
@@ -20,20 +14,19 @@ function Slider({img_slider}){
         x=== -100 * (sliderArr.length -1) ? setX(0) : setX(x - 100);
     };
 
-    return(
+    return (
         <div className="slider">
-            
-            {sliderArr.map((item,index)=>{
+            {sliderArr?.map((item,index)=>{
                 return(
                     <div key={index} className="slide" style={{transform: `translateX(${x}%)`}}>
                         {item}
 
                         <button id="goLeft" onClick={goLeft}>
-                            <span class="material-icons">keyboard_arrow_left</span>
+                            <span className="material-icons">keyboard_arrow_left</span>
                         </button>
 
                         <button id="goRight" onClick={goRight}>
-                            <span class="material-icons">keyboard_arrow_right</span>
+                            <span className="material-icons">keyboard_arrow_right</span>
                         </button>
                     </div>
                 );

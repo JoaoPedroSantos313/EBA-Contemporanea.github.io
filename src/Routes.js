@@ -1,11 +1,11 @@
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import CidadeUniversitaria from './Pages/CidadeUniversitaria';
 import Header from './Components/Header.js';
 import Footer from './Components/footer';
 import Pesquisadores from './Pages/Pesquisadores';
 import Publicacoes from './Pages/Publicacoes';
 import Artistas from './Pages/Artistas';
-import Artista_pag1 from './Pages/Artistas/Artista_pag1';
+import { Artista_pag1 } from './Pages/Artistas/Artista_pag1';
 import Artista_pag2 from './Pages/Artistas/Artista_pag2';
 import Projeto from './Pages/Projeto';
 import Contato from './Pages/Contato';
@@ -14,8 +14,7 @@ import EBA from './Pages/EBA';
 import AtrocidadesMaravilhosas from './Pages/Coletivos/AtrocidadesMaravilhosas';
 
 const Routes = () => {
-    return(
-        
+    return (
         <BrowserRouter>
             <Header/>
 
@@ -25,11 +24,11 @@ const Routes = () => {
                 <Route path="/projeto" component={Projeto} />
                 <Route path="/contato" component={Contato} />
                 <Route path="/artistas" component={Artistas} />
-                <Route path="/artistas_pag1" component={Artista_pag1} />
-                <Route path="/artistas_pag2" component={Artista_pag2} />
+                <Route path="/artistas_pag1/:id" component={Artista_pag1} />
+                <Route path="/artistas_pag2/:id" component={Artista_pag2} />
                 <Route path="/publicacoes" component={Publicacoes} />
                 <Route path="/pesquisadores" component={Pesquisadores} />
-                <Route path="/cidade universitaria" component={CidadeUniversitaria} />
+                <Route path="/cidade_universitaria" component={CidadeUniversitaria} />
                 <Route path="/AtrocidadesMaravilhosas" component={AtrocidadesMaravilhosas} />
             </Switch>
 

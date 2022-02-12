@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
 import './Projeto.css';
 
 export default function Projeto(){

@@ -1,31 +1,24 @@
-import React, {Component} from 'react';
+import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './footer.css';
 
 export default class Footer extends Component{
-    
-
-    render(){
-        return(
+    render() {
+        return (
             <section className="footer_container">
-                
                 <div className="faixa">
-                   
                     <Link to="/">
                         <img className='logo_footer' src='logo_h_white.png'></img>
                         <img className='logo2_footer' src='logo_h_completo_white.png'></img>
                     </Link>
                 </div>
-
                 <div className="footer_main">
                     <a href="#">
                         <img id='ufrj' src='ufrj.png'></img>
                     </a>
-
                     <a href="#">
                         <img id='eba' src='eba.png'></img>
                     </a>
-
                     <nav>
                         <ul id="menu_footer">
                             <li>
@@ -42,9 +35,7 @@ export default class Footer extends Component{
                             </li>
                         </ul>
                     </nav>
-                    
                 </div>
-
                 <div className='hr_main'>
                     <hr/>
                     <p>© 2020 por EBAContemporânea de 1975 à atualidade.</p>
@@ -52,4 +43,4 @@ export default class Footer extends Component{
             </section>
         )
     }
-};
+}

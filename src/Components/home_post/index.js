@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Ft from '../../helpers/format_text';
 
 class  Home_post extends Component{

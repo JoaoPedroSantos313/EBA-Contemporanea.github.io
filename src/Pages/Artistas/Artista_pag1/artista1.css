@@ -6,7 +6,7 @@
     font: inherit;
   }*/
 
-hr{
+  hr{
     display: flex;
     justify-content: center;
 
@@ -31,19 +31,12 @@ hr{
     margin: 2%;
 }
 
-.P_foto{
-    display: flex;
-}
-
-.P_foto img{
-    object-fit: contain;
-    display: flex;
-
-
+.P_foto img {
     border-style: none;
     background-color: white;
     box-shadow: 0px -2px 2px 0px rgba(171, 170, 170, 0.34);
     border-radius: 5%;
+    max-width: 200px;
 }
 
 .artista_main h1{
@@ -122,7 +115,7 @@ hr{
 
  .Links_main button:hover{
      width: 8%;
-     background-image: url();
+     /* background-image: url(); */
  }
 
 .Links_main h3{

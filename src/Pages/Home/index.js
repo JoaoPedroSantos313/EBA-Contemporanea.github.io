@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import { Component } from 'react';
 import Home_post from '../../Components/home_post';
 import Slider from '../../Components/Slider';
 import { Link } from 'react-router-dom';
@@ -7,14 +7,10 @@ import img2 from '../../Components/Slider/Imgs/img2.jpg'
 import img3 from '../../Components/Slider/Imgs/img3.jpg'
 import './Home.css';
 
-export default class Home extends Component{
-
-    render(){
-        
-        return(
+export default class Home extends Component {
+    render() {
+        return (
             <section className="home_main">
-               
-
                 <img  id='titulo'src='logo.png'></img>
 
                 <section className='sabermais'>
@@ -37,7 +33,7 @@ export default class Home extends Component{
             
                 <section className='sabermais'>
 
-                    <Link to="/cidade universitaria"> 
+                    <Link to="/cidade_universitaria"> 
                         <button className='botao_cidadeu'>
                             saiba mais
                         </button>
@@ -48,8 +44,7 @@ export default class Home extends Component{
                                    text = "Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo e a mexeu para fazer um livro de amostras do tipo. "/>
                     </div>
                 </section>
-
             </section>
         )
     }
-};
+}

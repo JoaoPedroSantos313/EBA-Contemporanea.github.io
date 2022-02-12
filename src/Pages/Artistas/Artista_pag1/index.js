@@ -1,33 +1,88 @@
-import { Link } from 'react-router-dom';
-import Artista_modelpage1 from '../../../Components/artista_modelpage1'
+import { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { getArtista } from '../../../services/artistaService';
+import Slider from '../../../Components/Slider/index';
+import defaultProfile from '../../../utils/default_profile.jpeg';
+import './artista1.css';
 
+export function Artista_pag1 () {
+    const { id } = useParams();
+    const [info, setInfo] = useState({});
 
-export default function Artista_pag1(){
-   
-    const informacoes={
-        banner:'',
-        foto:'https://static.wixstatic.com/media/8b4bc0_9ffd147fc9c1490088c89002622734a0~mv2.png/v1/fill/w_241,h_325,al_c,q_85,usm_0.66_1.00_0.01/imagem.webp',
-        artistname:"Alexandre Vogler",
-        local:"Nasceu no Rio de Janeiro",
-        ondevive:"Vive e trabalha no Rio de Janeiro",
-        graduacao:['Graduado em Pintura (1992-1996)','Mestre em Artes Visuais (1998-2000)','Doutor em Artes Visuais (2014-2019)'],
-        atalhonavegacao: "Atalho de Navegação",
-        profissao:"Professor do Instituto de Artes da Uerj (desde 2002)",
-        detalhestitulo: "Detalhes Acadêmicos",
-        curriculolattes:"Currículo Lattes",
-        dissertacao:"Dissertações",
-        tese:"Tese",
-        biografia:"Alexandre Volger é formado em Pintura pela EBA-UFRJ (1996), além de ser mestre (2000) e doutor (2019) em Linguagens Visuais pelo PPGAV-UFRJ. Na década de 1990 fez parte do Atelier 491 em Santa Teresa. Como parte de seu projeto de mestrado, que investiga a percepção da imagem pelo espectador em movimento, idealizou a ação coletiva Atrocidades Maravilhosas no ano 2000. Entre 2001 e 2002 coproduziu o evento Zona Franca, na Fundição Progresso. Entre outros coletivos que integrou, estão o Rradial e o Tupinambá Lambido (em atividade). Como parte de sua pesquisa de doutorado (Monumento-contra-monumento), desenvolveu em um espaço ocioso do galpão do PPGAV-UFRJ o Horto que voa, uma agrofloresta com 50 espécies plantadas, que também abrange o projeto MACAs: esculturas/mobiliários que agenciam a fruição de elementos naturais naquele ambiente. Vogler desenvolve desde 2000 trabalhos em contexto público e sistemas de comunicação. Atualmente é professor no Instituto de Artes da Uerj. (TF)",
-        galeria:['https://static.wixstatic.com/media/8b4bc0_66bdf6e9fd124f7ba3bfe41d3dcf60cf~mv2.jpg', 'https://static.wixstatic.com/media/8b4bc0_82ccb9875e4249df822792886c3454e5~mv2.jpg'],
-        youtube:"yt.png",
-        site:"site.png"
-    }
+    useEffect(async() => {
+        await getArtista(id).then(res => {
+            setInfo(res);
+            console.log(res);
+        });
+    }, []);
 
-    return(
-        <>
-            <section>
-                <Artista_modelpage1 info={informacoes}/>
-            </section>
+    return (
+        <> 
+        <div className='artista_banner' />
+        
+        <section className="artista_main">      
+            <div className='row artista_body1'>
+                <div className='col-sm P_foto'> 
+                    <img src={info?.fotoPerfil || defaultProfile}></img>
+                </div>
+
+                <div className='col-sm Info_main'> 
+                    <h2>{info?.nome}</h2>
+                    <h3>{info?.localNascimento}</h3>
+                    <h3>{info?.localAtual}</h3>
+                    {info?.estudos?.map(i =>
+                        <h3>{`${i.tipo} em ${i.area} de ${i.anoInicio} a ${i.anoFim}`}</h3>
+                    )}
+                    <h3>{info?.profissao}</h3>
+                </div>
+
+                <div className='col-sm Links_main'> 
+                
+                {/* <h2>{state.atalhonavegacao}</h2> */}
+                
+                <div className='flex AtalhodeNavegacao'> 
+                    <button><img src="I_E_Arrow.png"/></button>
+                    <button><img src="I_Menu.png"/></button>
+                    <button><img src="I_D_Arrow.png"/></button>
+                </div> 
+
+                <hr/>
+                    {/* <h2>{state.detalhestitulo}</h2> */}
+                    {info?.links?.map(i => (
+                        <div className='flex'> 
+                            <a href={i.url}><img src="link.png"/></a>
+                            <h3 className='mx-2'>{i.nome}</h3>
+                        </div> 
+                    ))}
+                {/* <div className='flex SocialMedia'> 
+                        <button><img src={state.youtube}/></button>
+                        <button><img src={state.site}/></button>
+                    </div> */}
+                </div>        
+            </div>   
+
+            <div className='Biografia_main'>
+                <h1>Biografia</h1>
+                <p>{info?.biografia}</p>
+            </div>
+
+            <div className='Carrossel_Artistas'>
+                <h1>Seleção de Obras</h1>
+                <Slider img_slider={info?.obras}/>
+            </div>
+            
+            <div className='row buttonNext'>
+                <div className='col-sm'>
+                    <h1>Página 1/2</h1>
+                </div>
+                
+                <div className='col-sm'>
+                    <Link to={`/artistas_pag2/${id}`}>
+                        Próxima página do Arquivo <img src="I_D_Arrow.png"/>
+                    </Link>
+                </div>
+            </div>
+        </section>
         </>
     ) 
 };
