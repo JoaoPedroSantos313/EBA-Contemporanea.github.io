@@ -24,21 +24,27 @@ export default function Artistas(){
             <section className='artistas_main'>
             <div className="row">
                <div className='col-sm'> 
-                    <Card_artist icon={'icon_pasta.png'}
-                                 title= "Agrippina R. Manhattan"
-                                 image={'AGRIPPINA_R_MANHATTAN_PIC.png'}
+                    <Card_artist 
+                        icon={'icon_pasta.png'}
+                        title= "Agrippina R. Manhattan"
+                        image={'AGRIPPINA_R_MANHATTAN_PIC.png'}
+                        id={1}
                     />
                 </div> 
                 <div className='col-sm'>
-                    <Card_artist icon={'icon_pasta.png'}
-                                 title= "Alexandre Vogler"
-                                 image={'ALEXANDRE_VOGLER_PIC.png'}
+                    <Card_artist 
+                        icon={'icon_pasta.png'}
+                        title= "Alexandre Vogler"
+                        image={'ALEXANDRE_VOGLER_PIC.png'}
+                        id={1}
                     />
                 </div>   
                 <div className='col-sm'>
-                    <Card_artist icon={'icon_pasta.png'}
-                                 title= "Andréa Hygino"
-                                 image={'ANDREA_HYGNO_PIC.png'}
+                    <Card_artist 
+                        icon={'icon_pasta.png'}
+                        title= "Andréa Hygino"
+                        image={'ANDREA_HYGNO_PIC.png'}
+                        id={1}
                     />
                 </div> 
             </div>    

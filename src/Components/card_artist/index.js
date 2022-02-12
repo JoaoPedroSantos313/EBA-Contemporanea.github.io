@@ -9,7 +9,8 @@ class card_artist extends Component{
             this.state = {
                 icon: props.icon,
                 title: props.title,
-                image: props.image
+                image: props.image,
+                id: props.id
         };
     }
   
@@ -17,7 +18,7 @@ class card_artist extends Component{
         return(
             <>
             <div className='card_label'>
-            <Link to="/artistas_pag1"> 
+            <Link to={`/artistas_pag1/${this.state.id}`}> 
                 <button className='card_title'>
                     <img src={this.state.icon}></img> 
                     {this.state.title}
