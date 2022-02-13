@@ -5,8 +5,8 @@ function Header() {
     return (
      <header className="container_">
         <Link to="/" id="Logotipo">
-            <img id='logo' src='logo_h.png' />
-            <img id='logo2' src='logo_h_completo.png' />
+            <img id='logo' src='/logo_h.png' />
+            <img id='logo2' src='/logo_h_completo.png' />
         </Link>
         <nav>
             <ul id="menu_header">
@@ -26,10 +26,10 @@ function Header() {
             </ul>
         </nav>
         <a href="#">
-            <img id='fb' src='fb.png' />
+            <img id='fb' src='/fb.png' />
         </a>
         <a href="#">
-            <img id='insta' src='instagram.png' />
+            <img id='insta' src='/instagram.png' />
         </a>
         <hr id='faixa' />
     </header>

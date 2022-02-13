@@ -1,83 +1,119 @@
-import { Link } from 'react-router-dom';
-import Artista_modelpage2 from '../../../Components/artista_modelpage2'
-
-
+import { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { getArtista } from '../../../services/artistaService';
+import './artista_pag2.css'
 
 export default function Artista_pag2(){
-   
-    const informacoes={
-        title:"Vogler",
-        outrostextos: [
-            {
-              title: "MORAES, Alexandre Vogler de. Atrocidades maravilhosas: ação independente dearte no contexto público. Arte & Ensaios, v. 8, pp. 112-117, 2001.",
-              url: 'https://google.com',
-            },
-            {
-            title: "MORAES, Alexandre Vogler de. Fé em Deus / Fé em Diabo. Concinnitas (UERJ), v. 1, n. 10, pp. 133-142, 2007.",
-              url: 'https://facebook.com',
-            },
-            {
-              title: "MORAES, Alexandre Vogler de. Comentários sobre a Constituição de Acervos Públicos no Brasil e o Caso MAR. Concinnitas (Online) (Rio de Janeiro), v. 1, n. 28, pp. 61-75, 2016.",
-              url: 'https://twitter.com',
-            }
-          ],
-        entrevistasdestaque: [
-            {
-               title: "Alexandre Vogler (2009)",
-               url: "https://www.youtube.com/watch?v=yaHy8ru4FS8",
-            },
-             
-            {
-                title: "Artistas indicados PIPA 2011: Alexandre Vogler",
-                url: "https://www.youtube.com/watch?v=7TkrZ9Nx2CY&feature=emb_title",
-             },
+    const { id } = useParams();
+    const [info, setInfo] = useState({});
 
-             {
-                title: "PIPA 2014 - Alexandre Vogler",
-                url: "https://www.youtube.com/watch?v=HhJpoLWu7aI&feature=emb_title",
-             },
-            
-             {
-                title: "PIPA 2016 | artistas indicados | Alexandre Vogler",
-                url: "https://www.youtube.com/watch?v=yab5_2V7h-0&feature=emb_title",
-             },
-
-             {
-                title: "Paulo Tiefenthaler e Alexandre Vogler participam de videochat na TV O TEMPO",
-                url: "https://www.otempo.com.br/tempo-tv/paulo-tiefenthaler-e-alexandre-vogler-%20-participam-de-videochat-na-tv-o-tempo-3.18275",
-             },
-
-             {
-                title: "Entrevista feita a Alexandre Vogler para o painel “Ações Independentes/Novas iniciativas nas artes visuais” por Gloria Ferreira",
-                url: "http://www.alexandrevogler.com.br/texto/entrevista-feita-a-alexandre-vogler-%20-para-o-painel-acoes-independentesnovas-iniciativas-nas-artes-visuais-por-gloria-%20-ferreira/",
-             },
-          ],
-        galeriascomerciais: [
-            {
-                title:"Anita Schwartz",
-                url:"https://www.anitaschwartz.com.br/artista/alexandre-vogler/",
-            }
-        ],
-        eventoscoletivo1: "Atrocidades Maravilhosas",
-        eventoscoletivo2: "Imaginário Periférico",    
-        premiosresidencias: [
-            {
-                title:"6° Prêmio Flaboyant, Salão Nacional de Arte de Goiás",
-                url:"",
-            }, 
-
-            {
-                title:"Indicado ao PIPA em 2011, 2012, 2014 e 2016",
-                url:"https://www.premiopipa.com/pag/artistas/alexandre-vogler/",
-            },
-        ]
+    const getArtist = async() => {
+        await getArtista(id).then(res => {
+            setInfo(res);
+            console.log(res);
+        });
     }
 
+    useEffect(() => {
+        getArtist();
+    }, []);
+
+    useEffect(() => {
+        getArtist();
+    }, [id]);
+
     return(
-        <>
-            <section>
-                <Artista_modelpage2 info={informacoes}/>
-            </section>
+        <>     
+        <div className='artista_banner'>
+        </div>
+        
+        <section className="artista_main2 bodyText">   
+        
+            <div className="artista_main2_title buttonBack">   
+                <h2>{info?.title} Página 2</h2>
+                <Link to={`/artistas_pag1/${id}`}>
+                    <button><img src="/I_E_Arrow.png"/>Voltar</button>
+                </Link>
+            </div>
+
+            {info?.outrosTextos?.length > 0 
+            && (<div className='OutrosTextos_main buttonBody'>
+                <h1>Outros Textos</h1>
+                {info?.outrostextos?.map(i =>
+                    <div key={i.id} className="textblockarrange">
+                        <button onClick={() => { window.location.href = i.url }}><img src="/link.png"/></button>
+                        <h3>{i.title}</h3>
+                    </div>
+                )}
+            </div>)}
+
+            <div className='EntrevistasDestaque_main buttonBody'>
+                <h1>Entrevistas em Destaque</h1>                    
+                {info?.entrevistas?.map(i =>
+                    <div key={i.id} className="textblockarrange">
+                        <a href={i.url} target="_blank">
+                            <img src="/link.png"/>
+                        </a>
+                        <h3>{i.nome}</h3>
+                    </div>
+                )}
+            </div>
+
+            <div className='Outrasinformacoes_main buttonBody'>
+                <div className='row mx-1 my-3'>
+                    <h1>Outras informações</h1>
+                    <button className='mx-3 my-1'><img src="/I_B_Arrow.png"/></button>
+                </div>
+                {info?.galeriasComerciais?.length > 0 && (<div className='GC mx-1'>
+                    <h1>Galerias Comerciais</h1>
+                    {info?.galeriasComerciais?.map(i =>
+                        <div key={i.id} className="textblockarrange">
+                        <a href={i.url} target="_blank">
+                            <img src="/link.png"/>
+                        </a>
+                        <h3>{i.nome}</h3>
+                    </div>
+                    )}
+                </div>)}
+
+                {info?.eventos?.length> 0 && 
+                (<div className='EC mx-1'>
+                    <h1>Eventos / Coletivos</h1>
+                    {info?.eventos?.map(i => (
+                        <div key={i.id} className="textblockarrange">
+                        <Link to="/AtrocidadesMaravilhosas">
+                            <button><img src="/link.png"/></button>
+                        </Link>
+                            <h3>{i.nome}</h3>
+                        </div>
+                    ))}
+                </div>)}
+
+                {info?.premios?.length > 0 && 
+                (<div className='PR mx-1'>
+                    <h1>Prêmios e Residências</h1>
+                    {info?.premios?.map(i =>
+                        <div key={i.id} className="textblockarrange">
+                            <a href={i.url} target="_blank">
+                                <img src="/link.png"/>
+                            </a>
+                            <h3>{i.nome}</h3>
+                        </div>
+                    )}
+                </div>)}
+            </div>
+            
+            <div className="row buttonNext2">
+                <div className='col-sm'>
+                    <h1>Página 2/2</h1>
+                </div>
+                <div className='col-sm'>
+                    <Link to={`/artistas_pag1/${id}`}>
+                        <button> <img src="/I_E_Arrow.png"/> Voltar para Página Anterior</button>
+                    </Link>
+                </div>
+            </div>
+        </section>
         </>
     ) 
 };

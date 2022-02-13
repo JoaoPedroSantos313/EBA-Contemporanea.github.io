@@ -8,16 +8,16 @@ export default class Footer extends Component{
             <section className="footer_container">
                 <div className="faixa">
                     <Link to="/">
-                        <img className='logo_footer' src='logo_h_white.png'></img>
-                        <img className='logo2_footer' src='logo_h_completo_white.png'></img>
+                        <img className='logo_footer' src='/logo_h_white.png'></img>
+                        <img className='logo2_footer' src='/logo_h_completo_white.png'></img>
                     </Link>
                 </div>
                 <div className="footer_main">
                     <a href="#">
-                        <img id='ufrj' src='ufrj.png'></img>
+                        <img id='ufrj' src='/ufrj.png'></img>
                     </a>
                     <a href="#">
-                        <img id='eba' src='eba.png'></img>
+                        <img id='eba' src='/eba.png'></img>
                     </a>
                     <nav>
                         <ul id="menu_footer">

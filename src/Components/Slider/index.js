@@ -3,7 +3,7 @@ import ImgComp from './ImgComp';
 import './slider.css';
 
 const Slider = ({ img_slider }) => {
-    const sliderArr = img_slider?.map(i => <ImgComp src={i.img}/>)
+    const sliderArr = img_slider?.map(i => <ImgComp key={i.id} src={i.img}/>)
 
     const [x, setX] = useState(0)
    

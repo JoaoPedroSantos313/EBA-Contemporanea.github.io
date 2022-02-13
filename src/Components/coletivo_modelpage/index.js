@@ -39,7 +39,7 @@ class coletivo_modelpage extends Component{
                     <h2>Participantes</h2>
 
                     <Link to="/artistas_pag1">
-                        <button><img src="I_E_Arrow.png"/>Voltar</button>
+                        <button><img src="/I_E_Arrow.png"/>Voltar</button>
                     </Link>
                 </div>
 
@@ -101,7 +101,7 @@ class coletivo_modelpage extends Component{
                         <div className='col-sm'>
                             {this.state.linksVideosG1.map(i =>
                             <div className='Espaco'>
-                            <button onClick={() => { window.location.href = i.url }}><img src="link.png"/></button>
+                            <button onClick={() => { window.location.href = i.url }}><img src="/link.png"/></button>
                             <h3>{i.title}</h3>
                             </div>
                         )}
@@ -110,7 +110,7 @@ class coletivo_modelpage extends Component{
                     <div className='col-sm'>
                         {this.state.linksVideosG2.map(i =>
                             <div className='Espaco'>
-                            <button onClick={() => { window.location.href = i.url }}><img src="link.png"/></button>
+                            <button onClick={() => { window.location.href = i.url }}><img src="/link.png"/></button>
                             <h3>{i.title}</h3>
                             </div>
                         )}
@@ -119,7 +119,7 @@ class coletivo_modelpage extends Component{
                     <div className='col-sm'>
                         {this.state.linksVideosG3.map(i =>
                             <div className='Espaco'>
-                            <button onClick={() => { window.location.href = i.url }}><img src="link.png"/></button>
+                            <button onClick={() => { window.location.href = i.url }}><img src="/link.png"/></button>
                             <h3>{i.title}</h3>
                             </div>
                         )}
@@ -134,7 +134,7 @@ class coletivo_modelpage extends Component{
                     <div className='LimitWidth'>
                         {this.state.linksTextosG1.map(i =>
                             <div className='Espaco'>
-                            <button onClick={() => { window.location.href = i.url }}><img src="link.png"/></button>
+                            <button onClick={() => { window.location.href = i.url }}><img src="/link.png"/></button>
                             <h3>{i.title}</h3>
                             </div>
                         )}
@@ -143,7 +143,7 @@ class coletivo_modelpage extends Component{
                     <div className='col-sm'>
                         {this.state.linksTextosG2.map(i =>
                             <div className='EspacoPersonalizado'>
-                            <button onClick={() => { window.location.href = i.url }}><img src="link.png"/></button>
+                            <button onClick={() => { window.location.href = i.url }}><img src="/link.png"/></button>
                             <h3>{i.title}</h3>
                             </div>
                         )}

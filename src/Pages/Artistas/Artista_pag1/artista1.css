@@ -1,12 +1,4 @@
-/** {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-  }*/
-
-  hr{
+hr {
     display: flex;
     justify-content: center;
 
@@ -15,19 +7,17 @@
     background-color: black;
 }
 
-.artista_banner {
-    background-image: url(https://static.wixstatic.com/media/8b4bc0_66bdf6e9fd124f7ba3bfe41d3dcf60cf~mv2.jpg/v1/fill/w_1583,h_320,al_c,q_85,usm_0.66_1.00_0.01/8b4bc0_66bdf6e9fd124f7ba3bfe41d3dcf60cf~mv2.webp);
-    background-repeat: no-repeat;
+.artista_banner img {
     background-size: 100%;
     height: 303px;
     display: block;
 }
 
-.artista_main{
+.artista_main {
     margin: 0px 19.5%;
 }
 
-.artista_body1{
+.artista_body1 {
     margin: 2%;
 }
 
@@ -39,7 +29,7 @@
     max-width: 200px;
 }
 
-.artista_main h1{
+.artista_main h1 {
     justify-content: right;
     
     font-family: 'lucida sans unicode';
@@ -52,7 +42,7 @@
     margin-bottom: 0.5%;
 }
 
-.Info_main h2{
+.Info_main h2 {
     justify-content: right;
     
     font-family: 'lucida sans unicode';
@@ -65,7 +55,7 @@
     margin-bottom: 10%;
 }
 
-.Info_main h3{
+.Info_main h3 {
     justify-content: right;
     
     font-family: 'lucida sans unicode';
@@ -77,12 +67,12 @@
     margin-bottom: 10%;
 }
 
-.Links_main{
+.Links_main {
     display: flex;
     flex-direction: column;
 }
 
-.flex{
+.flex {
     display: flex;
     flex-direction: row;
     
@@ -90,7 +80,11 @@
     margin-left: 10%;
 }
 
-.Links_main button{
+.linkImg {
+    max-width: 20px;
+}
+
+.Links_main button {
    display: flex;
    flex-direction: row;
    
@@ -108,17 +102,16 @@
    cursor: pointer;
 }
 
-.Links_main button img{
+.Links_main button img {
     display: flex;
     width: 100%;
  }
 
- .Links_main button:hover{
+ .Links_main button:hover {
      width: 8%;
-     /* background-image: url(); */
  }
 
-.Links_main h3{
+.Links_main h3 {
     margin: 0%;
 
     font-family: 'lucida sans unicode';
@@ -126,7 +119,7 @@
     color: #333333;
  }
 
-.Links_main h2{
+.Links_main h2 {
     display: flex;
     justify-content: center;
 
@@ -138,13 +131,13 @@
     color: #333333;
  }
 
- .SocialMedia{
+ .SocialMedia {
     margin-left: 63%;
     width: 100%;
     height: 100%;
  }
 
- .SocialMedia button{
+ .SocialMedia button {
     width: 9%;
     margin-left: 2%;
     margin-right: 6%;
@@ -154,11 +147,11 @@
     cursor: pointer;
   }
 
-  .SocialMedia button:hover{
+  .SocialMedia button:hover {
     width: 10%;
   }
 
-.AtalhodeNavegacao{
+.AtalhodeNavegacao {
     display: flex;
     justify-content: space-around;
     
@@ -169,7 +162,7 @@
     width: 100%;
 }
 
-.AtalhodeNavegacao button{
+.AtalhodeNavegacao button {
     width: 8%;
 
     transition: 0.5s;
@@ -177,19 +170,19 @@
     cursor: pointer;
 }
 
-.AtalhodeNavegacao button:hover{
+.AtalhodeNavegacao button:hover {
     width: 9%;
 }
 
-.Biografia_main{
+.Biografia_main {
     margin-top: 10%;
 }
 
-.Biografia_main h1{
+.Biografia_main h1 {
     margin-bottom: 2%;
 }
 
-.Biografia_main p{
+.Biografia_main p {
     font-kerning: normal;
     font-size: 20px ;
    
@@ -202,15 +195,15 @@
     line-height: 31px;
 }
 
-.Carrossel_Artistas{
+.Carrossel_Artistas {
     margin-top: 10%;
 }
 
-.buttonNext{
+.buttonNext {
     margin-top: 4%;
 }
 
-.buttonNext button{   
+.buttonNext button {   
    width: 60%;
 
    font-family: 'lucida sans unicode';
@@ -225,10 +218,10 @@
    background: none;
 }
 
-.buttonNext img{
+.buttonNext img {
     width: 5%;
 }
 
-.buttonNext h1{
+.buttonNext h1 {
     font-size: 16px;
 }

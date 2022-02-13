@@ -33,8 +33,8 @@ class pesquisadores extends Component{
                             <div>
                                 <h1 className="mx-3">{i.name}</h1>
                                 <p className="mx-3">{i.about}</p> 
-                                <button className="Pesquisadores_buttonBody mx-3" onClick={() => { window.location.href = i.url }}><img src="cl.png"/></button>
-                                <button className="Pesquisadores_buttonBody mx-3" onClick={() => { window.location.href = i.url2 }}><img src="A.png"/></button> 
+                                <button className="Pesquisadores_buttonBody mx-3" onClick={() => { window.location.href = i.url }}><img src="/cl.png"/></button>
+                                <button className="Pesquisadores_buttonBody mx-3" onClick={() => { window.location.href = i.url2 }}><img src="/A.png"/></button> 
                             </div>
                         </div>
                     </>

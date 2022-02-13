@@ -16,22 +16,17 @@ class card_artist extends Component{
   
     render(){
         return(
-            <>
-            <div className='card_label'>
-            <Link to={`/artistas_pag1/${this.state.id}`}> 
-                <button className='card_title'>
-                    <img src={this.state.icon}></img> 
-                    {this.state.title}
-                </button>
+            <Link to={`/artistas_pag1/${this.state.id}`}>
+                <div className='card_label'>
+                    <button className='card_title'>
+                        <img src={this.state.icon}></img> 
+                        {this.state.title}
+                    </button>
+                    <button className='card_image'>
+                        <img src={this.state.image}></img>
+                    </button>
+                </div>
             </Link>
-            
-            <Link to="/artistas_pag1"> 
-                <button className='card_image'>
-                    <img src={this.state.image}></img>
-                </button>
-            </Link>
-            </div>
-            </>
         )
     }
     
