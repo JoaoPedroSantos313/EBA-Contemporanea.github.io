@@ -11,7 +11,7 @@ export default class Home extends Component {
     render() {
         return (
             <section className="home_main">
-                <img  id='titulo'src='/logo.png'></img>
+                <img id='titulo' src='/logo.png'></img>
 
                 <section className='sabermais'>
                     <div className='texto'>
@@ -28,7 +28,11 @@ export default class Home extends Component {
                 </section>
 
                 <section className='sabermais'>
-                    <Slider img_slider={[img1,img2,img3]}/>
+                    <Slider img_slider={[
+                        { img: img1, id: 1},
+                        { img: img2, id: 2},
+                        { img: img3, id: 3}
+                    ]}/>
                 </section>
             
                 <section className='sabermais'>
