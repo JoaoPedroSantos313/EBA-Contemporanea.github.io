@@ -1,6 +1,9 @@
 .card_label{
     display: flex;
     flex-direction: column;
+
+    width: 228px;
+    height: 181px;
 }
 
 .card_title{
@@ -9,9 +12,6 @@
 
     font-size: 18px;
     font-weight: bold;
-
-    width: 86%;
-    height: 15%;
     
     padding: 1%;
 
@@ -25,29 +25,26 @@
     cursor: pointer;
 }
 
-.card_title:hover{
+.card_title:hover {
     transform: scaleX(1.02);
     color: #D60000;
     text-decoration: none;
 }
 
-.card_title a:hover{
+.card_title a:hover {
     text-decoration: none;
 }
 
-.card_title img{
+.card_title img {
     width: 15%;
     margin-right: 8%;
 }
 
-.card_image{
+.card_image {
     margin-left: 20%;
 
     display: flex;
 
-    width: 65%;
-    height: 80%;
-   
     padding: 1%;
 
     border-style: none;

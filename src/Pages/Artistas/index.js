@@ -9,7 +9,7 @@ export default function Artistas(){
                       "I","J","K","L","M","N","O","P",
                       "R","S","T","U","V","W","X","Y","Z"];
 
-    function renderAbc(){
+    function renderAbc() {
         return abc_array.map(items => {
         return <Abc_filter  letter={items}/> 
         })
@@ -26,15 +26,15 @@ export default function Artistas(){
                <div className='col-sm'> 
                     <Card_artist 
                         icon={'icon_pasta.png'}
-                        title= "Agrippina R. Manhattan"
+                        title="Agrippina R. Manhattan"
                         image={'AGRIPPINA_R_MANHATTAN_PIC.png'}
-                        id={1}
+                        id={4}
                     />
                 </div> 
                 <div className='col-sm'>
                     <Card_artist 
                         icon={'icon_pasta.png'}
-                        title= "Alexandre Vogler"
+                        title="Alexandre Vogler"
                         image={'ALEXANDRE_VOGLER_PIC.png'}
                         id={1}
                     />
@@ -42,76 +42,31 @@ export default function Artistas(){
                 <div className='col-sm'>
                     <Card_artist 
                         icon={'icon_pasta.png'}
-                        title= "Andréa Hygino"
+                        title="Andréa Hygino"
                         image={'ANDREA_HYGNO_PIC.png'}
-                        id={1}
+                        id={2}
                     />
                 </div> 
-            </div>    
+            </div>         
 
             <div className="row">
                <div className='col-sm'> 
-                    <Card_artist icon={'icon_pasta.png'}
-                                 title= "Antonio Gonzaga Amador"
-                                 image={'ANTONIO_AMADOR_PIC.png'}
+                    <Card_artist 
+                        icon={'icon_pasta.png'}
+                        title="Ana Holck"
+                        image={'MERY_HORTA_PIC.png'}
+                        id={3}
                     />
                 </div> 
                 <div className='col-sm'>
-                    <Card_artist icon={'icon_pasta.png'}
-                                 title= "Beatriz Pimenta"
-                                 image={'BEATRIZ_PIMENTA_PIC.png'}
+                    <Card_artist 
+                        icon={'icon_pasta.png'}
+                        title= "Angélica Dass"
+                        image={'PANMELA_CASTRO_PIC.png'}
+                        id={5}
                     />
-                </div>   
-                <div className='col-sm'>
-                    <Card_artist icon={'icon_pasta.png'}
-                                 title= "Camila Braga"
-                                 image={'CAMILA_BRAGA_PIC.png'}
-                    />
-                </div> 
-            </div>  
-
-            <div className="row">
-               <div className='col-sm'> 
-                    <Card_artist icon={'icon_pasta.png'}
-                                 title= "Carlos Contente"
-                                 image={'CARLOS_CONTENTE_PIC.png'}
-                    />
-                </div> 
-                <div className='col-sm'>
-                    <Card_artist icon={'icon_pasta.png'}
-                                 title= "Guga Ferraz"
-                                 image={'GUGA_FERRAZ_PIC.png'}
-                    />
-                </div>   
-                <div className='col-sm'>
-                    <Card_artist icon={'icon_pasta.png'}
-                                 title= "Marcos Cardoso"
-                                 image={'MARCOS_CARDOSO_PIC.png'}
-                    />
-                </div> 
-                
-            </div>     
-
-            <div className="row">
-               <div className='col-sm'> 
-                    <Card_artist icon={'icon_pasta.png'}
-                                 title= "Mery Horta"
-                                 image={'MERY_HORTA_PIC.png'}
-                    />
-                </div> 
-                <div className='col-sm'>
-                    <Card_artist icon={'icon_pasta.png'}
-                                 title= "Panmela Castro"
-                                 image={'PANMELA_CASTRO_PIC.png'}
-                    />
-                </div>   
-                <div className='col-sm'>
-                    <Card_artist icon={'icon_pasta.png'}
-                                 title= "Paula Scamparini"
-                                 image={'PAULA_SCAMPARINI_PIC.png'}
-                    />
-                </div> 
-                
+                </div>    
+                <div className='col-sm'/>            
             </div>   
 
             
