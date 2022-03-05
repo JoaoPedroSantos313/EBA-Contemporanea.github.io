@@ -1,26 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { getArtista } from '../../../services/artistaService';
 import './artista_pag2.css'
 
-export default function Artista_pag2(){
+export default function Artista_pag2(props) {
+    const { artista } = props.location.state;
     const { id } = useParams();
-    const [info, setInfo] = useState({});
-
-    const getArtist = async() => {
-        await getArtista(id).then(res => {
-            setInfo(res);
-            console.log(res);
-        });
-    }
 
     useEffect(() => {
-        getArtist();
-    }, []);
-
-    useEffect(() => {
-        getArtist();
-    }, [id]);
+        window.scrollTo(0, 0);
+    }, [])
 
     return(
         <>     
@@ -30,16 +18,16 @@ export default function Artista_pag2(){
         <section className="artista_main2 bodyText">   
         
             <div className="artista_main2_title buttonBack">   
-                <h2>{info?.title} Página 2</h2>
-                <Link to={`/artistas_pag1/${id}`}>
+                <h2>{artista?.title} Página 2</h2>
+                <Link to={{ pathname: `/artistas_pag1/${id}`, state: { artista: info }}}>
                     <button><img src="/I_E_Arrow.png"/>Voltar</button>
                 </Link>
             </div>
 
-            {info?.outrosTextos?.length > 0 
+            {artista?.outrosTextos?.length > 0 
             && (<div className='OutrosTextos_main buttonBody'>
                 <h1>Outros Textos</h1>
-                {info?.outrostextos?.map(i =>
+                {artista?.outrostextos?.map(i =>
                     <div key={i.id} className="textblockarrange">
                         <button onClick={() => { window.location.href = i.url }}><img src="/link.png"/></button>
                         <h3>{i.title}</h3>
@@ -49,7 +37,7 @@ export default function Artista_pag2(){
 
             <div className='EntrevistasDestaque_main buttonBody'>
                 <h1>Entrevistas em Destaque</h1>                    
-                {info?.entrevistas?.map(i =>
+                {artista?.entrevistas?.map(i =>
                     <div key={i.id} className="textblockarrange">
                         <a href={i.url} target="_blank">
                             <img src="/link.png"/>
@@ -59,14 +47,14 @@ export default function Artista_pag2(){
                 )}
             </div>
 
-            <div className='Outrasinformacoes_main buttonBody'>
+            <div className='Outrasartistarmacoes_main buttonBody'>
                 <div className='row mx-1 my-3'>
-                    <h1>Outras informações</h1>
+                    <h1>Outras artistarmações</h1>
                     <button className='mx-3 my-1'><img src="/I_B_Arrow.png"/></button>
                 </div>
-                {info?.galeriasComerciais?.length > 0 && (<div className='GC mx-1'>
+                {artista?.galeriasComerciais?.length > 0 && (<div className='GC mx-1'>
                     <h1>Galerias Comerciais</h1>
-                    {info?.galeriasComerciais?.map(i =>
+                    {artista?.galeriasComerciais?.map(i =>
                         <div key={i.id} className="textblockarrange">
                         <a href={i.url} target="_blank">
                             <img src="/link.png"/>
@@ -76,10 +64,10 @@ export default function Artista_pag2(){
                     )}
                 </div>)}
 
-                {info?.eventos?.length> 0 && 
+                {artista?.eventos?.length> 0 && 
                 (<div className='EC mx-1'>
                     <h1>Eventos / Coletivos</h1>
-                    {info?.eventos?.map(i => (
+                    {artista?.eventos?.map(i => (
                         <div key={i.id} className="textblockarrange">
                         <Link to="/AtrocidadesMaravilhosas">
                             <button><img src="/link.png"/></button>
@@ -89,10 +77,10 @@ export default function Artista_pag2(){
                     ))}
                 </div>)}
 
-                {info?.premios?.length > 0 && 
+                {artista?.premios?.length > 0 && 
                 (<div className='PR mx-1'>
                     <h1>Prêmios e Residências</h1>
-                    {info?.premios?.map(i =>
+                    {artista?.premios?.map(i =>
                         <div key={i.id} className="textblockarrange">
                             <a href={i.url} target="_blank">
                                 <img src="/link.png"/>

@@ -1,7 +1,5 @@
-import {Component} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+import { Grid, Paper } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,7 +19,7 @@ export default function CenteredGrid() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}><img className='Logo' src='logo.png' ></img></Paper>
+          <Paper className={classes.paper}><img className='Logo' src='logo.png' /></Paper>
         </Grid>
         <Grid item xs={8}>
           <Paper className={classes.paper}>
@@ -29,7 +27,8 @@ export default function CenteredGrid() {
                 <h3>Sobre</h3>
                 <p>Descrição</p>
                 <button>Saber Mais</button>
-            </section></Paper>
+            </section>
+          </Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>xs=6</Paper>

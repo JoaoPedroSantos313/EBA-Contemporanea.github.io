@@ -7,7 +7,6 @@ const getArtista = async (publicId) => (
 );
 
 const getAllArtistas = () => (
-    // api fix catalogo collection
     api.get('/artista').then(res => res.data)
 );
 
