@@ -5,8 +5,10 @@ function Header() {
     return (
      <header className="container_">
         <Link to="/" id="Logotipo">
-            <img id='logo' src='/logo_h.png' />
-            <img id='logo2' src='/logo_h_completo.png' />
+            <div className='logos'>
+                <img id='logo' src='/logo_h.png' />
+                <img id='logo2' src='/logo_h_completo.png' />
+            </div>
         </Link>
         <nav>
             <ul id="menu_header">

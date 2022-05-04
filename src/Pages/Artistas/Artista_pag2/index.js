@@ -19,7 +19,7 @@ export default function Artista_pag2(props) {
         
             <div className="artista_main2_title buttonBack">   
                 <h2>{artista?.title} Página 2</h2>
-                <Link to={{ pathname: `/artistas_pag1/${id}`, state: { artista: info }}}>
+                <Link to={{ pathname: `/artistas_pag1/${id}`, state: { artista }}}>
                     <button><img src="/I_E_Arrow.png"/>Voltar</button>
                 </Link>
             </div>

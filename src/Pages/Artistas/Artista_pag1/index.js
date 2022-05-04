@@ -1,11 +1,30 @@
+import { CircularProgress } from '@material-ui/core';
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Slider from '../../../Components/Slider/index';
+import { getArtista } from '../../../services/artistaService';
 import defaultProfile from '../../../utils/default_profile.jpeg';
 import './artista1.css';
 
 export function Artista_pag1 (props) {
     const { id } = useParams();
-    const { artista: info } = props.location.state;
+    const [isLoading, setIsLoading] = useState(true);
+    const [info, setInfo] = useState(props.location.state?.artista);
+
+    useEffect(() => {
+        if(props.location.state?.artista !== undefined) {
+            setIsLoading(false);
+        } else {
+            const getArtist = async() => {
+                await getArtista(id).then(res => {
+                    setIsLoading(false);
+                    setInfo(res);
+                });
+            }
+
+        getArtist();
+        }
+    }, []);
 
     const goBack = () => {
         if(id > 1) {
@@ -18,7 +37,11 @@ export function Artista_pag1 (props) {
     }
 
     return (
-        <> 
+        isLoading ? 
+            (<div className='loading'>
+                <CircularProgress />
+            </div>)
+        : (<>
             <div className='artista_banner'>
                 <img src={info?.fotoBanner} />
             </div>
@@ -87,6 +110,6 @@ export function Artista_pag1 (props) {
                     </div>
                 </div>
             </section>
-        </>
-    ) 
+        </>)
+    )
 };

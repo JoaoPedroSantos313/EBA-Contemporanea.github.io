@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import CidadeUniversitaria from './Pages/CidadeUniversitaria';
-import Header from './Components/Header.js';
+import Header from './Components/Header/Header';
 import Footer from './Components/footer';
 import Pesquisadores from './Pages/Pesquisadores';
 import Publicacoes from './Pages/Publicacoes';
