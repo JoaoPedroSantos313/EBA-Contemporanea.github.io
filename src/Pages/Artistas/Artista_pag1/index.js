@@ -22,7 +22,7 @@ export function Artista_pag1 (props) {
                 });
             }
 
-        getArtist();
+            getArtist();
         }
     }, []);
 
