@@ -16,8 +16,7 @@ hr {
 
 .artista_banner img {
     width: 100%;
-    height: 303px;
-    display: block;
+    min-height: 303px;
 }
 
 .artista_main {

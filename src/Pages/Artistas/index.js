@@ -7,7 +7,7 @@ import './artistas.css';
 
 export default function Artistas() {
     const [info, setInfo] = useState([]);
-    const [filteredInfo, setFilteredInfo] = useState(info);
+    const [filteredInfo, setFilteredInfo] = useState();
     const [filteredLetter, setFilteredLetter] = useState();
     const [isLoading, setIsLoading] = useState(true);
     
@@ -16,6 +16,7 @@ export default function Artistas() {
             await getAllArtistas().then(res => {
                 setIsLoading(false);
                 setInfo(res);
+                setFilteredInfo(res);
             });
         }
 
@@ -30,7 +31,7 @@ export default function Artistas() {
             setFilteredInfo(info);
         } else {
             const filtered = info.filter(i => i.nome.indexOf(letra) === 0);
-            setFilteredLetter(letra)
+            setFilteredLetter(letra);
             setFilteredInfo(filtered);
         }
     }
