@@ -38,7 +38,6 @@ hr {
 .artista_main h1 {
     justify-content: right;
     
-    font-family: 'lucida sans unicode';
     font-weight: bold;
     font-size: 24px;
     color: #333333;
@@ -51,7 +50,6 @@ hr {
 .Info_main h2 {
     justify-content: right;
     
-    font-family: 'lucida sans unicode';
     font-weight: bold;
     font-size: 24px;
     color: #333333;
@@ -64,7 +62,6 @@ hr {
 .Info_main h3 {
     justify-content: right;
     
-    font-family: 'lucida sans unicode';
     font-size: 16px;
     color: #333333;
 
@@ -120,7 +117,6 @@ hr {
 .Links_main h3 {
     margin: 0%;
 
-    font-family: 'lucida sans unicode';
     font-size: 16px;
     color: #333333;
  }
@@ -132,7 +128,6 @@ hr {
     margin: 0%;
     margin-bottom: 2%;
 
-    font-family: 'lucida sans unicode';
     font-size: 18px;
     color: #333333;
  }
@@ -212,7 +207,6 @@ hr {
 .buttonNext button {   
    width: 60%;
 
-   font-family: 'lucida sans unicode';
    font-weight: bold;
    font-size: 16px;
    color: #333333;

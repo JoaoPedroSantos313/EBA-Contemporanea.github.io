@@ -48,7 +48,6 @@
 .coletivo_main h1{
     justify-content: right;
     
-    font-family: 'lucida sans unicode';
     font-weight: bold;
     font-size: 20px;
     color: #333333;
@@ -59,7 +58,6 @@
 
    font-size: 20px;
 
-   font-family: 'lucida sans unicode';
    font-weight: bold;
    font-size: 20px;
    color: #333333;
@@ -68,7 +66,6 @@
 .coletivo_main h3{
     font-size: 20px;
  
-    font-family: 'lucida sans unicode';
     font-size: 20px;
     color: #333333;
  }
@@ -100,7 +97,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     
-    font-family: 'lucida sans unicode';
     font-size: 18px;
     color: #333333;
 }
@@ -136,7 +132,6 @@
 .c_buttonBack button{
     width: 60%;
     
-    font-family: 'lucida sans unicode';
     font-weight: bold;
     font-size: 20px;
     color: #333333;

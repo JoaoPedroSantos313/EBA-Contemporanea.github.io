@@ -1,10 +1,9 @@
-import {Component} from 'react';
 import './Projeto.css';
 
 export default function Projeto(){
     return(
         <>
-            <section className="projeto_main">
+            <main>
                 <h1>O Projeto</h1>
                 <p className="p_normal">O projeto EBA Contemporânea teve início em 2016, 
                     a partir das comemorações dos 200 anos da Escola de Belas Artes 
@@ -53,7 +52,7 @@ export default function Projeto(){
                     da Escola, apresentando a produção contemporânea como parte significativa 
                     desse contexto, junto a outras formas de atuação que caracterizam a EBA.</p>
                 
-            </section>
+            </main>
         </>
     ) 
 };

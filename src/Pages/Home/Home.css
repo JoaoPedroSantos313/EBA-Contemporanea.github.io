@@ -1,4 +1,4 @@
-.home_main{
+.home_main {
     display: flex;
     flex-direction: column;
 
@@ -8,7 +8,7 @@
     justify-content: center;
 }
 
-#titulo{
+#titulo {
     width: 100%;
     
     padding-top: 8.5%;
@@ -26,7 +26,7 @@
     justify-content: space-between;
 }
 
-.texto{
+.texto {
     display: inline-block;
 
     padding-bottom: 2%;
@@ -35,8 +35,7 @@
     height: 100%;   
 }
 
-.texto h1{
-    font-family: 'lucida sans unicode';
+.texto h1 {
     font-size: 24px;
     color: #333333;
 
@@ -44,7 +43,7 @@
     margin-bottom: 10px;
 }
 
-.texto h3{
+.texto h3 {
     font-family: 'Roboto thin';
     font-weight: bold;
     font-kerning: normal;
@@ -60,8 +59,7 @@
     line-height: 32px;
 }
 
-.botao_sobre{
-    font-family: 'lucida sans unicode';
+.botao_sobre {
     font-weight: bold;
     font-size: 15px;
    
@@ -86,13 +84,12 @@
     cursor: pointer;
 }
 
-.botao_sobre:hover{
+.botao_sobre:hover {
     color: white;
     background-color: #818181;
 }
 
-.botao_cidadeu{
-    font-family: 'lucida sans unicode';
+.botao_cidadeu {
     font-weight: bold;
     font-size: 15px;
    
@@ -117,7 +114,7 @@
     cursor: pointer;
 }
 
-.botao_cidadeu:hover{
+.botao_cidadeu:hover {
     color: white;
     background-color: #818181;
 }

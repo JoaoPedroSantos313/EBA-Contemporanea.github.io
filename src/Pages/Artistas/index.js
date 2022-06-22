@@ -52,14 +52,14 @@ export default function Artistas() {
             )
             : (
                 <Grid container spacing="0" columns="3">
-                {filteredInfo ? filteredInfo.map(i => (
+                {filteredInfo?.length > 0 ? filteredInfo.map(i => (
                     <Grid item md={4} key={i._id}> 
                         <ArtistCard
                             artista={i}
                         />
                     </Grid>
                 ))
-                : <>Desculpe, não temos nenhum resultado para sua busca.</>}
+                : <p>Desculpe, não temos nenhum resultado para sua busca.</p>}
                 </Grid> 
             )}  
             </section>

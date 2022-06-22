@@ -63,7 +63,6 @@ a:hover .logo_footer{
 }
 
 #menu_footer li a{
-    font-family: 'lucida sans unicode';
     font-size: 90px;
     display: block;
     padding: 18px;
@@ -98,7 +97,6 @@ a:hover .logo_footer{
 .hr_main p{
     justify-self: center;
     align-self: center;
-    font-family: 'lucida sans unicode';
     font-size: 12px;
     margin: 10px;
     color: #949494;

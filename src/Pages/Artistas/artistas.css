@@ -10,7 +10,6 @@
 }
 
 .abc_filter button {
-    font-family: 'lucida sans unicode';
     font-weight: bold;
     font-size: 15px;
 
@@ -38,4 +37,8 @@
     align-items: center;
 
     margin: 5% 15%;
+}
+
+.artistas_main p {
+    font-size: 15px;
 }

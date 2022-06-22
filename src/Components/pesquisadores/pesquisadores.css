@@ -27,7 +27,6 @@
 
    font-size: 20px;
 
-   font-family: 'lucida sans unicode';
    font-weight: bold;
    font-size: 20px;
    color: #333333;
@@ -36,7 +35,6 @@
 .Pesquisadores_main h1{
     justify-content: right;
     
-    font-family: 'lucida sans unicode';
     font-weight: bold;
     font-size: 20px;
     color: #333333;
@@ -48,7 +46,6 @@
 .Pesquisadores_main p{
     justify-content: right;
     
-    font-family: 'lucida sans unicode';
     font-size: 19px;
     color: #333333;
 
