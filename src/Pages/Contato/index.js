@@ -18,6 +18,7 @@ export default function Contato(){
                 <FontAwesomeIcon icon={faTwitter} />
                 Siga no Twitter
             </a>
+            <br />
             <a href='#' className='redeSocialLink'>
                 <FontAwesomeIcon icon={faLinkedin}/>
                 Siga no LinkedIn

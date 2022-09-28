@@ -51,7 +51,7 @@ export default function Artistas() {
                 <CircularProgress />
             )
             : (
-                <Grid container spacing="0" columns="3">
+                <Grid container spacing="2" columns="3">
                 {filteredInfo?.length > 0 ? filteredInfo.map(i => (
                     <Grid item md={4} key={i._id}> 
                         <ArtistCard
