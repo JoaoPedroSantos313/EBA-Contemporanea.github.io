@@ -6,8 +6,8 @@ const getArtista = async (publicId) => (
         .catch(err => console.error(err))
 );
 
-const getAllArtistas = () => (
-    api.get('/artista').then(res => res.data)
+const getAllArtistas = (page = 1) => (
+    api.get(`/artista?page=${page}`).then(res => res.data)
 );
 
 export {

@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Home_post from '../../Components/home_post';
 import Slider from '../../Components/Slider';
 import { Link } from 'react-router-dom';

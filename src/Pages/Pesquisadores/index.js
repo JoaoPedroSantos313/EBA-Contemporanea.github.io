@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Pesquisadores from '../../Components/pesquisadores';
 
 export default function pesquisadores(){

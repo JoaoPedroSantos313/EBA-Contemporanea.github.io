@@ -1,6 +1,6 @@
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './footer.css';
 
@@ -16,36 +16,25 @@ export default class Footer extends Component{
                 </div>
                 <div className="footer_main">
                     <a href="#">
-                        <img id='ufrj' src='/ufrj.png' width="200px" />
+                        <img id='ufrj' src='/ufrj.png' width="150px" />
                     </a>
                     <a href="#">
-                        <img id='eba' src='/eba.png' width="200px" />
+                        <img id='eba' src='/eba.png' width="150px" />
                     </a>
                     <a href="#">
-                        <img id="ppgav" src='/logo_ppgav.png' />
+                        <img id="ppgav" src='/logo_ppgav.png' width="150px" />
                     </a>
                     <a href="#">
-                        <img id="faperj" src='/faperj.png' />
+                        <img id="faperj" src='/faperj.png' width="150px" />
                     </a>
                 </div>
                 <nav id="menu_footer">
-                    <ul style={{ display: 'flex' }}>
-                        <li>
-                            <li><a href="/artistas">artistas</a></li>
-                        </li>
-                        <li>
-                            <li><a href="/coletivos">coletivos</a></li>
-                        </li>
-                        <li>
-                            <li><a href="/">o projeto</a></li>
-                        </li>
-                    </ul>
                     <p>Desenvolvido por: 
-                        <a href="https://www.behance.net/joaopedros1520" target="_blank">
+                        <a href="https://www.behance.net/joaopedros1520" target="_blank" style={{ margin: '0 5px'}}>
                             João Pedro Santos 
                         </a>
                         e 
-                        <a href="https://github.com/evelyncorrea" target="_blank">
+                        <a href="https://github.com/evelyncorrea" target="_blank" style={{ marginLeft: '5px'}}>
                             Evelyn Ferreira
                         </a>
                     </p>

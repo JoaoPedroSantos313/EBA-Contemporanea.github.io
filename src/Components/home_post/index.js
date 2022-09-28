@@ -15,7 +15,7 @@ class  Home_post extends Component{
         return(
             <>
                 <h1>{this.state.title}</h1>
-                <h3>{Ft(this.state.text)}</h3>
+                <p>{Ft(this.state.text)}</p>
             </>
         )
     }

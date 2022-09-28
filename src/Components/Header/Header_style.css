@@ -74,14 +74,14 @@ a:hover #logo2 {
 }
 
 #fb {
-	width: 18px;
+	font-size: 18px;
 	margin-left: 80px;
 	transition: translateY 1s;
+	color: black;
 }
 
 #fb:hover {
 	transform: translateY(-5px);
-	color: violet;
 }
 
 #insta {

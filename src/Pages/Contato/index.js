@@ -1,3 +1,4 @@
+import React from 'react';
 import './contato.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";

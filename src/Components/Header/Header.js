@@ -1,5 +1,8 @@
+import React from 'react';
 import './Header_style.css';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 function Header() {
     return (
@@ -28,8 +31,8 @@ function Header() {
                 <li><Link to="/contato">Contato</Link></li>
             </ul>
         </nav>
-        <a href="#">
-            <img id='fb' src='/fb.png' />
+        <a href="mailto:ebacontemporanea@gmail.com" id='fb'>
+            <FontAwesomeIcon icon={faEnvelope} size=""/>
         </a>
         <a href="#">
             <img id='insta' src='/instagram.png' />

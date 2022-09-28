@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './Projeto.css';
 
 export default function Projeto(){
@@ -28,7 +30,7 @@ export default function Projeto(){
                     entrevistas com artistas, a serem realizadas no
                     futuro, de modo a constituir novas fontes de pesquisa.</p>
                 
-                <img id="projetoIMG" src="https://static.wixstatic.com/media/8b4bc0_d7649933a9a147f7a435d9968b618197~mv2.jpg/v1/fill/w_429,h_295,al_c,q_80,usm_0.66_1.00_0.01/ebacontemporanea.webp"></img>
+                <img id="projetoIMG" src="https://static.wixstatic.com/media/8b4bc0_d7649933a9a147f7a435d9968b618197~mv2.jpg/v1/fill/w_429,h_295,al_c,q_80,usm_0.66_1.00_0.01/ebacontemporanea.webp" width="400px"></img>
             </div>
                 <br/>
                 <p className="p_normal">Até o momento, o grupo formado por estudantes de graduação 
@@ -51,6 +53,8 @@ export default function Projeto(){
                     do ponto de vista de artistas. Ao mesmo tempo, reforçar um caráter plural 
                     da Escola, apresentando a produção contemporânea como parte significativa 
                     desse contexto, junto a outras formas de atuação que caracterizam a EBA.</p>
+
+                <p><b>O projeto EBA Contemporânea contou com apoio da Fundação Carlos Chagas Filho de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ, a partir do Programa Auxílio à Pesquisa (APQ1), 2019-2022.</b></p>
                 
             </main>
         </>

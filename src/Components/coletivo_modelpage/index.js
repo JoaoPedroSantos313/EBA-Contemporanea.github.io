@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from '../Slider';
 import './coletivo_modelpage.css';

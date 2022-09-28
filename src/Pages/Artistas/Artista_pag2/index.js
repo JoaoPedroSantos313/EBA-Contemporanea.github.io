@@ -1,9 +1,10 @@
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Collapse } from '@material-ui/core';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import site_icon from '../../../utils/site_icon.png';
+import defaultProfile from '../../../utils/default_profile.jpeg';
 import './artista_pag2.css';
 
 export default function Artista_pag2(props) {
@@ -19,6 +20,10 @@ export default function Artista_pag2(props) {
         if(id > 1) {
             window.location.href = `/artistas_pag1/${id - 1}`;
         }
+    }
+
+    const goToAllArtists = () => {
+        window.location.href = '/artistas'
     }
 
     const goForward = () => {
@@ -39,11 +44,11 @@ export default function Artista_pag2(props) {
 
             <div className='row' style={{ width: '100%' }}>
                     <div className='P_foto' style={{ width: '25%'}}> 
-                        <img src={artista?.fotoPerfil || defaultProfile}></img>
+                        <img src={artista?.fotoPerfil || defaultProfile} width="80%"></img>
                     </div>
 
-                    <div style={{ width: '50%'}}> 
-                        <h2>{artista?.nome} <h3>({artista?.localNascimento})</h3></h2>
+                    <div style={{ width: '50%', marginTop: '10px'}}> 
+                        <h2 class="artist_name">{artista?.nome} <h3>({artista?.localNascimento})</h3></h2>
                         {artista?.localAtual && <h3>Vive e trabalha: <b>{artista?.localAtual}</b></h3>}
                         <br/>
                         {artista?.estudos && (
@@ -90,7 +95,7 @@ export default function Artista_pag2(props) {
                         
                         <div className='flex AtalhodeNavegacao'> 
                             <button onClick={goBack}><img src="/I_E_Arrow.png"/></button>
-                            <button><img src="/I_Menu.png"/></button>
+                            <button onClick={goToAllArtists}><img src="/I_Menu.png"/></button>
                             <button onClick={goForward}><img src="/I_D_Arrow.png"/></button>
                         </div> 
                     </div>
@@ -118,17 +123,18 @@ export default function Artista_pag2(props) {
                 )}
             </div>)}
 
-            <div className='EntrevistasDestaque_main buttonBody'>
-                <h1>Entrevistas em Destaque</h1>                    
-                {artista?.entrevistas?.map(i =>
-                    <div key={i.id} className="textblockarrange">
-                        <a href={i.url} target="_blank">
-                            <img src="/link.png"/>
-                        </a>
-                        <h3>{i.nome}</h3>
-                    </div>
-                )}
-            </div>
+            {artista?.entrevistas?.length > 0 && (
+                <div className='EntrevistasDestaque_main buttonBody'>
+                    <h1>Entrevistas em Destaque</h1>                  
+                    {artista?.entrevistas?.map(i =>
+                        <div key={i.id} className="textblockarrange">
+                            <a href={i.url} target="_blank">
+                                <img src="/link.png"/>
+                            </a>
+                            <h3>{i.nome}</h3>
+                        </div>
+                    )}
+                </div>)}
 
             <div className='Outrasinformacoes_main buttonBody'>
                 <div className='row mx-1 my-3'>

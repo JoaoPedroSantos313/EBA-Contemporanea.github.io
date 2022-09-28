@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import CidadeUniversitaria from './Pages/CidadeUniversitaria';
 import Header from './Components/Header/Header';
@@ -12,6 +13,8 @@ import Contato from './Pages/Contato';
 import Home from './Pages/Home';
 import EBA from './Pages/EBA';
 import AtrocidadesMaravilhosas from './Pages/Coletivos/AtrocidadesMaravilhosas';
+import { Coletivos } from './Pages/Coletivos';
+import { Entrevistas } from './Pages/Entrevistas';
 
 const Routes = () => {
     return (
@@ -30,6 +33,8 @@ const Routes = () => {
                 <Route path="/pesquisadores" component={Pesquisadores} />
                 <Route path="/cidade_universitaria" component={CidadeUniversitaria} />
                 <Route path="/AtrocidadesMaravilhosas" component={AtrocidadesMaravilhosas} />
+                <Route path="/coletivos" component={Coletivos} />
+                <Route path="/entrevistas" component={Entrevistas} />
             </Switch>
 
             <Footer/>

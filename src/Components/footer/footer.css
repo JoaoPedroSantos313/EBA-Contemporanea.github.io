@@ -44,22 +44,18 @@ a:hover .logo_footer{
     background-color: white;
 }
 
-#menu_footer{
+#menu_footer {
     display: flex;
     justify-content: center;
     justify-content: space-around;
+    padding: 0 5%;
 }
 
-#menu_footer li a{
-    font-size: 90px;
-    display: block;
-    padding: 18px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    font-size: 15px;
-	color:#333333;
-	text-align: center;
+#menu_footer a {
+    font-weight: bold;
+    color: #333;
 }
+
 
 #menu_footer a:hover{
 	color:  #D60000;
@@ -71,7 +67,7 @@ a:hover .logo_footer{
     flex-direction: column;
 }
 
-.hr_main hr{
+.hr_main hr {
     display: flex;
     height: 1px;
     width: 100%;
@@ -82,7 +78,7 @@ a:hover .logo_footer{
     background-color: black;
 }
 
-.hr_main p{
+.hr_main p {
     justify-self: center;
     align-self: center;
     font-size: 12px;

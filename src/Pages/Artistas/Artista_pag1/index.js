@@ -1,3 +1,4 @@
+import React from 'react';
 import { CircularProgress } from '@material-ui/core';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
@@ -31,6 +32,10 @@ export function Artista_pag1 (props) {
         if(id > 1) {
             window.location.href = `/artistas_pag1/${id - 1}`;
         }
+    }
+
+    const goToAllArtists = () => {
+        window.location.href = '/artistas'
     }
 
     const goForward = () => {
@@ -101,20 +106,22 @@ export function Artista_pag1 (props) {
                         
                         <div className='flex AtalhodeNavegacao'> 
                             <button onClick={goBack}><img src="/I_E_Arrow.png"/></button>
-                            <button><img src="/I_Menu.png"/></button>
+                            <button onClick={goToAllArtists}><img src="/I_Menu.png"/></button>
                             <button onClick={goForward}><img src="/I_D_Arrow.png"/></button>
                         </div> 
                     </div>
 
-                    <div className='border_links detalhes_academicos'>
-                        <h2>Detalhes Acadêmicos</h2>
-                        {info?.links?.map(i => (
-                            <div key={i.id} className='flex'> 
-                                <a href={i.url}><img src="/link.png" className='linkImg'/></a>
-                                <h3 className='mx-2'>{i.nome}</h3>
-                            </div> 
-                        ))}
-                    </div>
+                    {info?.links?.length > 0 && (
+                        <div className='border_links detalhes_academicos'>
+                            <h2>Detalhes Acadêmicos</h2>
+                            {info?.links?.map(i => (
+                                <div key={i.id} className='flex'> 
+                                    <a href={i.url}><img src="/link.png" className='linkImg'/></a>
+                                    <h3 className='mx-2'>{i.nome}</h3>
+                                </div> 
+                            ))}
+                        </div>
+                    )}
                     </div>        
                 </div>   
 

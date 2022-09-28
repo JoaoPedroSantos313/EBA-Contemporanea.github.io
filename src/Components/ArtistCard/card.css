@@ -22,6 +22,11 @@
     text-decoration: none;
 }
 
+.card_container a:hover {
+    text-decoration: none;
+    color: #D60000;
+}
+
 
 .card_title_img {
     width: 15%;

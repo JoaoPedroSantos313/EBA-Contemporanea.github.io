@@ -1,7 +1,9 @@
+import React from 'react';
+
 export default function CidadeUniversitaria(){
-    return(
-        <>
-            <h1>Cidade Universitaria</h1>
-        </>
-    ) 
+    return (
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '70px'}}>
+            <h1>Página em Construção</h1>
+        </div>
+    )
 };

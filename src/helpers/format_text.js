@@ -5,5 +5,5 @@ export default text => {
       return text;
     }
   
-    return text.split('\n').map(str => str && <h3>{str}</h3>);
+    return text.split('\n').map(str => str && <p>{str}</p>);
   };

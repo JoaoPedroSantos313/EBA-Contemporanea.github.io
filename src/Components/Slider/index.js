@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import ImgComp from './ImgComp';
 import './slider.css';
 

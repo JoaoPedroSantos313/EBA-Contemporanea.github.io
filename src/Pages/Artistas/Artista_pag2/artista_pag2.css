@@ -62,13 +62,11 @@
     padding-bottom: 0%;
 }
 
-.bodyText h3{
-    flex-wrap: wrap;
-
-    font-size: 18px;
+.bodyText h3 {
+    justify-content: flex-start;
+    
+    font-size: 16px;
     color: #333333;
-
-    margin-left: 1%;
 }
 
 .buttonBody button{
@@ -144,14 +142,12 @@
     font-size: 16px;
 }
 
-.artista_main h1 {
+.artist_name {
     justify-content: flex-start;
     
     font-weight: bold;
     font-size: 24px;
     color: #333333;
 
-    margin: 0px;
-    margin-top: 1%;
-    margin-bottom: 0.5%;
+    margin-bottom: 10%;
 }

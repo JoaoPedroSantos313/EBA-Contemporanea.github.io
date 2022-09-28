@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Coletivo_modelpage from '../../../Components/coletivo_modelpage'
 
