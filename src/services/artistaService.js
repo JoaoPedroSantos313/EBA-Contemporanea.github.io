@@ -1,16 +1,20 @@
 import { api } from './api';
 
-const getArtista = async (publicId) => (
-    await api.get(`/artista/${publicId}`)
-        .then(res => res.data)
-        .catch(err => console.error(err))
-);
+const getArtista = async (publicId) => {
+    return await api.get(`/artista/${publicId}`);
+};
 
-const getAllArtistas = (page = 1) => (
-    api.get(`/artista?page=${page}`).then(res => res.data)
-);
+const getAllArtistas = async () => {
+    return await api.get(`/artista?getAll=true`);
+
+};
+
+const getPaginatedArtistas = async (page = 1, search = '') => {
+    return await api.get(`/artista?search=${search}&page=${page}`);
+}
 
 export {
     getArtista,
-    getAllArtistas
+    getAllArtistas,
+    getPaginatedArtistas
 }

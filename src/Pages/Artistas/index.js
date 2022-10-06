@@ -1,56 +1,54 @@
 import React, { useEffect, useState } from 'react';
 import { ArtistCard } from '../../Components/ArtistCard';
-
 import { CircularProgress, Grid } from '@material-ui/core';
 import { Pagination } from '@material-ui/lab';
-import { getAllArtistas } from '../../services/artistaService';
 import './artistas.css';
+import useArtist from '../../contexts/artists';
+import { useHistory } from 'react-router-dom';
 
 export default function Artistas() {
-    const [info, setInfo] = useState([]);
-    const [filteredInfo, setFilteredInfo] = useState();
-    const [filteredLetter, setFilteredLetter] = useState();
-    const [isLoading, setIsLoading] = useState(true);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(0);
-    
-    const getAllArtists = async(page) => {
-        await getAllArtistas(page).then(res => {
-            console.log(res);
-            setIsLoading(false);
-            setInfo(res.artists);
-            setFilteredInfo(res.artists);
-            setTotalPages(res.totalPages);
-        });
-    }
+    const navigate = useHistory();
+    const { 
+        artists, 
+        getPaginatedArtists, 
+        isLoading, 
+        totalPages,
+        filterLetters,
+        currentPage,
+        changePage,
+        setCurrentArtist
+    } = useArtist();
+
+    const [currentLetter, setCurrentLetter] = useState();
 
     useEffect(() => {
-        getAllArtists(1);
+        getPaginatedArtists();
     }, []);
 
     const handlePagination = (e, page) => {
-        setIsLoading(true);
-        setCurrentPage(page);
-        getAllArtists(page);
+        changePage(page);
     }
 
-    const lettersArray = ["A","B","C","D","E","F","G","H", "I","J","K","L","M","N","O","P", "R","S","T","U","V","W","X","Y","Z"];
-
     const filtrar = (letra) => {
-        if(filteredLetter == letra) {
-            setFilteredLetter(undefined);
-            setFilteredInfo(info);
+        if(letra === currentLetter) {
+            setCurrentLetter(null);
+            getPaginatedArtists(1);
         } else {
-            const filtered = info.filter(i => i.nome.indexOf(letra) === 0);
-            setFilteredLetter(letra);
-            setFilteredInfo(filtered);
+            setCurrentLetter(letra);
+            getPaginatedArtists(1, letra)
         }
+    }
+
+    const goToArtist = (id) => {
+        const artist = artists.filter(artist => artist.publicId == id);
+        setCurrentArtist(artist);
+        navigate.push(`/artistas_pag1/${id}`);
     }
     
     return (
         <>
             <section className='abc_filter'>
-                {lettersArray.map(item => (
+                {filterLetters?.map(item => (
                     <button onClick={() => filtrar(item)}>
                         {item}
                     </button>
@@ -64,11 +62,9 @@ export default function Artistas() {
             : (
                 <>
                 <Grid container spacing="2" columns="3">
-                {filteredInfo?.length > 0 ? filteredInfo.map(i => (
+                {artists?.length > 0 ? artists.map(i => (
                     <Grid item md={4} key={i._id}> 
-                        <ArtistCard
-                            artista={i}
-                        />
+                        <ArtistCard artista={i} goToArtist={goToArtist} />
                     </Grid>
                 ))
                 : <p>Desculpe, não temos nenhum resultado para sua busca.</p>}

@@ -3,34 +3,26 @@ import { CircularProgress } from '@material-ui/core';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Slider from '../../../Components/Slider';
-import { getArtista } from '../../../services/artistaService';
 import defaultProfile from '../../../utils/default_profile.jpeg';
 import site_icon from '../../../utils/site_icon.png';
 import './artista1.css';
+import useArtist from '../../../contexts/artists';
 
-export function Artista_pag1 (props) {
+export function Artista_pag1 () {
+    const { currentArtist: info, getArtist, navigationIds, isLoading } = useArtist();
     const { id } = useParams();
-    const [isLoading, setIsLoading] = useState(true);
-    const [info, setInfo] = useState(props.location.state?.artista);
 
     useEffect(() => {
-        if(props.location.state?.artista !== undefined) {
-            setIsLoading(false);
-        } else {
-            const getArtist = async() => {
-                await getArtista(id).then(res => {
-                    setIsLoading(false);
-                    setInfo(res);
-                });
-            }
-
-            getArtist();
+        if(info == undefined || info.publicId !== id) {
+            console.log(' veio pro if', id)
+            getArtist(id);
         }
+        console.log( 'nav ids', navigationIds)
     }, []);
 
     const goBack = () => {
-        if(id > 1) {
-            window.location.href = `/artistas_pag1/${id - 1}`;
+        if(navigationIds.previous > 0) {
+            window.location.href = `/artistas_pag1/${navigationIds.previous}`;
         }
     }
 
@@ -39,7 +31,7 @@ export function Artista_pag1 (props) {
     }
 
     const goForward = () => {
-        window.location.href = `/artistas_pag1/${Number(id) + 1}`;
+        window.location.href = `/artistas_pag1/${navigationIds.next}`;
     }
 
     return (
@@ -140,7 +132,7 @@ export function Artista_pag1 (props) {
                     </div>
                 )}
 
-                {info?.entrevistasSite.length > 0 && (
+                {info?.entrevistasSite?.length > 0 && (
                     <div className='entrevistas_site'>
                         <h1>Entrevista do Projeto EBAContemporânea</h1>
                         {info?.entrevistasSite.map(i =>

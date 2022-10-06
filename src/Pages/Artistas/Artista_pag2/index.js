@@ -48,7 +48,7 @@ export default function Artista_pag2(props) {
                     </div>
 
                     <div style={{ width: '50%', marginTop: '10px'}}> 
-                        <h2 class="artist_name">{artista?.nome} <h3>({artista?.localNascimento})</h3></h2>
+                        <h2 className="artist_name">{artista?.nome} <h3>({artista?.localNascimento})</h3></h2>
                         {artista?.localAtual && <h3>Vive e trabalha: <b>{artista?.localAtual}</b></h3>}
                         <br/>
                         {artista?.estudos && (
