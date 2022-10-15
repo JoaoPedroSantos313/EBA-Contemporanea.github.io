@@ -1,3 +1,6 @@
+import Cookies from "js-cookie";
+import { artistIdsHandler } from "../helpers/all-ids-formatter";
+
 const cases = {
     GET_ARTISTS: 'GET_ARTISTS',
     SET_PAGE: 'SET_PAGE',
@@ -21,12 +24,13 @@ const ArtistReducer = (state, action) => {
 
     window.scrollTo({
         top: 0,
+        left: 0,
         behavior: 'smooth'
     })
 
     switch (type) {
         case cases.GET_ARTISTS:
-            document.cookie = `allIds=${payload.allIds}`
+            Cookies.set('allIds', payload.allIds, { expires: 7 });
             return {
                 ...state,
                 isLoading: false,
@@ -45,14 +49,14 @@ const ArtistReducer = (state, action) => {
                 filterLetters: payload.filterLetters,
             };
         case cases.SET_CURRENT_ARTIST:
-            const idPosition = state.allIds.findIndex(id => id == payload.currentArtist.publicId);
-            console.log(idPosition, 'inside reducer')
+            const { previous, next } = artistIdsHandler(state.allIds, payload.currentArtist.publicId);
+
             return {
                 ...state,
                 currentArtist: payload.currentArtist,
                 navigationIds: {
-                    previous: state.allIds[idPosition - 1],
-                    next: state.allIds[idPosition + 1]
+                    previous,
+                    next,
                 },
                 isLoading: false,
             }

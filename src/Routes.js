@@ -7,7 +7,6 @@ import Pesquisadores from './Pages/Pesquisadores';
 import Publicacoes from './Pages/Publicacoes';
 import Artistas from './Pages/Artistas';
 import { Artista_pag1 } from './Pages/Artistas/Artista_pag1';
-import Artista_pag2 from './Pages/Artistas/Artista_pag2';
 import Projeto from './Pages/Projeto';
 import Contato from './Pages/Contato';
 import Home from './Pages/Home';
@@ -29,8 +28,7 @@ const Routes = () => {
                     <Route path="/projeto" component={Projeto} />
                     <Route path="/contato" component={Contato} />
                     <Route path="/artistas" component={Artistas} />
-                    <Route path="/artistas_pag1/:id" component={Artista_pag1} />
-                    <Route path="/artistas_pag2/:id" component={Artista_pag2} />
+                    <Route path="/artista/:id" component={Artista_pag1} />
                     <Route path="/publicacoes" component={Publicacoes} />
                     <Route path="/pesquisadores" component={Pesquisadores} />
                     <Route path="/cidade_universitaria" component={CidadeUniversitaria} />

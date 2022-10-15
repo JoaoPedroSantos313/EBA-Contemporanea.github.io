@@ -8,10 +8,10 @@ import { useHistory } from 'react-router-dom';
 
 export default function Artistas() {
     const navigate = useHistory();
-    const { 
-        artists, 
-        getPaginatedArtists, 
-        isLoading, 
+    const {
+        artists,
+        getPaginatedArtists,
+        isLoading,
         totalPages,
         filterLetters,
         currentPage,
@@ -30,7 +30,7 @@ export default function Artistas() {
     }
 
     const filtrar = (letra) => {
-        if(letra === currentLetter) {
+        if (letra === currentLetter) {
             setCurrentLetter(null);
             getPaginatedArtists(1);
         } else {
@@ -42,39 +42,39 @@ export default function Artistas() {
     const goToArtist = (id) => {
         const artist = artists.filter(artist => artist.publicId == id);
         setCurrentArtist(artist);
-        navigate.push(`/artistas_pag1/${id}`);
+        navigate.push(`/artista/${id}`);
     }
-    
+
     return (
         <>
             <section className='abc_filter'>
-                {filterLetters?.map(item => (
-                    <button onClick={() => filtrar(item)}>
+                {filterLetters?.map((item, index) => (
+                    <button key={index} onClick={() => filtrar(item)}>
                         {item}
                     </button>
                 ))}
             </section>
 
             <section className='artistas_main'>
-            {isLoading ? (
-                <CircularProgress />
-            )
-            : (
-                <>
-                <Grid container spacing="2" columns="3">
-                {artists?.length > 0 ? artists.map(i => (
-                    <Grid item md={4} key={i._id}> 
-                        <ArtistCard artista={i} goToArtist={goToArtist} />
-                    </Grid>
-                ))
-                : <p>Desculpe, não temos nenhum resultado para sua busca.</p>}
-                </Grid>
-                <div style={{ marginTop: '50px' }}>
-                    <Pagination page={currentPage} count={totalPages} variant="outlined" shape="rounded" onChange={handlePagination} />
-                </div>
-                </>
-            )}
+                {isLoading ? (
+                    <CircularProgress />
+                )
+                    : (
+                        <>
+                            <Grid container spacing={2} columns="3">
+                                {artists?.length > 0 ? artists.map(i => (
+                                    <Grid item md={4} key={i._id}>
+                                        <ArtistCard artista={i} goToArtist={goToArtist} />
+                                    </Grid>
+                                ))
+                                    : <p>Desculpe, não temos nenhum resultado para sua busca.</p>}
+                            </Grid>
+                            <div style={{ marginTop: '50px' }}>
+                                <Pagination page={currentPage} count={totalPages} variant="outlined" shape="rounded" onChange={handlePagination} />
+                            </div>
+                        </>
+                    )}
             </section>
         </>
-    ) 
+    )
 };

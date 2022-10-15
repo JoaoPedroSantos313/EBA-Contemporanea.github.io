@@ -1,15 +1,15 @@
-.Pesquisadores_main{
+.Pesquisadores_main {
     margin: 0px 20.5%;
 }
 
-.Img_pesquisadores{
+.Img_pesquisadores {
     margin-top: 0%;
 
     display: flex;
 
     width: 30%;
     height: 80%;
-   
+
     padding: 1%;
 
     align-items: center;
@@ -22,19 +22,19 @@
     cursor: pointer;
 }
 
-.Pesquisadores_main_title h2{
-   margin-top: 0.3%;
+.Pesquisadores_main_title h2 {
+    margin-top: 0.3%;
 
-   font-size: 20px;
+    font-size: 20px;
 
-   font-weight: bold;
-   font-size: 20px;
-   color: #333333;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333333;
 }
 
-.Pesquisadores_main h1{
+.Pesquisadores_main h1 {
     justify-content: right;
-    
+
     font-weight: bold;
     font-size: 20px;
     color: #333333;
@@ -43,9 +43,9 @@
     margin-bottom: 2%;
 }
 
-.Pesquisadores_main p{
+.Pesquisadores_main p {
     justify-content: right;
-    
+
     font-size: 19px;
     color: #333333;
 
@@ -53,11 +53,11 @@
     margin-bottom: 2%;
 }
 
-.Coordenador_main{
+.Coordenador_main {
     margin-top: 8%;
 }
 
-.Pesquisadores_card{
+.Pesquisadores_card {
     display: flex;
     flex-direction: row;
 
@@ -73,7 +73,7 @@
     margin-bottom: 2%;
 }
 
-.Participacoes_card{
+.Participacoes_card {
     display: flex;
     flex-direction: row;
 
@@ -90,7 +90,7 @@
     margin-bottom: 8%;
 }
 
-.Cargo_card{
+.Cargo_card {
     display: flex;
     flex-direction: row;
 
@@ -105,33 +105,33 @@
     margin-bottom: -10px;
 }
 
-.Cargo_card:nth-child(n+2){
+.Cargo_card:nth-child(n+2) {
     margin-top: 12%;
 }
 
-.Pesquisadores_buttonBody{
-   width:12%;
-   height:12%;
+.Pesquisadores_buttonBody {
+    width: 12%;
+    height: 12%;
 
-   padding: 0%;
+    padding: 0%;
 
-   margin-left: 20%;
-   margin-bottom: 5%;
+    margin-left: 20%;
+    margin-bottom: 5%;
 
-   border-style: none;
-   background: none;
+    border-style: none;
+    background: none;
 
-   transition: ease all 0.5s;
-   outline: none;
-   cursor: pointer;
+    transition: ease all 0.5s;
+    outline: none;
+    cursor: pointer;
 }
 
-.Pesquisadores_buttonBody img{
+.Pesquisadores_buttonBody img {
     display: flex;
     height: 70%;
     width: 100%;
- }
+}
 
-.Pesquisadores_buttonBody:hover{
+.Pesquisadores_buttonBody:hover {
     transform: scale(1.1);
- }
+}

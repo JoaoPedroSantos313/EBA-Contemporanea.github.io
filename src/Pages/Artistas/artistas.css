@@ -1,10 +1,10 @@
-.abc_filter{
+.abc_filter {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
     justify-content: center;
-    
+
     padding-top: 3%;
     padding-left: 2%;
 }
@@ -14,7 +14,7 @@
     font-size: 15px;
 
     margin: 0.67%;
-    
+
     border-style: none;
     background-color: white;
     box-shadow: 0px -2px 2px 0px rgba(171, 170, 170, 0.34);

@@ -15,37 +15,37 @@ export default class Home extends Component {
 
                 <section className='sabermais'>
                     <div className='texto'>
-                        <Home_post title="Sobre" 
-                                   text="Esta plataforma armazena e divulga os dados levantados e o material elaborado pelo grupo de pesquisa “Contagem regressiva aos 200, começando ao contrário: artistas formados pela EBA de 1975 à atualidade”."/>
+                        <Home_post title="Sobre"
+                            text="Esta plataforma armazena e divulga os dados levantados e o material elaborado pelo grupo de pesquisa “Contagem regressiva aos 200, começando ao contrário: artistas formados pela EBA de 1975 à atualidade”." />
                     </div>
-                        
-                    <Link to="/projeto"> 
+
+                    <Link to="/projeto">
                         <button className='botao_sobre'>
                             saiba mais
                         </button>
                     </Link>
-                   
+
                 </section>
 
                 <section className='sabermais'>
                     <Slider img_slider={[
-                        { img: img1, id: 1},
-                        { img: img2, id: 2},
-                        { img: img3, id: 3}
-                    ]}/>
+                        { img: img1, id: 1 },
+                        { img: img2, id: 2 },
+                        { img: img3, id: 3 }
+                    ]} />
                 </section>
-            
+
                 <section className='sabermais'>
 
-                    <Link to="/cidade_universitaria"> 
+                    <Link to="/cidade_universitaria">
                         <button className='botao_cidadeu'>
                             saiba mais
                         </button>
                     </Link>
-                    
+
                     <div className='texto'>
-                        <Home_post title= "Cidade Universitária" 
-                                   text = "Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo e a mexeu para fazer um livro de amostras do tipo. "/>
+                        <Home_post title="Cidade Universitária"
+                            text="Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo e a mexeu para fazer um livro de amostras do tipo. " />
                     </div>
                 </section>
             </section>

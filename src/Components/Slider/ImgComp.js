@@ -1,7 +1,7 @@
 import React from 'react';
 
 function ImgComp({ src }) {
-    let imgStyles={
+    let imgStyles = {
         width: "auto",
         height: "100%"
     }

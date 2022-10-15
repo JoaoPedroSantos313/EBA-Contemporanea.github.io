@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './footer.css';
 
-export default class Footer extends Component{
+export default class Footer extends Component {
     render() {
         return (
             <section className="footer_container">
@@ -29,19 +29,19 @@ export default class Footer extends Component{
                     </a>
                 </div>
                 <nav id="menu_footer">
-                    <p>Desenvolvido por: 
-                        <a href="https://www.behance.net/joaopedros1520" target="_blank" style={{ margin: '0 5px'}}>
-                            João Pedro Santos 
+                    <p>Desenvolvido por:
+                        <a href="https://www.behance.net/joaopedros1520" target="_blank" style={{ margin: '0 5px' }}>
+                            João Pedro Santos
                         </a>
-                        e 
-                        <a href="https://github.com/evelyncorrea" target="_blank" style={{ marginLeft: '5px'}}>
+                        e
+                        <a href="https://github.com/evelyncorrea" target="_blank" style={{ marginLeft: '5px' }}>
                             Evelyn Ferreira
                         </a>
                     </p>
                     <p><FontAwesomeIcon icon={faEnvelope} /> ebacontemporanea@gmail.com</p>
                 </nav>
                 <div className='hr_main'>
-                    <hr/>
+                    <hr />
                     <p>© 2020 por EBAContemporânea de 1975 à atualidade.</p>
                 </div>
             </section>

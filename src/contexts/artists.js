@@ -7,14 +7,13 @@ const ArtistContext = createContext(initialState);
 export const ArtistProvider = ({ children }) => {
     const [state, dispatch] = useReducer(ArtistReducer, initialState);
 
-    const getPaginatedArtists = async(page, search) => {
+    const getPaginatedArtists = async (page, search) => {
         let apiResponse;
         await getPaginatedArtistas(page, search).then(res => apiResponse = res.data);
-        console.log(apiResponse.allIds)
         dispatch({
             type: cases.GET_ARTISTS,
             payload: {
-                artists: apiResponse?.artists, 
+                artists: apiResponse?.artists,
                 totalPages: apiResponse?.totalPages,
                 allIds: apiResponse?.allIds
             }
@@ -22,13 +21,13 @@ export const ArtistProvider = ({ children }) => {
 
         dispatch({
             type: cases.GET_FILTER_LETTERS,
-            payload: { 
-                filterLetters: apiResponse?.availableLetters 
+            payload: {
+                filterLetters: apiResponse?.availableLetters
             }
         });
     };
 
-    const getAllArtists = async() => {
+    const getAllArtists = async () => {
         let apiResponse;
         await getAllArtistas().then(res => apiResponse = res.data);
         dispatch({
@@ -39,10 +38,9 @@ export const ArtistProvider = ({ children }) => {
         });
     }
 
-    const getArtist = async(id) => {
+    const getArtist = async (id) => {
         let apiResponse;
         await getArtista(id).then(res => apiResponse = res.data);
-        console.log(apiResponse);
 
         dispatch({
             type: cases.SET_CURRENT_ARTIST,
@@ -85,11 +83,11 @@ export const ArtistProvider = ({ children }) => {
 
 const useArtist = () => {
     const context = useContext(ArtistContext);
-  
+
     if (context === undefined) {
-      throw new Error("useArtist must be used within ArtistContext");
+        throw new Error("useArtist must be used within ArtistContext");
     }
-  
+
     return context;
 };
 

@@ -1,6 +1,6 @@
 .slider {
     display: flex;
-    
+
     margin: 0px;
     padding: 0px;
     padding-bottom: 0px;
@@ -8,7 +8,7 @@
 
     overflow: hidden;
     position: relative;
-    
+
     max-height: 500px;
     width: 100%;
 }
@@ -18,9 +18,9 @@
     min-width: 100%;
     max-height: 100%;
     transition: 0.5s;
-    
+
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
 }
 
@@ -28,7 +28,7 @@
     object-fit: contain;
 }
 
-#goLeft{
+#goLeft {
     position: absolute;
     top: 50%;
     left: 0;
@@ -43,14 +43,14 @@
     color: whitesmoke;
 }
 
-#goLeft:hover{
+#goLeft:hover {
     background: rgba(255, 255, 255, 0.356);
     cursor: pointer;
     color: black;
 }
-       
 
-#goRight{
+
+#goRight {
     position: absolute;
     top: 50%;
     right: 0;
@@ -64,7 +64,7 @@
     color: whitesmoke;
 }
 
-#goRight:hover{
+#goRight:hover {
     background: rgba(255, 255, 255, 0.356);
     cursor: pointer;
     color: black;

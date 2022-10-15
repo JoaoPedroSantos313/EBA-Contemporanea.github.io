@@ -41,7 +41,7 @@ hr {
 
 .artista_main h1 {
     justify-content: flex-start;
-    
+
     font-weight: bold;
     font-size: 24px;
     color: #333333;
@@ -54,7 +54,7 @@ hr {
 .Info_main {
     margin-top: 10px;
     width: 50%;
-    
+
     align-items: center;
 }
 
@@ -62,7 +62,7 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
+
     font-weight: bold;
     font-size: 24px;
     color: #333333;
@@ -72,7 +72,7 @@ hr {
 
 .Info_main h3 {
     justify-content: flex-start;
-    
+
     font-size: 16px;
     color: #333333;
 }
@@ -112,7 +112,7 @@ hr {
 .flex {
     display: flex;
     flex-direction: row;
-    
+
     margin-top: 6%;
     margin-left: 10%;
 }
@@ -122,38 +122,37 @@ hr {
 }
 
 .Links_main button {
-   display: flex;
-   flex-direction: row;
-   
-   width: 7%;
-   height: 7%;
+    display: flex;
+    flex-direction: row;
 
-   margin: 0%;
-   padding: 0%;
+    width: 7%;
 
-   border-style: none;
-   background: none;
+    margin: 0%;
+    padding: 0%;
 
-   transition: 0.5s;
-   outline: none;
-   cursor: pointer;
+    border-style: none;
+    background: none;
+
+    transition: 0.5s;
+    outline: none;
+    cursor: pointer;
 }
 
 .Links_main button img {
     display: flex;
     width: 100%;
- }
+}
 
- .Links_main button:hover {
-     width: 8%;
- }
+.Links_main button:hover {
+    width: 8%;
+}
 
 .Links_main h3 {
     margin: 0%;
 
     font-size: 16px;
     color: #333333;
- }
+}
 
 .Links_main h2 {
     display: flex;
@@ -164,9 +163,9 @@ hr {
 
     font-size: 18px;
     color: #333333;
- }
+}
 
- .SocialMedia a {
+.SocialMedia a {
     color: #222222;
     font-size: 16px;
 }
@@ -174,7 +173,7 @@ hr {
 .AtalhodeNavegacao {
     display: flex;
     justify-content: space-around;
-    
+
     margin: 0;
 
     width: 100%;
@@ -203,12 +202,12 @@ hr {
 .Biografia_main p {
     font-kerning: normal;
     font-size: 20px;
-   
+
     word-break: normal;
-    
+
     color: #1b1b1b;
-    margin:0px;
-   
+    margin: 0px;
+
     text-align: justify;
     line-height: 31px;
 }
@@ -221,18 +220,18 @@ hr {
     margin-top: 4%;
 }
 
-.buttonNext button {   
-   width: 60%;
+.buttonNext button {
+    width: 60%;
 
-   font-weight: bold;
-   font-size: 16px;
-   color: #333333;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333333;
 
-   margin-left: 42%;
-   padding: 0%;
+    margin-left: 42%;
+    padding: 0%;
 
-   border-style: none;
-   background: none;
+    border-style: none;
+    background: none;
 }
 
 .buttonNext img {
@@ -245,4 +244,158 @@ hr {
 
 .entrevistas_site {
     margin-top: 5%;
+}
+
+.artista_main2 {
+    margin: 0px 10%;
+}
+
+.coletivoBanner {
+    background-image: url('https://static.wixstatic.com/media/8b4bc0_c41ed87641a64271b488350d234e0c41~mv2.png/v1/fill/w_1291,h_284,al_c,q_90/8b4bc0_c41ed87641a64271b488350d234e0c41~mv2.webp');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 303px;
+    display: block;
+}
+
+.artista_main2_title {
+    display: flex;
+    flex-direction: row;
+}
+
+.artista_main2_title h2 {
+    margin-top: 0.3%;
+
+    font-size: 20px;
+
+    font-weight: bold;
+    font-size: 20px;
+    color: #333333;
+}
+
+.artista_main2 h1 {
+    justify-content: right;
+
+    font-weight: bold;
+    font-size: 20px;
+    color: #333333;
+
+    margin: 0px;
+    margin-bottom: 2%;
+}
+
+.OutrosTextos_main {
+    margin-top: 8%;
+}
+
+.EntrevistasDestaque_main {
+    margin-top: 8%;
+}
+
+.OutrasInformacoes_main {
+    margin-top: 8%;
+    margin-bottom: 7%;
+}
+
+.textblockarrange {
+    display: flex;
+    flex-direction: row;
+
+    border-style: none;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0px -1px 2px 0px rgba(171, 170, 170, 0.34);
+
+    margin-bottom: 3%;
+    padding: 1%;
+    padding-bottom: 0%;
+}
+
+.pag2_h3 {
+    justify-content: flex-start;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.buttonBody button {
+    width: 2.5%;
+    height: 2.5%;
+
+    padding: 0%;
+
+    border-style: none;
+    background: none;
+
+    transition: 0.5s;
+    outline: none;
+    cursor: pointer;
+}
+
+.buttonBody button img,
+.buttonBody a img {
+    display: flex;
+    width: 20px;
+}
+
+.buttonBody button:hover {
+    width: 3%;
+}
+
+.buttonNext2 {
+    margin-top: 4%;
+}
+
+.buttonBack button {
+    width: 60%;
+
+    font-weight: bold;
+    font-size: 20px;
+    color: #333333;
+
+    padding: 0%;
+
+    border-style: none;
+    background: none;
+}
+
+.buttonBack img {
+    width: 8%;
+    margin-right: 4%;
+    margin-bottom: 2%;
+}
+
+.buttonBack h1 {
+    font-size: 16px;
+}
+
+.buttonNext2 button {
+    width: 60%;
+
+    font-weight: bold;
+    font-size: 16px;
+    color: #333333;
+
+    margin-left: 42%;
+    padding: 0%;
+
+    border-style: none;
+    background: none;
+}
+
+.buttonNext2 img {
+    width: 5%;
+}
+
+.buttonNext2 h1 {
+    font-size: 16px;
+}
+
+.artist_name {
+    justify-content: flex-start;
+
+    font-weight: bold;
+    font-size: 24px;
+    color: #333333;
+
+    margin-bottom: 10%;
 }
