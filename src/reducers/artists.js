@@ -1,6 +1,3 @@
-import Cookies from "js-cookie";
-import { artistIdsHandler } from "../helpers/all-ids-formatter";
-
 const cases = {
     GET_ARTISTS: 'GET_ARTISTS',
     SET_PAGE: 'SET_PAGE',
@@ -16,7 +13,7 @@ const initialState = {
     currentArtist: {},
     filterLetters: [],
     allIds: document.cookie.allIds || [],
-    navigationIds: { previous: 0, next: 0 }
+    navigation: { previous: 0, next: 0 }
 };
 
 const ArtistReducer = (state, action) => {
@@ -30,7 +27,6 @@ const ArtistReducer = (state, action) => {
 
     switch (type) {
         case cases.GET_ARTISTS:
-            Cookies.set('allIds', payload.allIds, { expires: 7 });
             return {
                 ...state,
                 isLoading: false,
@@ -49,15 +45,10 @@ const ArtistReducer = (state, action) => {
                 filterLetters: payload.filterLetters,
             };
         case cases.SET_CURRENT_ARTIST:
-            const { previous, next } = artistIdsHandler(state.allIds, payload.currentArtist.publicId);
-
             return {
                 ...state,
                 currentArtist: payload.currentArtist,
-                navigationIds: {
-                    previous,
-                    next,
-                },
+                navigation: payload.navigation,
                 isLoading: false,
             }
         default:

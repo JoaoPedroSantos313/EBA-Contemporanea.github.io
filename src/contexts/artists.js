@@ -45,7 +45,8 @@ export const ArtistProvider = ({ children }) => {
         dispatch({
             type: cases.SET_CURRENT_ARTIST,
             payload: {
-                currentArtist: apiResponse
+                currentArtist: apiResponse.artista,
+                navigation: apiResponse.navigation
             }
         })
     }

@@ -11,7 +11,7 @@ import './artista1.css';
 import useArtist from '../../../contexts/artists';
 
 export function Artista_pag1() {
-    const { currentArtist: info, getArtist, navigationIds, isLoading } = useArtist();
+    const { currentArtist: info, getArtist, navigation, isLoading } = useArtist();
     const { id } = useParams();
     const [isPage1, setIsPage1] = useState(true);
     const [isCollapsed, setIsCollapsed] = useState(true);
@@ -23,8 +23,8 @@ export function Artista_pag1() {
     }, []);
 
     const goBack = () => {
-        if (navigationIds.previous > 0) {
-            window.location.href = `/artista/${navigationIds.previous}`;
+        if (navigation.previous > 0) {
+            window.location.href = `/artista/${navigation.previous}`;
         }
     }
 
@@ -33,7 +33,7 @@ export function Artista_pag1() {
     }
 
     const goForward = () => {
-        window.location.href = `/artista/${navigationIds.next}`;
+        window.location.href = `/artista/${navigation.next}`;
     }
 
     const changePageContent = () => {
