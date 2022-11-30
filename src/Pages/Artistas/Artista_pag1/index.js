@@ -155,7 +155,7 @@ export function Artista_pag1() {
                                 <div className='Carrossel_Artistas'>
                                     <h1>Seleção de Obras</h1>
 
-                                    <Slider img_slider={info?.obras} />
+                                    <Slider imgs={info?.obras} />
                                 </div>
                             )}
 

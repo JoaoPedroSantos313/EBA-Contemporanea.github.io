@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom';
 import img1 from '../../Components/Slider/Imgs/img1.jpg'
 import img2 from '../../Components/Slider/Imgs/img2.jpg'
 import img3 from '../../Components/Slider/Imgs/img3.jpg'
+import img4 from '../../Components/Slider/Imgs/img4.png'
 import './Home.css';
 
 export default class Home extends Component {
     render() {
         return (
+            <>
             <section className="home_main">
                 <img id='titulo' src='/logo.png'></img>
 
@@ -26,15 +28,16 @@ export default class Home extends Component {
                     </Link>
 
                 </section>
+            </section>
 
-                <section className='sabermais'>
-                    <Slider img_slider={[
-                        { img: img1, id: 1 },
-                        { img: img2, id: 2 },
-                        { img: img3, id: 3 }
-                    ]} />
-                </section>
-
+            <Slider imgs={[
+                { img: img1, id: 1 },
+                { img: img2, id: 2 },
+                { img: img3, id: 3 },
+                { img: img4, id: 4 }
+            ]} />
+            
+            <section className="home_main" >
                 <section className='sabermais'>
 
                     <Link to="/cidade_universitaria">
@@ -49,6 +52,7 @@ export default class Home extends Component {
                     </div>
                 </section>
             </section>
+        </>
         )
     }
 }
