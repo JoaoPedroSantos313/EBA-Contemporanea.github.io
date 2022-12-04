@@ -13,7 +13,7 @@ export default class Home extends Component {
         return (
             <>
             <section className="home_main">
-                <img id='titulo' src='/logo.png'></img>
+                <img id='titulo' src='/logo.png' width='100%' />
 
                 <section className='sabermais'>
                     <div className='texto'>
@@ -30,7 +30,7 @@ export default class Home extends Component {
                 </section>
             </section>
 
-            <section style={{ maxWidth: '1024px' }}>
+            <section style={{ maxWidth: '1024px', margin: 'auto' }}>
                 <Slider imgs={[
                     { img: img1, id: 1 },
                     { img: img2, id: 2 },

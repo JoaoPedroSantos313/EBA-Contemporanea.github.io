@@ -20,7 +20,8 @@ hr {
 }
 
 .artista_main {
-    margin: 0 10%;
+    margin: auto;
+    max-width: 1024px;
 }
 
 .artista_body1 {
@@ -214,6 +215,7 @@ hr {
 
 .Carrossel_Artistas {
     margin-top: 5%;
+    width: 100%;
 }
 
 .buttonNext {
