@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
 
-    margin: 0px 19.5%;
+    margin: auto;
+    max-width: 1024px;
 
     align-items: center;
     justify-content: center;
@@ -15,107 +16,4 @@
     padding-bottom: 8%;
 
     align-items: center;
-}
-
-.sabermais {
-    display: flex;
-
-    padding-top: 15%;
-
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.texto {
-    display: inline-block;
-
-    padding-bottom: 2%;
-
-    width: 57.35%;
-    height: 100%;
-}
-
-.texto h1 {
-    font-size: 24px;
-    color: #333333;
-
-    margin: 0px;
-    margin-bottom: 10px;
-}
-
-.texto h3 {
-    font-family: 'Roboto thin';
-    font-weight: bold;
-    font-kerning: normal;
-    font-size: 20px;
-
-    word-spacing: 4px;
-    word-break: normal;
-
-    color: #1b1b1b;
-    margin: 0px;
-
-    text-align: justify;
-    line-height: 32px;
-}
-
-.botao_sobre {
-    font-weight: bold;
-    font-size: 15px;
-
-    color: #D60000;
-    width: 120px;
-
-    margin-left: -100%;
-
-    padding: 8px;
-    padding-left: 18px;
-    padding-right: 18px;
-
-    border-radius: 15px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(171, 170, 170, 0.34);
-    background-color: white;
-    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.60);
-
-    transition: 0.6s;
-    outline: none;
-    cursor: pointer;
-}
-
-.botao_sobre:hover {
-    color: white;
-    background-color: #818181;
-}
-
-.botao_cidadeu {
-    font-weight: bold;
-    font-size: 15px;
-
-    color: #D60000;
-    width: 120px;
-
-    margin-left: 100%;
-
-    padding: 8px;
-    padding-left: 18px;
-    padding-right: 18px;
-
-    border-radius: 15px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(171, 170, 170, 0.34);
-    background-color: white;
-    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.60);
-
-    transition: 0.6s;
-    outline: none;
-    cursor: pointer;
-}
-
-.botao_cidadeu:hover {
-    color: white;
-    background-color: #818181;
 }

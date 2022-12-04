@@ -9,10 +9,10 @@ function Header() {
     return (
         <header className="container_">
             <div className='inner_container'>
-                <Link to="/" id="logotipo">
+                <Link to="/">
                     <div className='logos'>
-                        <img id='logo' src='/logo_h.png' />
-                        <img id='logo2' src='/logo_h_completo.png' />
+                        <img id='logo' src='/logo_min.png' height="25px" />
+                        <img id='logo2' src='/logo_completo.png' height="25px" />
                     </div>
                 </Link>
 

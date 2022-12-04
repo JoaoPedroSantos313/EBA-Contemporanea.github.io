@@ -11,14 +11,14 @@ a {
 .container_ {
 	padding: 3% 0;
 	
-	border-bottom: 10px solid #D60000;
+	border-bottom: 6px solid #D60000;
 }
 
 .inner_container {
 	position: relative;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 
 	max-width: 1024px;
 	margin: auto;
@@ -32,10 +32,9 @@ a {
 	width: 160px;
 }
 
-#logo, #logo2 {
+/* #logo, #logo2 {
 	position: absolute;
-	width: 160px;
-}
+} */
 
 a #logo2 {
 	display: none;
@@ -48,36 +47,40 @@ a:hover #logo {
 
 a:hover #logo2 {
 	display: block;
+	transform: translateX(-30px);
 }
 
 @keyframes logoanimation {
 	from {
 		opacity: 100%;
+		display: block;
 		transform: translateX(-10px);
 	}
 
 	to {
 		opacity: 0%;
 		display: none;
-		transform: translateX(-53px);
+		transform: translateX(-50px);
 	}
 }
 
 .social_media {
 	margin-left: 25px;
-	width: 160px;
+	width: 100px;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: right;
 }
 
 #fb, #insta {
 	font-size: 25px;
 	transition: translateY 1s;
 	color: black;
+	margin-left: 25px;
 }
 
 #fb:hover, #insta:hover {
 	transform: translateY(-5px);
+	color: #D60000;
 }
 
 /*Menu*/

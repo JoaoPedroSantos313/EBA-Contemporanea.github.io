@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Home_post from '../../Components/home_post';
 import Slider from '../../Components/Slider';
-import { Link } from 'react-router-dom';
 import img1 from '../../Components/Slider/Imgs/img1.jpg'
 import img2 from '../../Components/Slider/Imgs/img2.jpg'
 import img3 from '../../Components/Slider/Imgs/img3.jpg'
@@ -11,50 +10,30 @@ import './Home.css';
 export default class Home extends Component {
     render() {
         return (
-            <>
             <section className="home_main">
-                <img id='titulo' src='/logo.png' width='100%' />
+                <img id='titulo' src='/EBACONTEMPORÂNEA.png' />
 
-                <section className='sabermais'>
-                    <div className='texto'>
-                        <Home_post title="Sobre"
-                            text="Esta plataforma armazena e divulga os dados levantados e o material elaborado pelo grupo de pesquisa “Contagem regressiva aos 200, começando ao contrário: artistas formados pela EBA de 1975 à atualidade”." />
-                    </div>
+                <Home_post 
+                    title="Sobre o Projeto"
+                    text="EBA Contemporânea compreende um mapeamento de artistas visuais que se formaram na Escola de Belas Artes da UFRJ, desde a transferência da Escola para a Cidade Universitária, na Ilha do Fundão, em 1975. Divide-se entre a pesquisa e constituição de um banco de dados, disponibilizado nesta plataforma, e a realização de entrevistas, que estarão acessíveis na medida em que forem realizadas." 
+                    direction="left"
+                    buttonLink="/projeto"
+                />
 
-                    <Link to="/projeto">
-                        <button className='botao_sobre'>
-                            saiba mais
-                        </button>
-                    </Link>
-
-                </section>
-            </section>
-
-            <section style={{ maxWidth: '1024px', margin: 'auto' }}>
                 <Slider imgs={[
                     { img: img1, id: 1 },
                     { img: img2, id: 2 },
                     { img: img3, id: 3 },
                     { img: img4, id: 4 }
                 ]} />
-            </section>
-            
-            <section className="home_main" >
-                <section className='sabermais'>
 
-                    <Link to="/cidade_universitaria">
-                        <button className='botao_cidadeu'>
-                            saiba mais
-                        </button>
-                    </Link>
-
-                    <div className='texto'>
-                        <Home_post title="Cidade Universitária"
-                            text="Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo e a mexeu para fazer um livro de amostras do tipo. " />
-                    </div>
-                </section>
+                <Home_post 
+                    title="Cidade Universitária"
+                    text="Bairro da Zona Norte do Rio de Janeiro, localizado na Ilha do Fundão, às margens da Baía de Guanabara. Nele se localiza o campus principal da Universidade Federal do Rio de Janeiro."
+                    direction="right"
+                    buttonLink="/cidade_universitaria"
+                />
             </section>
-        </>
         )
     }
 }

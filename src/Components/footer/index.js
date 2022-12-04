@@ -1,5 +1,6 @@
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Grid } from '@material-ui/core';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './footer.css';
@@ -16,33 +17,43 @@ export default class Footer extends Component {
                 </div>
                 <div className="footer_main">
                     <a href="#">
-                        <img id='ufrj' src='/ufrj.png' width="150px" />
+                        <img id='ufrj' src='/UFRJ.png' width="150px" />
                     </a>
                     <a href="#">
-                        <img id='eba' src='/eba.png' width="150px" />
+                        <img id='eba' src='/EBA.png' width="150px" />
                     </a>
                     <a href="#">
-                        <img id="ppgav" src='/logo_ppgav.png' width="150px" />
+                        <img id="ppgav" src='/PPGAVE.png' width="150px" />
                     </a>
                     <a href="#">
-                        <img id="faperj" src='/faperj.png' width="150px" />
+                        <img id="faperj" src='/FAPERF.png' width="150px" />
                     </a>
                 </div>
-                <nav id="menu_footer">
-                    <p>Desenvolvido por:
-                        <a href="https://www.behance.net/joaopedros1520" target="_blank" style={{ margin: '0 5px' }}>
-                            João Pedro Santos
+                <Grid container id="menu_footer">
+                    <Grid item xs={4}>
+                        <a>Artistas</a>
+                        <a>Coletivos</a>
+                        <a>O Projeto</a>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <i>Desenvolvido por:</i>
+                        <a href="https://www.behance.net/joaopedros1520" target="_blank">
+                            João Pedro
                         </a>
                         e
-                        <a href="https://github.com/evelyncorrea" target="_blank" style={{ marginLeft: '5px' }}>
+                        <a href="https://github.com/evelyncorrea" target="_blank">
                             Evelyn Ferreira
                         </a>
-                    </p>
-                    <p><FontAwesomeIcon icon={faEnvelope} /> ebacontemporanea@gmail.com</p>
-                </nav>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <a href="mailto:ebacontemporanea@gmail.com" className='email' style={{ justifyContent: 'flex-end', margin: 0 }}>
+                            <FontAwesomeIcon icon={faEnvelope} size="2x" /> 
+                            ebacontemporanea@gmail.com
+                        </a>
+                    </Grid>
+                </Grid>
                 <div className='hr_main'>
-                    <hr />
-                    <p>© 2020 por EBAContemporânea de 1975 à atualidade.</p>
+                    <p>© 2022 por EBAContemporânea de 1975 à atualidade.</p>
                 </div>
             </section>
         )
