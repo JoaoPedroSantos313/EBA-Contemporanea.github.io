@@ -1,14 +1,8 @@
 .slider {
     display: flex;
-
-    margin: 0px;
-    padding: 0px;
-    padding-bottom: 0px;
     padding-top: 2%;
-
     overflow: hidden;
     position: relative;
-
     max-height: 500px;
     width: 100%;
 }
@@ -20,19 +14,28 @@
     transition: 0.5s;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .slide img {
-    object-fit: contain;
+    max-width: 100%;
+    padding: 0 1px;
+}
+
+.subtitle {
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(30%);
+    max-width: 80%;
 }
 
 #goLeft {
     position: absolute;
-    top: 50%;
     left: 0;
-    transform: translateY(-50%);
     width: 10%;
     height: 100%;
     background: none;
@@ -40,7 +43,7 @@
     border: none;
     outline: none;
     transition: 0.5s;
-    color: whitesmoke;
+    color: black;
 }
 
 #goLeft:hover {
@@ -49,19 +52,16 @@
     color: black;
 }
 
-
 #goRight {
     position: absolute;
-    top: 50%;
     right: 0;
-    transform: translateY(-50%);
     width: 10%;
     height: 100%;
     background: none;
     transition: 0.5s;
     border: none;
     outline: none;
-    color: whitesmoke;
+    color: black;
 }
 
 #goRight:hover {

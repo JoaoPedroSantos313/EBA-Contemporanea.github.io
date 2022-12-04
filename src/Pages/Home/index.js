@@ -30,12 +30,14 @@ export default class Home extends Component {
                 </section>
             </section>
 
-            <Slider imgs={[
-                { img: img1, id: 1 },
-                { img: img2, id: 2 },
-                { img: img3, id: 3 },
-                { img: img4, id: 4 }
-            ]} />
+            <section style={{ maxWidth: '1024px' }}>
+                <Slider imgs={[
+                    { img: img1, id: 1 },
+                    { img: img2, id: 2 },
+                    { img: img3, id: 3 },
+                    { img: img4, id: 4 }
+                ]} />
+            </section>
             
             <section className="home_main" >
                 <section className='sabermais'>

@@ -1,9 +1,4 @@
-body,
-ul,
-li,
-p {
-	margin: 0px;
-	padding: 0px;
+ul, li, p {
 	list-style: none;
 	font-family: Arial;
 }
@@ -17,23 +12,17 @@ a {
 	display: flex;
 	align-content: center;
 	justify-content: center;
-	flex-wrap: wrap;
-	flex-direction: row;
 	padding-top: 3%;
+	
+	border-bottom: 10px solid #D60000;
 }
 
 .logos {
 	position: relative;
-	margin-right: 20px;
 	width: 160px;
 }
 
-#logo {
-	position: absolute;
-	width: 160px;
-}
-
-#logo2 {
+#logo, #logo2 {
 	position: absolute;
 	width: 160px;
 }
@@ -52,51 +41,32 @@ a:hover #logo2 {
 }
 
 @keyframes logoanimation {
-	0% {
+	from {
 		opacity: 100%;
 		transform: translateX(-10px);
 	}
 
-	25% {
-		opacity: 75%;
-		transform: translateX(-20px);
-
-	}
-
-	50% {
-		opacity: 50%;
-		transform: translateX(-40px);
-	}
-
-	75% {
-		opacity: 25%;
-		transform: translateX(-49px);
-	}
-
-	100% {
+	to {
 		opacity: 0%;
 		display: none;
 		transform: translateX(-53px);
 	}
 }
 
-#fb {
-	font-size: 18px;
-	margin-left: 80px;
+.social_media {
+	margin: 0 25px;
+	width: 160px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#fb, #insta {
+	font-size: 25px;
 	transition: translateY 1s;
 	color: black;
 }
 
-#fb:hover {
-	transform: translateY(-5px);
-}
-
-#insta {
-	width: 18px;
-	margin-left: 25px;
-}
-
-#insta:hover {
+#fb:hover, #insta:hover {
 	transform: translateY(-5px);
 }
 
@@ -114,9 +84,8 @@ a:hover #logo2 {
 	display: block;
 	text-align: center;
 
-	padding: 18px;
-	padding-top: 0px;
-	padding-bottom: 0%;
+	padding: 0 18px;
+	
 	color: #333333;
 }
 
@@ -141,19 +110,7 @@ a:hover #logo2 {
 #menu_header ul li a {
 	background-color: white;
 	text-align: center;
-	padding: 7px 7px 7px 7px;
+	padding: 7px;
 	margin: 0px;
 	box-shadow: 2px 0px 1px rgba(50, 50, 50, 0.77);
-}
-
-#faixa {
-	display: inline;
-	height: 10px;
-	width: 100%;
-	color: #D60000;
-	;
-	border: none;
-	background-color: #D60000;
-	;
-	margin: 0px;
 }

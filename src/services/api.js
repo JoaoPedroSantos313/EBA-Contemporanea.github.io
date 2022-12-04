@@ -5,7 +5,7 @@ const apiSufix = {
 }
 
 const api = axios.create({
-    baseURL: "https://ebacontemporanea.herokuapp.com",
+    baseURL: "https://ebac.fly.dev",
 });
 
 export {
