@@ -11,8 +11,8 @@ function Header() {
             <div className='inner_container'>
                 <Link to="/">
                     <div className='logos'>
-                        <img id='logo' src='/logo_min.png' height="25px" />
-                        <img id='logo2' src='/logo_completo.png' height="25px" />
+                        <img id='logo' src='/logo_min.svg' height="25px" />
+                        <img id='logo2' src='/logo_completo.svg' height="25px" />
                     </div>
                 </Link>
 
