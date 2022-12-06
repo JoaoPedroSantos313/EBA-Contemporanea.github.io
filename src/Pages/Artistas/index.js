@@ -49,7 +49,11 @@ export default function Artistas() {
         <>
             <section className='abc_filter'>
                 {filterLetters?.map((item, index) => (
-                    <button key={index} onClick={() => filtrar(item)}>
+                    <button 
+                        className={currentLetter === item && 'active-button'}
+                        key={index} 
+                        onClick={() => filtrar(item)}
+                    >
                         {item}
                     </button>
                 ))}

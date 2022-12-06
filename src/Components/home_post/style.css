@@ -14,7 +14,7 @@
 }
 
 .post_button:hover {
-    border: 1px solid black;
+    color: #D60000;
 }
 
 .post_button_container {
