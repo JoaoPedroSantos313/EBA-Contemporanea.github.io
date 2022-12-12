@@ -1,18 +1,10 @@
-* {
-  font-family: 'lucida sans unicode';
-}
-
-main {
-  margin: 20px 10%;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans Unicode';
 }
 
 main h1 {
-  justify-content: right;
-    
   font-size: 24px;
   color: #333333;
-
-  margin: 0px;
-  margin-bottom: 20px;
-  font-size: 24px;
 }

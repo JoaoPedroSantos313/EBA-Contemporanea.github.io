@@ -1,23 +1,24 @@
-.projeto_main p{
-    font-kerning: normal;
+main {
+    max-width: 1024px;
+    margin: 45px auto;
+}
+
+.p_normal {
+    font-family: 'Lucida Sans Unicode';
     font-size: 20px;
    
     word-break: normal;
     
     color: #1b1b1b;
-    margin:0px;
    
     text-align: justify;
-    line-height: 31px;
+    line-height: 36px;
 }
 
-.text_img{
-    display: flex;
-    flex-direction: row;
+.p_normal:first-of-type {
+    margin-top: 45px;
 }
 
-#projetoIMG{
-    margin-left: 2%;
-    width: 100%;
-    height: 100%;
+.p_bold {
+    font-weight: bold;
 }

@@ -15,30 +15,33 @@ import AtrocidadesMaravilhosas from './Pages/Coletivos/AtrocidadesMaravilhosas';
 import { Coletivos } from './Pages/Coletivos';
 import { Entrevistas } from './Pages/Entrevistas';
 import { ArtistProvider } from './contexts/artists';
+import { PesquisadoresProvider } from './contexts/pesquisadores';
 
 const Routes = () => {
     return (
         <ArtistProvider>
-            <BrowserRouter>
-                <Header/>
+            <PesquisadoresProvider>
+                <BrowserRouter>
+                    <Header/>
 
-                <Switch>
-                    <Route exact path ="/" component={Home} />
-                    <Route path="/EBA" component={EBA} />
-                    <Route path="/projeto" component={Projeto} />
-                    <Route path="/contato" component={Contato} />
-                    <Route path="/artistas" component={Artistas} />
-                    <Route path="/artista/:id" component={Artista_pag1} />
-                    <Route path="/publicacoes" component={Publicacoes} />
-                    <Route path="/pesquisadores" component={Pesquisadores} />
-                    <Route path="/cidade_universitaria" component={CidadeUniversitaria} />
-                    <Route path="/AtrocidadesMaravilhosas" component={AtrocidadesMaravilhosas} />
-                    <Route path="/coletivos" component={Coletivos} />
-                    <Route path="/entrevistas" component={Entrevistas} />
-                </Switch>
+                    <Switch>
+                        <Route exact path ="/" component={Home} />
+                        <Route path="/EBA" component={EBA} />
+                        <Route path="/projeto" component={Projeto} />
+                        <Route path="/contato" component={Contato} />
+                        <Route path="/artistas" component={Artistas} />
+                        <Route path="/artista/:id" component={Artista_pag1} />
+                        <Route path="/publicacoes" component={Publicacoes} />
+                        <Route path="/pesquisadores" component={Pesquisadores} />
+                        <Route path="/cidade_universitaria" component={CidadeUniversitaria} />
+                        <Route path="/AtrocidadesMaravilhosas" component={AtrocidadesMaravilhosas} />
+                        <Route path="/coletivos" component={Coletivos} />
+                        <Route path="/entrevistas" component={Entrevistas} />
+                    </Switch>
 
-                <Footer/>
-            </BrowserRouter>
+                    <Footer/>
+                </BrowserRouter>
+            </PesquisadoresProvider>
         </ArtistProvider>
     )
 }

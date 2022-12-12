@@ -1,6 +1,6 @@
 import React from 'react';
-import { CircularProgress, Collapse } from '@material-ui/core';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { CircularProgress, Collapse, Grid } from '@material-ui/core';
+import { faChevronDown, faChevronUp, faChevronLeft, faChevronRight, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
@@ -60,30 +60,30 @@ export function Artista_pag1() {
                 </div>
 
                 <section className="artista_main">
-                    <div className='row artista_body1'>
-                        <div className='P_foto'>
+                    <Grid container className='artista_body1'>
+                        <Grid item md={3} className='P_foto'>
                             <img src={info?.fotoPerfil || defaultProfile}></img>
-                        </div>
+                        </Grid>
 
-                        <div className='Info_main'>
-                            <h2>{info?.nome} <h3>({info?.localNascimento})</h3></h2>
-                            {info?.localAtual && <h3>Vive e trabalha: <b>{info?.localAtual}</b></h3>}
+                        <Grid item md={5} className='Info_main'>
+                            <h2>{info?.nome} <p>({info?.localNascimento})</p></h2>
+                            {info?.localAtual && <p>Vive e trabalha: <b>{info?.localAtual}</b></p>}
                             <br />
                             {info?.estudos && (
                                 <>
-                                    <h3>Formações:</h3>
+                                    <p>Formações:</p>
                                     {info?.estudos.map(i => (
-                                        <h3 key={i.id}>
+                                        <p key={i.id}>
                                             <b>{`${i.tipo} em ${i.area} (${i.anoInicio || "-"} - ${i.anoFim || "atualmente"});`}</b>
-                                        </h3>
+                                        </p>
                                     ))}
                                     <br />
                                 </>
                             )}
-                            {info?.profissao && <h3>Profissão:
+                            {info?.profissao && <p>Profissão:
                                 <br />
                                 <b>{info.profissao}</b>
-                            </h3>}
+                            </p>}
 
                             <br />
 
@@ -97,36 +97,41 @@ export function Artista_pag1() {
                                     </div>
                                 ))}
                             </div>
-                        </div>
+                        </Grid>
 
-                        <div className='Links_main'>
+                        <Grid item md={3} className='Links_main'>
+                            <div className='border_links navegacao_outro_artista'>
+                                <h2>Anterior/Próximo Artista</h2>
+
+                                <div className='flex AtalhodeNavegacao'>
+                                    <button onClick={goBack}>
+                                        <FontAwesomeIcon icon={faChevronLeft} />
+                                    </button>
+                                    <button onClick={goToAllArtists}>
+                                        <FontAwesomeIcon icon={faBars} />
+                                    </button>
+                                    <button onClick={goForward}>
+                                        <FontAwesomeIcon icon={faChevronRight} />
+                                    </button>
+                                </div>
+                            </div>
 
                             <div className='border_links navegacao_artista'>
                                 {isPage1 ? (
                                     <>
                                         <h2>Página 1/2 do Artista</h2>
                                         <button onClick={changePageContent}>
-                                            <img src="/I_D_Arrow.png" />
+                                            <FontAwesomeIcon icon={faChevronRight} />
                                         </button>
                                     </>
                                 ) : (
                                     <>
                                         <button onClick={changePageContent}>
-                                            <img src="/I_E_Arrow.png" />
+                                            <FontAwesomeIcon icon={faChevronLeft} />
                                         </button>
                                         <h2>Página 2/2 do Artista</h2>
                                     </>
                                 )}
-                            </div>
-
-                            <div className='border_links navegacao_outro_artista'>
-                                <h2>Anterior/Próximo Artista</h2>
-
-                                <div className='flex AtalhodeNavegacao'>
-                                    <button onClick={goBack}><img src="/I_E_Arrow.png" /></button>
-                                    <button onClick={goToAllArtists}><img src="/I_Menu.png" /></button>
-                                    <button onClick={goForward}><img src="/I_D_Arrow.png" /></button>
-                                </div>
                             </div>
 
                             {info?.links?.length > 0 && (
@@ -140,8 +145,8 @@ export function Artista_pag1() {
                                     ))}
                                 </div>
                             )}
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                     {isPage1 ? (
                         <>
                             {info?.biografia?.texto !== null && <div className='Biografia_main'>

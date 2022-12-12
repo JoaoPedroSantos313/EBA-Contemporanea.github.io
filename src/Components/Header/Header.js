@@ -24,14 +24,14 @@ function Header() {
                     <li><Link to="/entrevistas">Entrevistas</Link></li>
                     <li><Link to="/projeto">O Projeto</Link>
                         <ul>
-                            <li><Link to="/pesquisadores">Pesquisadores</Link></li>
+                            <li><Link to="/pesquisadores">Pesquisadores(as)</Link></li>
                             <li><Link to="/publicacoes">Publicações</Link></li>
                         </ul>
                     </li>
                     <li><Link to="/contato">Contato</Link></li>
                 </ul>
 
-                <div class="social_media">
+                <div className="social_media">
                     <a href="mailto:ebacontemporanea@gmail.com" id='fb'>
                         <FontAwesomeIcon icon={faEnvelope} />
                     </a>

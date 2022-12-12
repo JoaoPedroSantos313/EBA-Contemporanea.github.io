@@ -1,16 +1,16 @@
-import { api } from './api';
+import { api, apiSufix } from './api';
 
 const getArtista = async (publicId) => {
-    return await api.get(`/artista/${publicId}`);
+    return await api.get(`/${apiSufix.artista}/${publicId}`);
 };
 
 const getAllArtistas = async () => {
-    return await api.get(`/artista?getAll=true`);
+    return await api.get(`/${apiSufix.artista}?getAll=true`);
 
 };
 
 const getPaginatedArtistas = async (page = 1, search = '') => {
-    return await api.get(`/artista?search=${search}&page=${page}`);
+    return await api.get(`/${apiSufix.artista}?search=${search}&page=${page}`);
 }
 
 export {

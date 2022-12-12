@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './slider.css';
 
 const Slider = ({ imgs }) => {
@@ -7,7 +7,7 @@ const Slider = ({ imgs }) => {
             <img 
                 src={i.img} 
                 alt="slide-img"
-                height="80%" 
+                height="100%"
             />
             {i?.nome && <p className='subtitle'>{i.nome}</p>}
         </>
@@ -24,21 +24,19 @@ const Slider = ({ imgs }) => {
 
     return (
         <div className="slider">
-            {sliderArr?.map((item, index) => {
-                return (
-                    <div key={index} className="slide" style={{ transform: `translateX(${x}%)` }}>
-                        {item}
+            {sliderArr?.map((item, index) => (
+                <div key={index} className="slide" style={{ transform: `translateX(${x}%)` }}>
+                    {item}
 
-                        <button id="goLeft" onClick={goLeft}>
-                            <span className="material-icons">keyboard_arrow_left</span>
-                        </button>
+                    <button id="goLeft" onClick={goLeft}>
+                        <span className="material-icons">keyboard_arrow_left</span>
+                    </button>
 
-                        <button id="goRight" onClick={goRight}>
-                            <span className="material-icons">keyboard_arrow_right</span>
-                        </button>
-                    </div>
-                );
-            })}
+                    <button id="goRight" onClick={goRight}>
+                        <span className="material-icons">keyboard_arrow_right</span>
+                    </button>
+                </div>
+            ))}
         </div>
     )
     

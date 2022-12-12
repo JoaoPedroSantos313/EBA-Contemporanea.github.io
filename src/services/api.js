@@ -1,7 +1,8 @@
 import axios from 'axios';
+
 const apiSufix = {
     artista: 'artistas',
-    pesquisador: 'pesquisador'
+    pesquisador: 'pesquisadores'
 }
 
 const api = axios.create({

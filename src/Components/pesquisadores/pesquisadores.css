@@ -1,137 +1,34 @@
-.Pesquisadores_main {
-    margin: 0px 20.5%;
+.card-container {
+    height: auto;
+    width: 1130px;
+    padding: 18px 30px;
+    margin-bottom: 32px;
+
+    background-color: #F9F9F9;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
 }
 
-.Img_pesquisadores {
-    margin-top: 0%;
+.card-picture {
+    width: 224px;
+    height: 224px;
+}
 
+.card-title {
     display: flex;
-
-    width: 30%;
-    height: 80%;
-
-    padding: 1%;
-
-    align-items: center;
-
-    border-style: none;
-    box-shadow: 0px -2px 2px 0px rgba(171, 170, 170, 0.34);
-
-    transition: 0.6s;
-    outline: none;
-    cursor: pointer;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-.Pesquisadores_main_title h2 {
-    margin-top: 0.3%;
+.card-name {
+    font-weight: 400px;
+    color: #222;
+}
 
+.card-link {
+    height: 37px;
+}
+
+.card-description {
     font-size: 20px;
-
-    font-weight: bold;
-    font-size: 20px;
-    color: #333333;
-}
-
-.Pesquisadores_main h1 {
-    justify-content: right;
-
-    font-weight: bold;
-    font-size: 20px;
-    color: #333333;
-
-    margin: 0px;
-    margin-bottom: 2%;
-}
-
-.Pesquisadores_main p {
-    justify-content: right;
-
-    font-size: 19px;
-    color: #333333;
-
-    margin: 0px;
-    margin-bottom: 2%;
-}
-
-.Coordenador_main {
-    margin-top: 8%;
-}
-
-.Pesquisadores_card {
-    display: flex;
-    flex-direction: row;
-
-    border-style: none;
-    background-color: rgb(250, 250, 250);
-    box-shadow: 0px 0px 0px 0px rgba(171, 170, 170, 0.34);
-
-    padding-left: 2%;
-    padding-right: 5%;
-    padding-bottom: 0%;
-    padding-top: 2%;
-
-    margin-bottom: 2%;
-}
-
-.Participacoes_card {
-    display: flex;
-    flex-direction: row;
-
-    border-style: none;
-    background-color: rgb(250, 250, 250);
-    box-shadow: 0px -1px 2px 0px rgba(171, 170, 170, 0.34);
-
-    padding-left: 2%;
-    padding-right: 5%;
-    padding-bottom: 0%;
-    padding-top: 1%;
-
-    margin-top: 5%;
-    margin-bottom: 8%;
-}
-
-.Cargo_card {
-    display: flex;
-    flex-direction: row;
-
-    border-style: none;
-    background-color: rgb(250, 250, 250);
-    box-shadow: 0px -1px 2px 0px rgba(171, 170, 170, 0.34);
-
-    padding-left: 2%;
-    padding-right: 5%;
-    padding-top: 2%;
-
-    margin-bottom: -10px;
-}
-
-.Cargo_card:nth-child(n+2) {
-    margin-top: 12%;
-}
-
-.Pesquisadores_buttonBody {
-    width: 12%;
-    height: 12%;
-
-    padding: 0%;
-
-    margin-left: 20%;
-    margin-bottom: 5%;
-
-    border-style: none;
-    background: none;
-
-    transition: ease all 0.5s;
-    outline: none;
-    cursor: pointer;
-}
-
-.Pesquisadores_buttonBody img {
-    display: flex;
-    height: 70%;
-    width: 100%;
-}
-
-.Pesquisadores_buttonBody:hover {
-    transform: scale(1.1);
 }

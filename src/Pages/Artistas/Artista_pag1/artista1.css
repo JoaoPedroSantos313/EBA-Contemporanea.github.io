@@ -1,17 +1,13 @@
+h1, h2, h3, h4, h5, p, span {
+    font-family: 'Lucida Sans Unicode';
+    margin: 0;
+}
+
 .loading {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-}
-
-hr {
-    display: flex;
-    justify-content: center;
-
-    height: 1px;
-    width: 80%;
-    background-color: black;
 }
 
 .artista_banner img {
@@ -25,7 +21,10 @@ hr {
 }
 
 .artista_body1 {
-    margin: 2% 0;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
 }
 
 .P_foto {
@@ -46,55 +45,29 @@ hr {
     font-weight: bold;
     font-size: 24px;
     color: #333333;
-
-    margin: 0px;
-    margin-top: 1%;
-    margin-bottom: 0.5%;
 }
 
 .Info_main {
-    margin-top: 10px;
-    width: 50%;
-
     align-items: center;
 }
 
-.Info_main h2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    font-weight: bold;
-    font-size: 24px;
-    color: #333333;
-
-    margin-bottom: 10%;
-}
-
-.Info_main h3 {
-    justify-content: flex-start;
-
+.Info_main h2 p {
+    margin: 0 0 30px 0;
     font-size: 16px;
     color: #333333;
 }
 
-.Links_main {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-}
-
 .border_links {
-    border: 1px lightgray solid;
-    border-radius: 20px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
 }
 
 .navegacao_artista {
     display: flex;
-    flex-direction: row;
-    padding: 10px 20px;
-    justify-content: space-between;
     align-items: center;
+    padding: 8px 20px;
+    margin-bottom: 32px;
+    justify-content: space-between;
 }
 
 .navegacao_artista img {
@@ -102,20 +75,39 @@ hr {
 }
 
 .navegacao_outro_artista {
-    padding: 20px;
-    margin: 30px 0;
+    padding: 16px;
+    margin-bottom: 32px;
+}
+
+.navegacao_outro_artista h2 {
+    margin-bottom: 16px;
+}
+
+.navegacao_outro_artista button {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.navegacao_outro_artista svg {
+    width: 20px;
 }
 
 .detalhes_academicos {
-    padding: 20px;
+    padding: 16px 30px;
+}
+
+.detalhes_academicos h2 {
+    padding-bottom: 10px;
+}
+
+.detalhes_academicos a img {
+    padding-right: 10px;
 }
 
 .flex {
     display: flex;
-    flex-direction: row;
-
-    margin-top: 6%;
-    margin-left: 10%;
+    align-items: center;
 }
 
 .linkImg {
@@ -126,11 +118,6 @@ hr {
     display: flex;
     flex-direction: row;
 
-    width: 7%;
-
-    margin: 0%;
-    padding: 0%;
-
     border-style: none;
     background: none;
 
@@ -139,18 +126,7 @@ hr {
     cursor: pointer;
 }
 
-.Links_main button img {
-    display: flex;
-    width: 100%;
-}
-
-.Links_main button:hover {
-    width: 8%;
-}
-
 .Links_main h3 {
-    margin: 0%;
-
     font-size: 16px;
     color: #333333;
 }
@@ -159,37 +135,28 @@ hr {
     display: flex;
     justify-content: center;
 
-    margin: 0%;
-    margin-bottom: 2%;
-
-    font-size: 18px;
+    font-size: 16px;
     color: #333333;
 }
 
 .SocialMedia a {
     color: #222222;
     font-size: 16px;
+    display: flex;
+    align-items: center;
 }
 
 .AtalhodeNavegacao {
     display: flex;
     justify-content: space-around;
 
-    margin: 0;
-
     width: 100%;
 }
 
 .AtalhodeNavegacao button {
-    width: 8%;
-
     transition: 0.5s;
     outline: none;
     cursor: pointer;
-}
-
-.AtalhodeNavegacao button:hover {
-    width: 9%;
 }
 
 .Biografia_main {
@@ -207,7 +174,6 @@ hr {
     word-break: normal;
 
     color: #1b1b1b;
-    margin: 0px;
 
     text-align: justify;
     line-height: 31px;
@@ -230,7 +196,6 @@ hr {
     color: #333333;
 
     margin-left: 42%;
-    padding: 0%;
 
     border-style: none;
     background: none;
@@ -281,8 +246,7 @@ hr {
     font-weight: bold;
     font-size: 20px;
     color: #333333;
-
-    margin: 0px;
+    
     margin-bottom: 2%;
 }
 
@@ -309,7 +273,6 @@ hr {
 
     margin-bottom: 3%;
     padding: 1%;
-    padding-bottom: 0%;
 }
 
 .pag2_h3 {
@@ -322,8 +285,6 @@ hr {
 .buttonBody button {
     width: 2.5%;
     height: 2.5%;
-
-    padding: 0%;
 
     border-style: none;
     background: none;
@@ -354,14 +315,11 @@ hr {
     font-size: 20px;
     color: #333333;
 
-    padding: 0%;
-
     border-style: none;
     background: none;
 }
 
 .buttonBack img {
-    width: 8%;
     margin-right: 4%;
     margin-bottom: 2%;
 }
@@ -378,7 +336,6 @@ hr {
     color: #333333;
 
     margin-left: 42%;
-    padding: 0%;
 
     border-style: none;
     background: none;

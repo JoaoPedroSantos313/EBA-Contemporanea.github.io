@@ -1,78 +1,32 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Grid } from '@material-ui/core';
 import './pesquisadores.css';
 
-class pesquisadores extends Component {
+const Pesquisadores = ({ pesquisador }) => {
+    const { foto, nome, descricao, links } = pesquisador;
+    return (
+        <Grid container className="card-container">
+            <Grid item xs={4} className="card-picture">
+                <img src={foto} width="100%" />
+            </Grid>
+            <Grid item xs={8} className="card-info">
+                <div className='card-title'>
+                    <h2 className="card-name">{nome}</h2>
+                    <div>
+                        {links?.map((link, index) => {
+                            const imgLink = link.nome == 'Curriculum Lattes' ? 'cl.png' : 'A.png';
 
-    constructor(props) {
-
-        super(props);
-        this.state = {
-            card_pesquisadores: props.info.card_pesquisadores,
-            card_participacoescol1: props.info.card_participacoescol1,
-            card_participacoescol2: props.info.card_participacoescol2
-        };
-    }
-
-    render() {
-        return (
-            <>
-                <section className="Pesquisadores_main bodyText">
-
-                    <div className='Coordenador_main'>
-                        {this.state.card_pesquisadores.map(i =>
-                            <>
-                                {i.cargo_pesquisadores && (
-                                    <div className="Cargo_card">
-                                        <h1>{i.cargo_pesquisadores}</h1>
-                                    </div>
-                                )}
-
-                                <div className="Pesquisadores_card">
-                                    <img className="Img_pesquisadores" src={i.photo} />
-                                    <div>
-                                        <h1 className="mx-3">{i.name}</h1>
-                                        <p className="mx-3">{i.about}</p>
-                                        <button className="Pesquisadores_buttonBody mx-3" onClick={() => { window.location.href = i.url }}><img src="/cl.png" /></button>
-                                        <button className="Pesquisadores_buttonBody mx-3" onClick={() => { window.location.href = i.url2 }}><img src="/A.png" /></button>
-                                    </div>
-                                </div>
-                            </>
-                        )}
+                            return (
+                                <a key={index} className="card-link" href={link.url} rel="noreferrer" target="_blank">
+                                    <img src={imgLink} alt={link.nome} height="37px" />
+                                </a>
+                            )
+                        })}
                     </div>
-
-                    <div className="Cargo_card">
-                        <h1>Participações</h1>
-                    </div>
-                    <div className='Coordenador_main row' >
-                        <div className="col-sm">
-
-                            {this.state.card_participacoescol1.map(i =>
-                                <div className="Participacoes_card">
-                                    <div>
-                                        <h1 className="mx-3 my-2">{i.name}</h1>
-                                    </div>
-                                </div>
-                            )}
-
-                        </div>
-
-                        <div className="col-sm">
-
-                            {this.state.card_participacoescol2.map(i =>
-                                <div className="Participacoes_card">
-                                    <div>
-                                        <h1 className="mx-3 my-2">{i.name}</h1>
-                                    </div>
-                                </div>
-                            )}
-
-                        </div>
-                    </div>
-                </section>
-            </>
-        )
-    }
+                </div>
+                <p className="card-description">{descricao}</p>
+            </Grid>
+        </Grid>
+    )
 }
 
-export default pesquisadores;
+export default Pesquisadores;

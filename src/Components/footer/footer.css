@@ -1,5 +1,4 @@
 .footer_container {
-    margin-bottom: 0px;
     bottom: 0%;
 }
 
@@ -53,7 +52,6 @@ a:hover .logo_footer {
 }
 
 #menu_footer div, #menu_footer a {
-    margin: 0;
     font-size: 14px;
     
     justify-content: center;
@@ -81,10 +79,6 @@ a:hover .logo_footer {
     font-size: 12px;
     color: #949494;
     text-align: center;
-}
-
-.hr_main p {
-    margin: 0;
 }
 
 .email {
