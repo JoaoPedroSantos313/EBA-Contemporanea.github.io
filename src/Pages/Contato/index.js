@@ -1,29 +1,56 @@
-import React from 'react';
-import './contato.css';
+import { useState } from 'react';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import './contato.css';
 
-export default function Contato(){
-    return(
+export default function Contato() {
+    const [contact, setContact] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const handleChange = (info, inputName) => {
+        setContact(curr => ({ ...curr, [inputName]: info }));
+    }
+
+    const submit = (e) => {
+        e.preventDefault();
+        console.log(contact);
+    }
+
+    return (
         <main>
-            <h1>Contato</h1>
-            <br />
-            <h6>EBA<span className='redTitle'>Contemporanea</span></h6>
-            <br />
-            <p>Av. Athos da Silveira Ramos, 149 - Cidade Universitária da Universidade Federal do Rio de Janeiro, Rio de Janeiro - RJ, 21941-485</p>
-            <p>ebacontemporanea@gmail.com</p>
-            <p>Tel: 021-8888-8888</p>
-            <p>Fax: 021-8888-8888</p>
-            <br />
-            <a href="#" className='redeSocialLink'>
-                <FontAwesomeIcon icon={faTwitter} />
-                Siga no Twitter
-            </a>
-            <br />
-            <a href='#' className='redeSocialLink'>
-                <FontAwesomeIcon icon={faLinkedin}/>
-                Siga no LinkedIn
-            </a>
+            <img className="cover-img" src='/EBACONTEMPORÂNEA.png' width="100%" />
+            
+            <h2 className="form-title">Entre em contato conosco</h2>
+
+            <form className="form-container" onSubmit={submit}>
+                <input 
+                    className="form-input" 
+                    placeholder="Nome (obrigatório)" 
+                    required
+                    onChange={({ target }) => handleChange(target.value, 'name')}
+                />
+                <input 
+                    className="form-input" 
+                    placeholder="E-mail (obrigatório)"
+                    type="email"
+                    required
+                    onChange={({ target }) => handleChange(target.value, 'email')} 
+                />
+                <textarea 
+                    className="form-input" 
+                    rows="10"
+                    placeholder="Sua mensagem..." 
+                    required
+                    onChange={({ target }) => handleChange(target.value, 'message')}
+                />
+                <button className="form-submit" type="submit">
+                    <FontAwesomeIcon icon={faEnvelope} />
+                    <h2>ebacontemporanea@gmail.com</h2>
+                </button>
+            </form>
         </main>
     )
 };

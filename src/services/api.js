@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiSufix = {
-    artista: 'artistas',
+    artista: 'artista',
     pesquisador: 'pesquisadores'
 }
 

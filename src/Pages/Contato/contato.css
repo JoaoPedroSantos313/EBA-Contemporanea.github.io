@@ -1,7 +1,44 @@
-.redTitle {
-    color: #D60000;
+main {
+    max-width: 1024px;
+    margin: 65px auto;
 }
 
-.redeSocialLink {
-    text-decoration: none;
+.cover-img {
+    margin-bottom: 100px;
+}
+
+.form-title {
+    color: #222;
+    text-align: center;
+}
+
+.form-container {
+    width: 500px;
+    margin: 50px auto;
+}
+
+.form-input {
+    font-family: 'Lucida Sans Unicode';
+    background-color: #F9F9F9;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    resize: none;
+}
+
+.form-submit {
+    display: flex;
+    margin: auto;
+    background: none;
+    border: none;
+    color: #333;
+    margin-top: 30px;
+}
+
+.form-submit svg {
+    font-size: 30px;
+    margin-right: 10px;
 }
