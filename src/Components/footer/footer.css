@@ -45,7 +45,7 @@ a:hover .logo_footer {
 }
 
 #menu_footer {
-    width: 1024px;
+    max-width: 1024px;
     display: flex;
     align-items: center;
     margin: 70px auto 25px auto;

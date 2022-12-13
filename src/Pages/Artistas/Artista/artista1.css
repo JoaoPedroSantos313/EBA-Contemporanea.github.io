@@ -1,0 +1,157 @@
+h1, h2, h3, h4, h5, p, a, span {
+    font-family: 'Lucida Sans Unicode';
+    margin: 0;
+    color: #222;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.artista_banner {
+    width: 100%;
+    height: auto;
+}
+
+.artista_main {
+    margin: auto;
+    max-width: 1024px;
+}
+
+.artista_body {
+    margin: 40px 0 80px 0;
+}
+
+.artista_foto {
+    width: 250px;
+}
+
+.artista_foto img {
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.artista_info {
+    padding: 0 40px;
+}
+
+.artista_name {
+    font-size: 24px;
+}
+
+.artista_more_info {
+    margin-bottom: 20px;
+}
+
+.border_links {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_link {
+    display: flex;
+    align-items: center;
+}
+
+.nav_link img {
+    margin-right: 10px;
+}
+
+.nav_artistas {
+    padding: 15px 20px;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.column h1 {
+    margin: 5px 0;
+}
+
+.column button {
+    margin-top: 10px;
+}
+
+.column a {
+    margin-top: 12px;
+    width: 100%;
+}
+
+.nav_pages {
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.button-left {
+    border: none;
+    background-color: #FFF;
+    margin-right: 10px;
+}
+
+.button-right {
+    border: none;
+    background-color: #FFF;
+    margin-left: 10px;
+}
+
+.border_links h2 {
+    font-size: 16px;
+}
+
+.button_navigation {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+}
+
+.biografia {
+    margin-bottom: 80px;
+}
+
+.biografia h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.biografia p {
+    text-align: justify;
+}
+
+.info_links {
+    display: flex;
+    background-color: #F9F9F9;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+.info_links img {
+    width: 20px;
+    height: 20px;
+    margin: 8px 15px 0 0;
+}
+
+.info_links p {
+    font-size: 20px;
+    color: #333;
+}
+
+.collapse_section {
+    margin-top: 40px;
+}
+
+.collapse_section h1 {
+    font-size: 20px;
+}

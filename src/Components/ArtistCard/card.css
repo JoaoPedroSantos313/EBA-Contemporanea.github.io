@@ -4,6 +4,8 @@
 }
 
 .card_title {
+    display: flex;
+    align-items: center;
     font-size: 18px;
     font-weight: bold;
     height: 15%;
