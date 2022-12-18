@@ -1,6 +1,6 @@
 import React from 'react';
 import { CircularProgress, Collapse, Grid } from '@material-ui/core';
-import { faChevronDown, faChevronUp, faChevronLeft, faChevronRight, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp, faChevronLeft, faChevronRight, faBars, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
@@ -15,6 +15,8 @@ export function Artista() {
     const { id } = useParams();
     const [isPage1, setIsPage1] = useState(true);
     const [isCollapsed, setIsCollapsed] = useState(true);
+    const [isOutrosTextosCollapsed, setOutrosTextosCollapsed] = useState(false);
+    const [isEntrevistasCollapsed, setEntrevistasCollapsed] = useState(false);
 
     useEffect(() => {
         if (info == undefined || info.publicId !== id) {
@@ -88,9 +90,9 @@ export function Artista() {
                             </p>}
 
                             {info?.redesSociais?.map((rs, index) => (
-                                <a key={rs.id || index} href={rs.url} target="_blank" className='nav_link'>
+                                <a key={rs.id || index} href={rs.url} target="_blank" className='nav_link button_hover'>
                                     <img src={site_icon} width="30px" />
-                                    {rs.nome}
+                                    <p>{rs.nome}</p>
                                 </a>
                             ))}
                         </Grid>
@@ -99,21 +101,21 @@ export function Artista() {
                             <div className='border_links nav_artistas'>
                                 <div className='nav_link column'>
                                     <h2>Anterior</h2>
-                                    <button className="button_navigation" onClick={goBack}>
+                                    <button className="button_navigation button_hover" onClick={goBack}>
                                         <FontAwesomeIcon icon={faChevronLeft} />
                                     </button>
                                 </div>
 
                                 <div className='nav_link column'>
                                     <h2>Menu</h2>
-                                    <button className="button_navigation" onClick={goToAllArtists}>
+                                    <button className="button_navigation button_hover" onClick={goToAllArtists}>
                                         <FontAwesomeIcon icon={faBars} />
                                     </button>
                                 </div>
 
                                 <div className='nav_link column'>
                                     <h2>Próximo</h2>
-                                    <button className="button_navigation" onClick={goForward}>
+                                    <button className="button_navigation button_hover" onClick={goForward}>
                                         <FontAwesomeIcon icon={faChevronRight} />
                                     </button>
                                 </div>
@@ -121,14 +123,14 @@ export function Artista() {
 
                             <div className='border_links nav_pages'>
                                 {isPage1 ? (
-                                    <div className="nav_link">
+                                    <div className="nav_link button_hover">
                                         <h2>Página 1/2 do Artista</h2>
                                         <button className='button-right' onClick={changePageContent}>
                                             <FontAwesomeIcon icon={faChevronRight} />
                                         </button>
                                     </div>
                                 ) : (
-                                    <div className="nav_link">
+                                    <div className="nav_link button_hover">
                                         <button className='button-left' onClick={changePageContent}>
                                             <FontAwesomeIcon icon={faChevronLeft} />
                                         </button>
@@ -141,9 +143,9 @@ export function Artista() {
                                 <div className='border_links column nav_artistas'>
                                     <h2>Detalhes Acadêmicos</h2>
                                     {info?.links?.map(i => (
-                                        <a key={i.id} className='nav_link' href={i.url} >
-                                            <img src="/link.png" width="16px" className='button-left' />
-                                            {i.nome}
+                                        <a key={i.id} className='nav_link button_hover' href={i.url} >
+                                            <FontAwesomeIcon icon={faPaperPlane} className='button-left' />
+                                            <p>{i.nome}</p>
                                         </a>
                                     ))}
                                 </div>
@@ -172,7 +174,7 @@ export function Artista() {
                                     <h1>Entrevista do Projeto EBAContemporânea</h1>
                                     {info?.entrevistasSite.map(i =>
                                         <a key={i.id} className="nav_link info_links" href={i.url} target="_blank">
-                                            <img src="/link.png" />
+                                            <FontAwesomeIcon icon={faPaperPlane} className='button-left button_hover' />
                                             <p>{i.nome}</p>
                                         </a>
                                     )}
@@ -182,34 +184,58 @@ export function Artista() {
                     ) : (
                         <>
                             {info?.outrosTextos?.length > 0
-                                && (<div className='biografia'>
-                                    <h1>Outros Textos</h1>
-                                    {info?.outrosTextos?.map((i, index) =>
-                                        <a href={i.url} target='_blank' className="info_links">
-                                            <img src="/link.png" />
-                                            <p>{i.nome}</p>
-                                        </a>
-                                    )}
-                                </div>)}
+                                && (<>
+                                    <div className='nav_link collapse_title'>
+                                        <h1>Outros Textos</h1>
+                                        {isOutrosTextosCollapsed ?
+                                            <button onClick={() => setOutrosTextosCollapsed(curr => !curr)} className='button-right button_navigation button_hover'>
+                                                <FontAwesomeIcon icon={faChevronDown} />
+                                            </button>
+                                            : <button onClick={() => setOutrosTextosCollapsed(curr => !curr)} className='button-right button_navigation button_hover'>
+                                                <FontAwesomeIcon icon={faChevronUp} />
+                                            </button>
+                                        }
+                                    </div>
+                                    <Collapse in={!isOutrosTextosCollapsed} unmountOnExit className="collapse_section">
+                                        {info.outrosTextos.map((i, index) =>
+                                            <a href={i.url} target='_blank' className="info_links">
+                                                <FontAwesomeIcon icon={faPaperPlane} className='button-left button_hover' />
+                                                <p>{i.nome}</p>
+                                            </a>
+                                        )}
+                                    </Collapse>
+                                </>)}
 
                             {info?.entrevistas?.length > 0 && (
-                                <div className='biografia'>
-                                    <h1>Entrevistas em Destaque</h1>
-                                    {info?.entrevistas?.map(i =>
-                                        <a href={i.url} target='_blank' className="info_links">
-                                            <img src="/link.png" />
-                                            <p>{i.nome}</p>
-                                        </a>
-                                    )}
-                                </div>)}
+                                <>
+                                    <div className="nav_link collapse_title">
+                                        <h1>Entrevistas em Destaque</h1>
+                                        {isEntrevistasCollapsed ?
+                                            <button onClick={() => setEntrevistasCollapsed(curr => !curr)} className='button-right button_navigation button_hover'>
+                                                <FontAwesomeIcon icon={faChevronDown} />
+                                            </button>
+                                            : <button onClick={() => setEntrevistasCollapsed(curr => !curr)} className='button-right button_navigation button_hover'>
+                                                <FontAwesomeIcon icon={faChevronUp} />
+                                            </button>
+                                        }
+                                    </div>
+                                    <Collapse in={!isEntrevistasCollapsed} unmountOnExit className="collapse_section">
+                                        {info?.entrevistas?.map(i =>
+                                            <a href={i.url} target='_blank' className="info_links">
+                                                <FontAwesomeIcon icon={faPaperPlane} className='button-left button_hover' />
+                                                <p>{i.nome}</p>
+                                            </a>
+                                        )}
+                                    </Collapse>
+                                </>)}
 
                             <div class="nav_link">
                                 <h1>Outras informações</h1>
                                 {isCollapsed ?
-                                    <button onClick={handleCollapse} className='button-right button_navigation'>
+                                    <button onClick={handleCollapse} className='button-right button_navigation button_hover'>
                                         <FontAwesomeIcon icon={faChevronDown} />
                                     </button>
-                                    : <button onClick={handleCollapse} className='button-right button_navigation'>
+                                    : <button onClick={handleCollapse} className='button-right button_navigation button_hover'>
                                         <FontAwesomeIcon icon={faChevronUp} />
                                     </button>}
                             </div>
@@ -219,7 +245,7 @@ export function Artista() {
                                         <h1>Galerias Comerciais</h1>
                                         {info?.galeriasComerciais?.map(i =>
                                             <a href={i.url} target='_blank' className="nav_link info_links">
-                                                <img src="/link.png" />
+                                                <FontAwesomeIcon icon={faPaperPlane} className='button-left button_hover' />
                                                 <p>{i.nome}</p>
                                             </a>
                                         )}
@@ -231,7 +257,7 @@ export function Artista() {
                                         <h1>Eventos / Coletivos</h1>
                                         {info?.eventos?.map(i => (
                                             <a href={i.url} target='_blank' className="nav_link">
-                                                <img src="/link.png" />
+                                                <FontAwesomeIcon icon={faPaperPlane} className='button-left button_hover' />
                                                 <p>{i.nome}</p>
                                             </a>
                                         ))}
@@ -242,7 +268,7 @@ export function Artista() {
                                         <h1>Prêmios e Residências</h1>
                                         {info?.premios?.map(i =>
                                             <a href={i.url} target='_blank' className="nav_link">
-                                                <img src="/link.png" />
+                                                <FontAwesomeIcon icon={faPaperPlane} className='button-left button_hover' />
                                                 <p>{i.nome}</p>
                                             </a>
                                         )}
@@ -254,14 +280,14 @@ export function Artista() {
                     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '5%' }}>
                         <div className='border_links nav_pages'>
                             {isPage1 ? (
-                                <div className="nav_link">
+                                <div className="nav_link button_hover">
                                     <h2>Página 1/2 do Artista</h2>
                                     <button className='button-right' onClick={changePageContent}>
                                         <FontAwesomeIcon icon={faChevronRight} />
                                     </button>
                                 </div>
                             ) : (
-                                <div className="nav_link">
+                                <div className="nav_link button_hover">
                                     <button className='button-left' onClick={changePageContent}>
                                         <FontAwesomeIcon icon={faChevronLeft} />
                                     </button>

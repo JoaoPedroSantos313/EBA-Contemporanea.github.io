@@ -30,50 +30,34 @@
     position: relative;
     width: 100%;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.42);
+    transform: translateY(-50%);
 }
 
-#goLeft {
+.seta {
     position: absolute;
+    width: 10%;
+    height: 100%;
+    background: none;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.goLeft {
     left: 0;
-    width: 10%;
-    height: 100%;
-    background: none;
-    transition: 0.5s;
-    border: none;
-    outline: none;
-    transition: 0.5s;
-    color: black;
-    display: flex;
     justify-content: flex-start;
-    align-items: center;
 }
 
-#goLeft:hover {
-    background: rgba(255, 255, 255, 0.356);
-    cursor: pointer;
-    color: black;
-}
 
-#goRight {
-    position: absolute;
+.goRight {
     right: 0;
-    width: 10%;
-    height: 100%;
-    background: none;
-    transition: 0.5s;
-    border: none;
-    outline: none;
-    color: black;
-    display: flex;
     justify-content: flex-end;
-    align-items: center;
-}
-
-#goRight:hover {
-    background: rgba(255, 255, 255, 0.356);
-    cursor: pointer;
-    color: black;
 }

@@ -137,15 +137,18 @@ h1, h2, h3, h4, h5, p, a, span {
     margin-bottom: 16px;
 }
 
-.info_links img {
-    width: 20px;
-    height: 20px;
-    margin: 8px 15px 0 0;
+.info_links svg {
+    font-size: 20px;
+    margin: 5px 15px 0 0;
 }
 
 .info_links p {
     font-size: 20px;
     color: #333;
+}
+
+.collapse_title {
+    margin: 40px 0;
 }
 
 .collapse_section {
@@ -154,4 +157,12 @@ h1, h2, h3, h4, h5, p, a, span {
 
 .collapse_section h1 {
     font-size: 20px;
+}
+
+.button_hover:hover, .button_hover:hover * {
+    color: #D60000;
+}
+
+.button_hover:hover img {
+    filter: invert(18%) sepia(57%) saturate(4805%) hue-rotate(352deg) brightness(85%) contrast(128%);
 }

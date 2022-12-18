@@ -1,17 +1,19 @@
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import './slider.css';
 
 const Slider = ({ imgs }) => {
-    const sliderArr = imgs?.map(i => 
+    const sliderArr = imgs?.map(i =>
         <>
-            <img 
-                src={i.img} 
+            <img
+                src={i.img}
                 alt="slide-img"
                 height="100%"
             />
             {i?.nome && <p className='subtitle'>{i.nome}</p>}
         </>
-        );
+    );
 
     const [x, setX] = useState(0);
 
@@ -24,22 +26,22 @@ const Slider = ({ imgs }) => {
 
     return (
         <div className="slider">
+
             {sliderArr?.map((item, index) => (
                 <div key={index} className="slide" style={{ transform: `translateX(${x}%)` }}>
+                    <button class="seta goLeft" onClick={goLeft}>
+                        <FontAwesomeIcon icon={faChevronLeft} />
+                    </button>
                     {item}
-
-                    <button id="goLeft" onClick={goLeft}>
-                        <span className="material-icons">keyboard_arrow_left</span>
-                    </button>
-
-                    <button id="goRight" onClick={goRight}>
-                        <span className="material-icons">keyboard_arrow_right</span>
-                    </button>
                 </div>
             ))}
+
+            <button class="seta goRight" onClick={goRight}>
+                <FontAwesomeIcon icon={faChevronRight} />
+            </button>
         </div>
     )
-    
+
 }
 
 export default Slider;
