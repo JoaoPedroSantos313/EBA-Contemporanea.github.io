@@ -263,7 +263,7 @@ const Coletivo = ({ info }) => {
                 
                 <div className="collapse_title">
                     <h2>Links</h2>
-                    <button onClick={handleLinkCollapse}>
+                    <button onClick={handleLinkCollapse} className="button_hover">
                         {isLinkCollapsed ? 
                             <FontAwesomeIcon icon={faChevronDown} />
                             : <FontAwesomeIcon icon={faChevronUp} />
@@ -275,7 +275,7 @@ const Coletivo = ({ info }) => {
                         <>
                             <div className='collapse_title'>
                                 <h2>Vídeos</h2>
-                                <button onClick={handleVideoCollapse}>
+                                <button onClick={handleVideoCollapse} className="button_hover">
                                     {isVideosCollapsed ? 
                                         <FontAwesomeIcon icon={faChevronDown} />
                                         : <FontAwesomeIcon icon={faChevronUp} />
@@ -287,7 +287,7 @@ const Coletivo = ({ info }) => {
                                     {informacoes.videos.map((v, index) => (
                                         <Grid md={5} key={index}>
                                             <a href={v.url} target="_blank" rel="noreferrer" className="links_container">
-                                                <FontAwesomeIcon icon={faPaperPlane} />
+                                                <FontAwesomeIcon icon={faPaperPlane} className="button_hover" />
                                                 <p>{v.title}</p>
                                             </a>
                                         </Grid>
@@ -300,7 +300,7 @@ const Coletivo = ({ info }) => {
                         <>
                             <div className='collapse_title'>
                                 <h2>Arquivos de texto</h2>
-                                <button onClick={handleTextoCollapse}>
+                                <button onClick={handleTextoCollapse} className="button_hover">
                                     {isTextsCollapsed ? 
                                         <FontAwesomeIcon icon={faChevronDown} />
                                         : <FontAwesomeIcon icon={faChevronUp} />
@@ -312,7 +312,7 @@ const Coletivo = ({ info }) => {
                                     {informacoes.textos.map((t, index) => (
                                         <Grid md={5} key={index}>
                                             <a href={t.url} target="_blank" rel="noreferrer" className="links_container">
-                                                <FontAwesomeIcon icon={faPaperPlane} />
+                                                <FontAwesomeIcon icon={faPaperPlane} className="button_hover" />
                                                 <p>{t.title}</p>
                                             </a>
                                         </Grid>
