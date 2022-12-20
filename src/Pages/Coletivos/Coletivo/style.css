@@ -40,6 +40,10 @@ button {
     margin-bottom: 15px;
 }
 
+.participante h3:hover {
+    text-decoration: underline #D60000;
+}
+
 .sobre {
     font-size: 20px;
     line-height: 36px;

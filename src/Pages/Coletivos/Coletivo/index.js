@@ -8,9 +8,9 @@ import './style.css';
 
 const Coletivo = ({ info }) => {
     const navigate = useHistory();
-    const [isLinkCollapsed, setLinkCollapsed] = useState(false);
-    const [isVideosCollapsed, setVideosCollapsed] = useState(false);
-    const [isTextsCollapsed, setTextsCollapsed] = useState(false);
+    const [isLinkCollapsed, setLinkCollapsed] = useState(true);
+    const [isVideosCollapsed, setVideosCollapsed] = useState(true);
+    const [isTextsCollapsed, setTextsCollapsed] = useState(true);
 
     const handleLinkCollapse = () => (setLinkCollapsed(current => !current));
     const handleVideoCollapse = () => (setVideosCollapsed(current => !current));
