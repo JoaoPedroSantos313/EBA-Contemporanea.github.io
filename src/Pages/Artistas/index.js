@@ -5,6 +5,7 @@ import { Pagination } from '@material-ui/lab';
 import './artistas.css';
 import useArtist from '../../contexts/artists';
 import { useHistory } from 'react-router-dom';
+import { Filter } from '../../Components/filter';
 
 export default function Artistas() {
     const navigate = useHistory();
@@ -19,8 +20,6 @@ export default function Artistas() {
         setCurrentArtist
     } = useArtist();
 
-    const [currentLetter, setCurrentLetter] = useState();
-
     useEffect(() => {
         getPaginatedArtists();
     }, []);
@@ -29,15 +28,6 @@ export default function Artistas() {
         changePage(page);
     }
 
-    const filtrar = (letra) => {
-        if (letra === currentLetter) {
-            setCurrentLetter(null);
-            getPaginatedArtists(1);
-        } else {
-            setCurrentLetter(letra);
-            getPaginatedArtists(1, letra)
-        }
-    }
 
     const goToArtist = (id) => {
         const artist = artists.filter(artist => artist.publicId == id);
@@ -46,39 +36,27 @@ export default function Artistas() {
     }
 
     return (
-        <>
-            <section className='abc_filter'>
-                {filterLetters?.map((item, index) => (
-                    <button 
-                        className={currentLetter === item && 'active-button'}
-                        key={index} 
-                        onClick={() => filtrar(item)}
-                    >
-                        {item}
-                    </button>
-                ))}
-            </section>
-
-            <section className='artistas_main'>
-                {isLoading ? (
+        <section className='artistas_main'>
+            <Filter letters={filterLetters} filterFunction={getPaginatedArtists} />
+            {isLoading
+                ? (
                     <CircularProgress />
                 )
-                    : (
-                        <>
-                            <Grid container spacing={2} columns="3">
-                                {artists?.length > 0 ? artists.map(i => (
-                                    <Grid item md={4} key={i._id}>
-                                        <ArtistCard artista={i} goToArtist={goToArtist} />
-                                    </Grid>
-                                ))
-                                    : <p>Desculpe, não temos nenhum resultado para sua busca.</p>}
-                            </Grid>
-                            <div style={{ marginTop: '50px' }}>
-                                <Pagination page={currentPage} count={totalPages} variant="outlined" shape="rounded" onChange={handlePagination} />
-                            </div>
-                        </>
-                    )}
-            </section>
-        </>
+                : (
+                    <>
+                        <Grid container spacing={2} columns="3">
+                            {artists?.length > 0 ? artists.map(i => (
+                                <Grid item md={4} key={i._id}>
+                                    <ArtistCard artista={i} goToArtist={goToArtist} />
+                                </Grid>
+                            ))
+                                : <p>Desculpe, não temos nenhum resultado para sua busca.</p>}
+                        </Grid>
+                        <div className='pagination'>
+                            <Pagination page={currentPage} count={totalPages} variant="outlined" shape="rounded" onChange={handlePagination} />
+                        </div>
+                    </>
+                )}
+        </section>
     )
 };

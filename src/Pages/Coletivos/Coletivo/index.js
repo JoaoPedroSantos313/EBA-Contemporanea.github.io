@@ -225,7 +225,7 @@ const Coletivo = ({ info }) => {
                 <div className="page_title">
                     <h2>Participantes</h2>
 
-                    <button className='button_hover' onClick={() => navigate('/coletivos')}>
+                    <button className='button_hover' onClick={() => navigate.push('/coletivos')}>
                         <FontAwesomeIcon icon={faChevronLeft} />
                         <p>Voltar</p>
                     </button>

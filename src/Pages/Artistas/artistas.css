@@ -1,48 +1,13 @@
-.abc_filter {
-    display: flex;
-    justify-content: space-between;
-
-    margin: 3% auto;
-    max-width: 1024px;
-}
-
-.abc_filter button {
-    font-weight: bold;
-    font-size: 15px;
-    text-align: center;
-
-    width: 25px;
-    height: 25px;
-
-    border-style: none;
-    background-color: white;
-    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25);
-
-    transition: 0.6s;
-    outline: none;
-    cursor: pointer;
-}
-
-.active-button {
-    color: #D60000;
-}
-
-.abc_filter button:hover {
-    color: #D60000;
-    transform: scaleY(1);
-    transform: scaleX(1);
-}
-
 .artistas_main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     margin: 5% auto;
     max-width: 1024px;
 }
 
 .artistas_main p {
     font-size: 15px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
 }
