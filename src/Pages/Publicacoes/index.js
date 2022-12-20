@@ -1,4 +1,4 @@
-import React from 'react';
+
 export default function Publicacoes(){
     return(
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '70px'}}>

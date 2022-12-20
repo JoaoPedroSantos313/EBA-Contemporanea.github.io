@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import CidadeUniversitaria from './Pages/CidadeUniversitaria';
 import Header from './Components/Header/Header';
@@ -11,7 +11,7 @@ import Projeto from './Pages/Projeto';
 import Contato from './Pages/Contato';
 import Home from './Pages/Home';
 import EBA from './Pages/EBA';
-import AtrocidadesMaravilhosas from './Pages/Coletivos/AtrocidadesMaravilhosas';
+import Coletivo from './Pages/Coletivos/Coletivo';
 import { Coletivos } from './Pages/Coletivos';
 import { Entrevistas } from './Pages/Entrevistas';
 import { ArtistProvider } from './contexts/artists';
@@ -34,7 +34,7 @@ const Routes = () => {
                         <Route path="/publicacoes" component={Publicacoes} />
                         <Route path="/pesquisadores" component={Pesquisadores} />
                         <Route path="/cidade_universitaria" component={CidadeUniversitaria} />
-                        <Route path="/AtrocidadesMaravilhosas" component={AtrocidadesMaravilhosas} />
+                        <Route path="/coletivo/:id" component={Coletivo} />
                         <Route path="/coletivos" component={Coletivos} />
                         <Route path="/entrevistas" component={Entrevistas} />
                     </Switch>

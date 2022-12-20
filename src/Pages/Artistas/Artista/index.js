@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { CircularProgress, Collapse, Grid } from '@material-ui/core';
 import { faChevronDown, faChevronUp, faChevronLeft, faChevronRight, faBars, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

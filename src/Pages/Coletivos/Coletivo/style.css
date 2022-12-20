@@ -1,0 +1,76 @@
+main {
+    max-width: 1024px;
+}
+
+h1, h2, h3, h4, h5, p, a, span {
+    font-family: 'Lucida Sans Unicode';
+    margin: 0;
+    color: #222;
+    padding: 0;
+}
+
+button {
+    border: none;
+    background-color: #FFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+}
+
+.page_title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.page_title button { 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;   
+    font-size: 16px;
+    padding: 0 15px;
+    width: 110px;
+}
+
+.participante_container {
+    margin-bottom: 80px;
+}
+
+.participante h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.sobre {
+    font-size: 20px;
+    line-height: 36px;
+    margin-bottom: 32px;
+}
+
+.collapse_title {
+    display: flex;
+}
+
+.collapse_title button {
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.collapse_section {
+    padding: 0 20px;
+}
+
+.links_container {
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.links_container svg {
+    margin: 5px 15px 0 0;
+}
+
+.button_hover:hover, .button_hover:hover * {
+    color: #D60000;
+}

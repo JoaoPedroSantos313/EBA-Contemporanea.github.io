@@ -29,14 +29,14 @@ const Slider = ({ imgs }) => {
 
             {sliderArr?.map((item, index) => (
                 <div key={index} className="slide" style={{ transform: `translateX(${x}%)` }}>
-                    <button class="seta goLeft" onClick={goLeft}>
+                    <button className="seta goLeft" onClick={goLeft}>
                         <FontAwesomeIcon icon={faChevronLeft} />
                     </button>
                     {item}
                 </div>
             ))}
 
-            <button class="seta goRight" onClick={goRight}>
+            <button className="seta goRight" onClick={goRight}>
                 <FontAwesomeIcon icon={faChevronRight} />
             </button>
         </div>
