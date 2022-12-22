@@ -24,13 +24,14 @@
 }
 
 .card_deactivated {
+    display: flex;
+    align-items: center;
     font-size: 18px;
     font-weight: bold;
     height: 15%;
     padding-bottom: 8px;
 
     color: #333;
-    cursor: pointer;
 }
 
 .card_container {
@@ -41,7 +42,6 @@
     text-decoration: none;
     color: #D60000;
 }
-
 
 .card_title_img {
     width: 15%;

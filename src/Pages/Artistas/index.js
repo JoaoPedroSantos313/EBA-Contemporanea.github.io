@@ -28,7 +28,6 @@ export default function Artistas() {
         changePage(page);
     }
 
-
     const goToArtist = (id) => {
         const artist = artists.filter(artist => artist.publicId == id);
         setCurrentArtist(artist);
@@ -36,27 +35,27 @@ export default function Artistas() {
     }
 
     return (
-        <section className='artistas_main'>
-            <Filter letters={filterLetters} filterFunction={getPaginatedArtists} />
-            {isLoading
-                ? (
-                    <CircularProgress />
-                )
-                : (
-                    <>
-                        <Grid container spacing={2} columns="3">
-                            {artists?.length > 0 ? artists.map(i => (
-                                <Grid item md={4} key={i._id}>
-                                    <ArtistCard artista={i} goToArtist={goToArtist} />
-                                </Grid>
-                            ))
-                                : <p>Desculpe, não temos nenhum resultado para sua busca.</p>}
-                        </Grid>
-                        <div className='pagination'>
-                            <Pagination page={currentPage} count={totalPages} variant="outlined" shape="rounded" onChange={handlePagination} />
-                        </div>
-                    </>
-                )}
-        </section>
+        isLoading
+            ? (
+                <div className='loading_all'>
+                    <CircularProgress style={{ color: '#D60000' }} />
+                </div>
+            )
+            : (
+                <section className='artistas_main'>
+                    <Filter letters={filterLetters} filterFunction={getPaginatedArtists} />
+                    <Grid container>
+                        {artists?.length > 0 ? artists.map(i => (
+                            <Grid item md={4} key={i._id}>
+                                <ArtistCard artista={i} goToArtist={goToArtist} />
+                            </Grid>
+                        ))
+                            : <p>Desculpe, não temos nenhum resultado para sua busca.</p>}
+                    </Grid>
+                    <div className='pagination'>
+                        <Pagination page={currentPage} count={totalPages} variant="outlined" shape="rounded" onChange={handlePagination} />
+                    </div>
+                </section>
+            )
     )
 };

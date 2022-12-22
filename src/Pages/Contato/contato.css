@@ -1,4 +1,4 @@
-main {
+.contato_main {
     max-width: 1024px;
     margin: 65px auto;
 }
@@ -29,16 +29,18 @@ main {
     resize: none;
 }
 
+.form-submit-section {
+    display: flex;
+    justify-content: flex-end;
+    width: 520px;
+}
+
 .form-submit {
     display: flex;
-    margin: auto;
+    justify-content: center;
     background: none;
     border: none;
     color: #333;
-    margin-top: 30px;
-}
-
-.form-submit svg {
-    font-size: 30px;
-    margin-right: 10px;
+    font-size: 12px;
+    width: 115px;
 }

@@ -1,6 +1,6 @@
 import './card.css';
 
-export const ArtistCard = ({ artista, goToArtist }) => { 
+export const ArtistCard = ({ artista, goToArtist, videoEmbedLink = null }) => {
     const { publicId, nome, fotoCard, active = true } = artista;
     const icon = active ? '/icon_pasta.svg' : '/icon_pasta_desativada.svg';
 
@@ -8,10 +8,16 @@ export const ArtistCard = ({ artista, goToArtist }) => {
         <div className='card_container' onClick={() => { active && goToArtist(publicId) }}>
             <div className='card_label'>
                 <div className={!active ? 'card_deactivated' : 'card_title'}>
-                    <img className='card_title_img' src={icon} /> 
+                    <img className='card_title_img' src={icon} />
                     {nome}
                 </div>
-                <img className='card_image' src={fotoCard} width="100%" />
+                <div className="card_image">
+                    {videoEmbedLink 
+                    ? <iframe width="100%" src={videoEmbedLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style={{ borderRadius: '6px' }}/>
+                    : <img src={active ? fotoCard : 'no_img.png'} width="100%" height="100%" />
+                    }
+                </div>
             </div>
         </div>
-)}
+    )
+}

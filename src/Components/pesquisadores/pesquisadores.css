@@ -18,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    font-size: 16px;
 }
 
 .card-name {
@@ -29,6 +30,10 @@
     height: 37px;
 }
 
+.card-link img {
+    margin-left: 24px;
+}
+
 .card-description {
-    font-size: 20px;
+    font-size: 16px;
 }

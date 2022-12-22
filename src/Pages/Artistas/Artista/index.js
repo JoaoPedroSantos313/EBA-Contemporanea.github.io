@@ -78,11 +78,11 @@ export function Artista() {
                             {info?.estudos && (
                                 <div className="artista_more_info">
                                     <p>Formações:</p>
+                                    <b>
                                     {info?.estudos.map(i => (
-                                        <p key={i.id}>
-                                            <b>{`${i.tipo} em ${i.area} (${i.anoInicio || "-"} - ${i.anoFim || "atualmente"});`}</b>
-                                        </p>
+                                        `${i.tipo} em ${i.area} (${i.anoInicio || "-"} - ${i.anoFim || "atualmente"}); `
                                     ))}
+                                    </b>
                                 </div>
                             )}
                             {info?.profissao && <p className="artista_more_info">Profissão:
@@ -121,21 +121,19 @@ export function Artista() {
                                 </div>
                             </div>
 
-                            <div className='border_links nav_pages'>
+                            <div className='nav_pages'>
                                 {isPage1 ? (
-                                    <div className="nav_link button_hover">
+                                    <button onClick={changePageContent} className="nav_link button_hover">
                                         <h2>Página 1/2 do Artista</h2>
-                                        <button className='button-right' onClick={changePageContent}>
-                                            <FontAwesomeIcon icon={faChevronRight} />
-                                        </button>
-                                    </div>
+
+                                        <FontAwesomeIcon icon={faChevronRight} className='button-right' />
+                                    </button>
                                 ) : (
-                                    <div className="nav_link button_hover">
-                                        <button className='button-left' onClick={changePageContent}>
-                                            <FontAwesomeIcon icon={faChevronLeft} />
-                                        </button>
+                                    <button onClick={changePageContent} className="nav_link button_hover">
+
+                                        <FontAwesomeIcon icon={faChevronLeft} className='button-left' />
                                         <h2>Página 2/2 do Artista</h2>
-                                    </div>
+                                    </button>
                                 )}
                             </div>
 
@@ -199,7 +197,9 @@ export function Artista() {
                                     <Collapse in={!isOutrosTextosCollapsed} unmountOnExit className="collapse_section">
                                         {info.outrosTextos.map((i, index) =>
                                             <a href={i.url} target='_blank' className="info_links">
-                                                <FontAwesomeIcon icon={faPaperPlane} className='button-left button_hover' />
+                                                <div class="button_hover">
+                                                    <FontAwesomeIcon icon={faPaperPlane} className='button-left' />
+                                                </div>
                                                 <p>{i.nome}</p>
                                             </a>
                                         )}
@@ -222,14 +222,16 @@ export function Artista() {
                                     <Collapse in={!isEntrevistasCollapsed} unmountOnExit className="collapse_section">
                                         {info?.entrevistas?.map(i =>
                                             <a href={i.url} target='_blank' className="info_links">
-                                                <FontAwesomeIcon icon={faPaperPlane} className='button-left button_hover' />
+                                                <div class="button_hover">
+                                                    <FontAwesomeIcon icon={faPaperPlane} className='button-left' />
+                                                </div>
                                                 <p>{i.nome}</p>
                                             </a>
                                         )}
                                     </Collapse>
                                 </>)}
 
-                            <div class="nav_link">
+                            <div class="nav_link collapse_title">
                                 <h1>Outras informações</h1>
                                 {isCollapsed ?
                                     <button onClick={handleCollapse} className='button-right button_navigation button_hover'>
@@ -243,12 +245,14 @@ export function Artista() {
                                 {info?.galeriasComerciais?.length > 0 && (
                                     <div className='info_links column'>
                                         <h1>Galerias Comerciais</h1>
-                                        {info?.galeriasComerciais?.map(i =>
-                                            <a href={i.url} target='_blank' className="nav_link info_links">
-                                                <FontAwesomeIcon icon={faPaperPlane} className='button-left button_hover' />
+                                        {info?.galeriasComerciais?.map(i => (
+                                            <a href={i.url} target='_blank' className="nav_link">
+                                                <div class="button_hover">
+                                                    <FontAwesomeIcon icon={faPaperPlane} className='button-left' />
+                                                </div>
                                                 <p>{i.nome}</p>
                                             </a>
-                                        )}
+                                        ))}
                                     </div>
                                 )}
 
@@ -257,7 +261,9 @@ export function Artista() {
                                         <h1>Eventos / Coletivos</h1>
                                         {info?.eventos?.map(i => (
                                             <a href={i.url} target='_blank' className="nav_link">
-                                                <FontAwesomeIcon icon={faPaperPlane} className='button-left button_hover' />
+                                                <div class="button_hover">
+                                                    <FontAwesomeIcon icon={faPaperPlane} className='button-left' />
+                                                </div>
                                                 <p>{i.nome}</p>
                                             </a>
                                         ))}
@@ -268,7 +274,9 @@ export function Artista() {
                                         <h1>Prêmios e Residências</h1>
                                         {info?.premios?.map(i =>
                                             <a href={i.url} target='_blank' className="nav_link">
-                                                <FontAwesomeIcon icon={faPaperPlane} className='button-left button_hover' />
+                                                <div class="button_hover">
+                                                    <FontAwesomeIcon icon={faPaperPlane} className='button-left' />
+                                                </div>
                                                 <p>{i.nome}</p>
                                             </a>
                                         )}
@@ -278,21 +286,19 @@ export function Artista() {
                         </>
                     )}
                     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '5%' }}>
-                        <div className='border_links nav_pages'>
+                        <div className='nav_pages' style={{ width: '256px' }}>
                             {isPage1 ? (
-                                <div className="nav_link button_hover">
+                                <button onClick={changePageContent} className="nav_link button_hover">
                                     <h2>Página 1/2 do Artista</h2>
-                                    <button className='button-right' onClick={changePageContent}>
-                                        <FontAwesomeIcon icon={faChevronRight} />
-                                    </button>
-                                </div>
+
+                                    <FontAwesomeIcon icon={faChevronRight} className='button-right' />
+                                </button>
                             ) : (
-                                <div className="nav_link button_hover">
-                                    <button className='button-left' onClick={changePageContent}>
-                                        <FontAwesomeIcon icon={faChevronLeft} />
-                                    </button>
+                                <button onClick={changePageContent} className="nav_link button_hover">
+
+                                    <FontAwesomeIcon icon={faChevronLeft} className='button-left' />
                                     <h2>Página 2/2 do Artista</h2>
-                                </div>
+                                </button>
                             )}
                         </div>
                     </div>

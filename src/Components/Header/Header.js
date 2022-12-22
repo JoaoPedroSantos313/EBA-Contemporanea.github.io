@@ -32,10 +32,13 @@ function Header() {
                 </ul>
 
                 <div className="social_media">
-                    <a href="mailto:ebacontemporanea@gmail.com" id='fb'>
+                    <a href="#" target="_blank" className='social_media_icon'>
+                        <img src='/btnYoutube.svg' width="100%" />
+                    </a>
+                    <a href="mailto:ebacontemporanea@gmail.com" target="_blank" className='social_media_icon'>
                         <FontAwesomeIcon icon={faEnvelope} />
                     </a>
-                    <a href="#" id="insta">
+                    <a href="#" target="_blank" className='social_media_icon'>
                         <FontAwesomeIcon icon={faInstagram} />
                     </a>
 

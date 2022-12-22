@@ -285,7 +285,7 @@ const Coletivo = ({ info }) => {
                             <Collapse in={!isVideosCollapsed} unmountOnExit className="collapse_section">
                                 <Grid container>
                                     {informacoes.videos.map((v, index) => (
-                                        <Grid md={5} key={index}>
+                                        <Grid md={6} key={index}>
                                             <a href={v.url} target="_blank" rel="noreferrer" className="links_container">
                                                 <FontAwesomeIcon icon={faPaperPlane} className="button_hover" />
                                                 <p>{v.title}</p>
@@ -310,7 +310,7 @@ const Coletivo = ({ info }) => {
                             <Collapse in={!isTextsCollapsed} unmountOnExit className="collapse_section">
                                 <Grid container>
                                     {informacoes.textos.map((t, index) => (
-                                        <Grid md={5} key={index}>
+                                        <Grid md={6} key={index}>
                                             <a href={t.url} target="_blank" rel="noreferrer" className="links_container">
                                                 <FontAwesomeIcon icon={faPaperPlane} className="button_hover" />
                                                 <p>{t.title}</p>

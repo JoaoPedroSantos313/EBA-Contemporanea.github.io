@@ -13,26 +13,30 @@ export default class Home extends Component {
             <section className="home_main">
                 <img id='titulo' src='/EBACONTEMPORÂNEA.png' />
 
-                <Home_post 
-                    title="Sobre o Projeto"
-                    text="EBA Contemporânea compreende um mapeamento de artistas visuais que se formaram na Escola de Belas Artes da UFRJ, desde a transferência da Escola para a Cidade Universitária, na Ilha do Fundão, em 1975. Divide-se entre a pesquisa e constituição de um banco de dados, disponibilizado nesta plataforma, e a realização de entrevistas, que estarão acessíveis na medida em que forem realizadas." 
-                    direction="left"
-                    buttonLink="/projeto"
-                />
+                <div className="firstPost">
+                    <Home_post 
+                        title="Sobre o Projeto"
+                        text="EBA Contemporânea compreende um mapeamento de artistas visuais que se formaram na Escola de Belas Artes da UFRJ, desde a transferência da Escola para a Cidade Universitária, na Ilha do Fundão, em 1975. Divide-se entre a pesquisa e constituição de um banco de dados, disponibilizado nesta plataforma, e a realização de entrevistas, que estarão acessíveis na medida em que forem realizadas." 
+                        direction="left"
+                        buttonLink="/projeto"
+                    />
+                </div>
 
                 <Slider imgs={[
-                    { img: img1, id: 1 },
-                    { img: img2, id: 2 },
+                    { img: img1, id: 1, nome: 'Lorem Ipsum' },
+                    { img: img2, id: 2, nome: 'Lorem Ipsum' },
                     { img: img3, id: 3 },
                     { img: img4, id: 4 }
                 ]} />
 
-                <Home_post 
-                    title="Cidade Universitária"
-                    text="Bairro da Zona Norte do Rio de Janeiro, localizado na Ilha do Fundão, às margens da Baía de Guanabara. Nele se localiza o campus principal da Universidade Federal do Rio de Janeiro."
-                    direction="right"
-                    buttonLink="/cidade_universitaria"
-                />
+                <div className="secondPost">
+                    <Home_post 
+                        title="Cidade Universitária"
+                        text="Bairro da Zona Norte do Rio de Janeiro, localizado na Ilha do Fundão, às margens da Baía de Guanabara. Nele se localiza o campus principal da Universidade Federal do Rio de Janeiro."
+                        direction="right"
+                        buttonLink="/cidade_universitaria"
+                    />
+                </div>
             </section>
         )
     }

@@ -2,7 +2,6 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Grid } from '@material-ui/core';
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './footer.css';
 
 export default class Footer extends Component {
@@ -10,30 +9,30 @@ export default class Footer extends Component {
         return (
             <section className="footer_container">
                 <div className="faixa">
-                    <Link to="/">
-                        <img className='logo_footer' src='/logo_h_white.png'></img>
-                        <img className='logo2_footer' src='/logo_h_completo_white.png'></img>
-                    </Link>
+                    <a href="/" rel='noreferrer'>
+                        <img className='logo_footer' src='/logo_eba_white_min.svg' />
+                        <img className='logo2_footer' src='/logo_eba_white.svg' />
+                    </a>
                 </div>
                 <div className="footer_main">
-                    <a href="#">
+                    <a href="/" target="_blank">
                         <img id='ufrj' src='/UFRJ.png' width="150px" />
                     </a>
-                    <a href="#">
+                    <a href="/" target="_blank">
                         <img id='eba' src='/EBA.png' width="150px" />
                     </a>
-                    <a href="#">
+                    <a href="/" target="_blank">
                         <img id="ppgav" src='/PPGAVE.png' width="150px" />
                     </a>
-                    <a href="#">
+                    <a href="/" target="_blank">
                         <img id="faperj" src='/FAPERF.png' width="150px" />
                     </a>
                 </div>
                 <Grid container id="menu_footer">
                     <Grid item xs={4}>
-                        <a>Artistas</a>
-                        <a>Coletivos</a>
-                        <a>O Projeto</a>
+                        <a href='/artistas'>Artistas</a>
+                        <a href='/coletivos'>Coletivos</a>
+                        <a href='/projeto'>O Projeto</a>
                     </Grid>
                     <Grid item xs={4}>
                         <i>Desenvolvido por:</i>
@@ -46,7 +45,12 @@ export default class Footer extends Component {
                         </a>
                     </Grid>
                     <Grid item xs={4}>
-                        <a href="mailto:ebacontemporanea@gmail.com" className='email' style={{ justifyContent: 'flex-end', margin: 0 }}>
+                        <a 
+                            href="mailto:ebacontemporanea@gmail.com" 
+                            className='email' 
+                            style={{ justifyContent: 'flex-end', margin: 0 }}
+                            target="_blank"
+                        >
                             <FontAwesomeIcon icon={faEnvelope} size="2x" /> 
                             ebacontemporanea@gmail.com
                         </a>

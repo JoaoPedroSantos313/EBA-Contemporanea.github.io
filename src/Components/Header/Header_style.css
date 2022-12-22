@@ -29,12 +29,8 @@ a {
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	width: 160px;
+	max-width: 160px;
 }
-
-/* #logo, #logo2 {
-	position: absolute;
-} */
 
 a #logo2 {
 	display: none;
@@ -66,21 +62,32 @@ a:hover #logo2 {
 
 .social_media {
 	margin-left: 25px;
-	width: 100px;
+	max-width: 150px;
 	display: flex;
+	align-items: center;
 	justify-content: right;
+	font-size: 25px;
 }
 
-#fb, #insta {
-	font-size: 25px;
+.social_media_icon {
+	width: 26px;
 	transition: translateY 1s;
 	color: black;
 	margin-left: 25px;
+    transform: scale(1);
+    transition: ease all 0.2s;
 }
 
-#fb:hover, #insta:hover {
-	transform: translateY(-5px);
+.social_media_icon:hover {
+    transform: scale(1.03);
+    transition: ease all 0.2s;
 	color: #D60000;
+}
+
+.social_media_icon:hover img {
+    transform: scale(1.03);
+    transition: ease all 0.2s;
+    filter: invert(11%) sepia(99%) saturate(5177%) hue-rotate(4deg) brightness(87%) contrast(117%);
 }
 
 /*Menu*/

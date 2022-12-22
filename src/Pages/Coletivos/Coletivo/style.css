@@ -41,7 +41,7 @@ button {
 }
 
 .participante h3:hover {
-    text-decoration: underline #D60000;
+    color: #D60000;
 }
 
 .sobre {
@@ -75,6 +75,12 @@ button {
     margin: 5px 15px 0 0;
 }
 
+.button_hover {
+    transform: scale(1);
+    transition: ease all 0.5s;
+}
+
 .button_hover:hover, .button_hover:hover * {
     color: #D60000;
+    transition: ease all 0.5s;
 }

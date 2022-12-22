@@ -85,21 +85,29 @@ h1, h2, h3, h4, h5, p, a, span {
     width: 100%;
 }
 
-.nav_pages {
+.nav_pages button {
     justify-content: space-around;
     padding: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.nav_pages h2 {
+    font-size: 16px;
 }
 
 .button-left {
     border: none;
     background-color: #FFF;
     margin-right: 10px;
+    box-shadow: none;
 }
 
 .button-right {
     border: none;
     background-color: #FFF;
     margin-left: 10px;
+    box-shadow: none;
 }
 
 .border_links h2 {
@@ -159,10 +167,22 @@ h1, h2, h3, h4, h5, p, a, span {
     font-size: 20px;
 }
 
+.button_hover {
+    transform: scale(1);
+    transition: ease all 0.5s;
+}
 .button_hover:hover, .button_hover:hover * {
     color: #D60000;
+    transition: ease all 0.5s;
 }
 
+.button_hover:hover svg {
+    transform: scale(1.2);
+    transition: ease all 0.5s;
+} 
+
 .button_hover:hover img {
-    filter: invert(18%) sepia(57%) saturate(4805%) hue-rotate(352deg) brightness(85%) contrast(128%);
+    transform: scale(1.1);
+    transition: ease all 0.5s;
+    filter: invert(11%) sepia(99%) saturate(5177%) hue-rotate(4deg) brightness(87%) contrast(117%);
 }

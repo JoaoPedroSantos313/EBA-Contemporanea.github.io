@@ -13,11 +13,21 @@ const Pesquisadores = ({ pesquisador }) => {
                     <h2 className="card-name">{nome}</h2>
                     <div>
                         {links?.map((link, index) => {
-                            const imgLink = link.nome == 'Curriculum Lattes' ? 'cl.png' : 'A.png';
+                            const imgLink = () => {
+                                switch(link.nome) {
+                                    case 'Curriculum Lattes':
+                                        return 'btnLattes.svg';
+                                    case 'Academia.edu':
+                                        return 'btnAcademiaEdu.svg';
+                                    case 'Site':
+                                        return 'btnSite.svg';
+                                    default:
+                                        return 'btnSite.svg';
+                            }};
 
                             return (
                                 <a key={index} className="card-link" href={link.url} rel="noreferrer" target="_blank">
-                                    <img src={imgLink} alt={link.nome} height="37px" />
+                                    <img src={imgLink()} alt={link.nome} height="37px" />
                                 </a>
                             )
                         })}

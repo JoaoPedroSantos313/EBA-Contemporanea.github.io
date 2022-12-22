@@ -20,7 +20,7 @@ export default function Contato() {
     }
 
     return (
-        <main>
+        <main className="contato_main">
             <img className="cover-img" src='/EBACONTEMPORÂNEA.png' width="100%" />
             
             <h2 className="form-title">Entre em contato conosco</h2>
@@ -46,10 +46,11 @@ export default function Contato() {
                     required
                     onChange={({ target }) => handleChange(target.value, 'message')}
                 />
-                <button className="form-submit" type="submit">
-                    <FontAwesomeIcon icon={faEnvelope} />
-                    <h2>ebacontemporanea@gmail.com</h2>
-                </button>
+                <div className='form-submit-section'>
+                    <button className="form-submit" type="submit">
+                        <h2>Enviar</h2>
+                    </button>
+                </div>
             </form>
         </main>
     )
