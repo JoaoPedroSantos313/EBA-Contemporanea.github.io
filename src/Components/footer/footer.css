@@ -12,6 +12,14 @@
     height: 45px;
 }
 
+.logos {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	max-width: 160px;
+}
+
 .logo_footer {
     font-size: 80px;
 }

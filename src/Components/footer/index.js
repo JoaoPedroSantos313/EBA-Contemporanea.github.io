@@ -9,9 +9,9 @@ export default class Footer extends Component {
         return (
             <section className="footer_container">
                 <div className="faixa">
-                    <a href="/" rel='noreferrer'>
-                        <img className='logo_footer' src='/logo_eba_white_min.svg' />
-                        <img className='logo2_footer' src='/logo_eba_white.svg' />
+                    <a href="/" rel='noreferrer' className="logos">
+                        <img className='logo_footer' src='/logo_eba_white_min.svg' height="25px" />
+                        <img className='logo2_footer' src='/logo_eba_white.svg' height="25px" />
                     </a>
                 </div>
                 <div className="footer_main">

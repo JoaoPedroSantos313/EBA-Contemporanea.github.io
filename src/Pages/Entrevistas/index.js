@@ -1,5 +1,5 @@
 import './style.css';
-import { ArtistCard } from '../../Components/ArtistCard';
+import { InfoCard } from '../../Components/InfoCard';
 import { Grid } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import { Filter } from '../../Components/filter';
@@ -14,10 +14,10 @@ export const Entrevistas = () => {
         </div>
         : <main>
             <Filter />
-            <Grid container>
+            <Grid container spacing={5}>
                 {[...Array(9).keys()].map(entrevista => (
                     <Grid item md={4} key={entrevista}>
-                        <ArtistCard 
+                        <InfoCard 
                             artista={{
                                 publicId: entrevista, nome: `Entrevista ${entrevista}`, fotoCard: null
                             }} 

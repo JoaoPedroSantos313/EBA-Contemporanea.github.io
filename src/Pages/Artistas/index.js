@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArtistCard } from '../../Components/ArtistCard';
+import { InfoCard } from '../../Components/InfoCard';
 import { CircularProgress, Grid } from '@material-ui/core';
 import { Pagination } from '@material-ui/lab';
 import './artistas.css';
@@ -44,10 +44,10 @@ export default function Artistas() {
             : (
                 <section className='artistas_main'>
                     <Filter letters={filterLetters} filterFunction={getPaginatedArtists} />
-                    <Grid container>
+                    <Grid container spacing={5}>
                         {artists?.length > 0 ? artists.map(i => (
                             <Grid item md={4} key={i._id}>
-                                <ArtistCard artista={i} goToArtist={goToArtist} />
+                                <InfoCard artista={i} goToArtist={goToArtist} />
                             </Grid>
                         ))
                             : <p>Desculpe, não temos nenhum resultado para sua busca.</p>}
