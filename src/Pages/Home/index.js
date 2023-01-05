@@ -11,7 +11,7 @@ export default class Home extends Component {
     render() {
         return (
             <section className="home_main">
-                <img id='titulo' src='/EBACONTEMPORÂNEA.png' />
+                <img id='titulo' src='/EBACONTEMPORANEA.png' />
 
                 <div className="firstPost">
                     <Home_post 

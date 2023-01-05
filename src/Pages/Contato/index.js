@@ -21,7 +21,7 @@ export default function Contato() {
 
     return (
         <main className="contato_main">
-            <img className="cover-img" src='/EBACONTEMPORÂNEA.png' width="100%" />
+            <img className="cover-img" src='/EBACONTEMPORANEA.png' width="100%" />
             
             <h2 className="form-title">Entre em contato conosco</h2>
 
