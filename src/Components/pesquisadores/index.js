@@ -6,7 +6,7 @@ const Pesquisadores = ({ pesquisador }) => {
     return (
         <Grid container className="card-container">
             <Grid item xs={4} className="card-picture">
-                <img src={foto} width="100%" />
+                <img src={foto} height="100%" />
             </Grid>
             <Grid item xs={8} className="card-info">
                 <div className='card-title'>
@@ -14,7 +14,7 @@ const Pesquisadores = ({ pesquisador }) => {
                     <div>
                         {links?.map((link, index) => {
                             const imgLink = () => {
-                                switch(link.nome) {
+                                switch (link.nome) {
                                     case 'Curriculum Lattes':
                                         return 'btnLattes.svg';
                                     case 'Academia.edu':
@@ -23,7 +23,8 @@ const Pesquisadores = ({ pesquisador }) => {
                                         return 'btnSite.svg';
                                     default:
                                         return 'btnSite.svg';
-                            }};
+                                }
+                            };
 
                             return (
                                 <a key={index} className="card-link" href={link.url} rel="noreferrer" target="_blank">

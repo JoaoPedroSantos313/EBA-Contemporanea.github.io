@@ -186,3 +186,7 @@ h1, h2, h3, h4, h5, p, a, span {
     transition: ease all 0.5s;
     filter: invert(11%) sepia(99%) saturate(5177%) hue-rotate(4deg) brightness(87%) contrast(117%);
 }
+
+.carrossel {
+    margin-bottom: 40px;
+}

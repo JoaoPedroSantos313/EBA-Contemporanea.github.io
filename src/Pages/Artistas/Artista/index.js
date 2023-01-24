@@ -3,7 +3,7 @@ import { CircularProgress, Collapse, Grid } from '@material-ui/core';
 import { faChevronDown, faChevronUp, faChevronLeft, faChevronRight, faBars, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Slider from '../../../Components/Slider';
 import defaultProfile from '../../../utils/default_profile.jpeg';
 import site_icon from '../../../utils/site_icon.png';
@@ -17,6 +17,10 @@ export function Artista() {
     const [isCollapsed, setIsCollapsed] = useState(true);
     const [isOutrosTextosCollapsed, setOutrosTextosCollapsed] = useState(false);
     const [isEntrevistasCollapsed, setEntrevistasCollapsed] = useState(false);
+    const hasOutrasInformacoes = 
+        info?.galeriasComerciais?.length > 0 
+        && info?.eventos?.length > 0 
+         && info?.premios?.length > 0;
 
     useEffect(() => {
         if (info == undefined || info.publicId !== id) {
@@ -160,7 +164,7 @@ export function Artista() {
                             </div>}
 
                             {info?.obras?.length > 0 && (
-                                <div className='Carrossel_Artistas'>
+                                <div className='carrossel'>
                                     <h1>Seleção de Obras</h1>
 
                                     <Slider imgs={info?.obras} />
@@ -231,7 +235,7 @@ export function Artista() {
                                     </Collapse>
                                 </>)}
 
-                            <div class="nav_link collapse_title">
+                            {hasOutrasInformacoes && (<div class="nav_link collapse_title">
                                 <h1>Outras informações</h1>
                                 {isCollapsed ?
                                     <button onClick={handleCollapse} className='button-right button_navigation button_hover'>
@@ -240,7 +244,7 @@ export function Artista() {
                                     : <button onClick={handleCollapse} className='button-right button_navigation button_hover'>
                                         <FontAwesomeIcon icon={faChevronUp} />
                                     </button>}
-                            </div>
+                            </div>)}
                             <Collapse in={!isCollapsed} unmountOnExit className="collapse_section">
                                 {info?.galeriasComerciais?.length > 0 && (
                                     <div className='info_links column'>

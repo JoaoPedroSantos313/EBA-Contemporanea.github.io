@@ -44,3 +44,9 @@
     font-size: 12px;
     width: 115px;
 }
+
+.form-submit h2:hover {
+    color: #D60000;
+    font-weight: bold;
+    transition: ease all 0.3s;
+}
