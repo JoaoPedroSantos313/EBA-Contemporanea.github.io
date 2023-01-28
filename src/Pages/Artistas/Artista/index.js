@@ -17,10 +17,10 @@ export function Artista() {
     const [isCollapsed, setIsCollapsed] = useState(true);
     const [isOutrosTextosCollapsed, setOutrosTextosCollapsed] = useState(false);
     const [isEntrevistasCollapsed, setEntrevistasCollapsed] = useState(false);
-    const hasOutrasInformacoes = 
-        info?.galeriasComerciais?.length > 0 
-        && info?.eventos?.length > 0 
-         && info?.premios?.length > 0;
+    let hasOutrasInformacoes =
+        info?.galeriasComerciais?.length > 0
+        || info?.eventos?.length > 0
+        || info?.premios?.length > 0;
 
     useEffect(() => {
         if (info == undefined || info.publicId !== id) {
@@ -73,7 +73,9 @@ export function Artista() {
 
                         <Grid item md={6} className='artista_info'>
                             <h2 className='artista_name'>{info?.nome}</h2>
-                            <p className="artista_more_info">({info?.localNascimento})</p>
+                            <p className="artista_more_info">
+                                {info?.localNascimento && `(${info.localNascimento})`}
+                            </p>
 
                             {info?.localAtual && <p className="artista_more_info">
                                 Vive e trabalha: <b>{info?.localAtual}</b>
@@ -83,9 +85,9 @@ export function Artista() {
                                 <div className="artista_more_info">
                                     <p>Formações:</p>
                                     <b>
-                                    {info?.estudos.map(i => (
-                                        `${i.tipo} em ${i.area} (${i.anoInicio || "-"} - ${i.anoFim || "atualmente"}); `
-                                    ))}
+                                        {info?.estudos.map(i => (
+                                            `${i.tipo} em ${i.area} (${i.anoInicio || "-"} - ${i.anoFim || "atualmente"}); `
+                                        ))}
                                     </b>
                                 </div>
                             )}
@@ -163,14 +165,6 @@ export function Artista() {
                                 <p>Escrito por: <b>{info?.biografia?.autor}</b></p>
                             </div>}
 
-                            {info?.obras?.length > 0 && (
-                                <div className='carrossel'>
-                                    <h1>Seleção de Obras</h1>
-
-                                    <Slider imgs={info?.obras} />
-                                </div>
-                            )}
-
                             {info?.entrevistasSite?.length > 0 && (
                                 <div className='biografia'>
                                     <h1>Entrevista do Projeto EBAContemporânea</h1>
@@ -180,6 +174,14 @@ export function Artista() {
                                             <p>{i.nome}</p>
                                         </a>
                                     )}
+                                </div>
+                            )}
+
+                            {info?.obras?.length > 0 && (
+                                <div className='carrossel'>
+                                    <h1>Seleção de Obras</h1>
+
+                                    <Slider imgs={info?.obras} />
                                 </div>
                             )}
                         </>

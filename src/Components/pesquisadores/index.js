@@ -5,10 +5,10 @@ const Pesquisadores = ({ pesquisador }) => {
     const { foto, nome, descricao, links } = pesquisador;
     return (
         <Grid container className="card-container">
-            <Grid item xs={4} className="card-picture">
+            <Grid item xs={3} className="card-picture">
                 <img src={foto} height="100%" />
             </Grid>
-            <Grid item xs={8} className="card-info">
+            <Grid item xs={9} className="card-info">
                 <div className='card-title'>
                     <h2 className="card-name">{nome}</h2>
                     <div>
