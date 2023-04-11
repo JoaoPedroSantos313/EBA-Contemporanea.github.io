@@ -10,6 +10,7 @@ export default function pesquisadores() {
         bolsistasAnteriores,
         bolsistasAtuais,
         voluntarios,
+        participacoes,
         isLoading,
         getResearchers
     } = usePesquisadores();
@@ -48,11 +49,19 @@ export default function pesquisadores() {
                         </div>
                     )}
 
-                    <h2 className='title-section'>Participações</h2>
-                    <div className="names-container">
-                        Alice Miada, André Chaves, Beatriz Lopes, Claudio Marques, Cynthia Seage,
-                        Gabriel Mendes, Lucas Henrique Guimarães, Maíza França, Mônica Coster
-                    </div>
+                    {participacoes.length > 0 && (
+                    <>
+                        <h2 className='title-section'>Participações</h2>
+                        <div className="names-container">
+                            {participacoes.map((i, index) => {
+                                const lastPosition = participacoes.length - 1;
+                                const punctuation = index == lastPosition ? '.' : ', ';
+
+                                return <span key={index}>{i.nome}{punctuation}</span>;
+                            })}
+                        </div>
+                    </>
+                    )}
                 </section>
             )
     )

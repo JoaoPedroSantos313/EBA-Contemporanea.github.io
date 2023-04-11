@@ -7,6 +7,7 @@ const initialState = {
     bolsistasAtuais: [],
     bolsistasAnteriores: [],
     voluntarios: [],
+    participacoes: [],
     isLoading: true
 }
 
@@ -19,13 +20,15 @@ const PesquisadoresReducer = (state, action) => {
                 coordenador, 
                 bolsistasAtuais, 
                 bolsistasAnteriores, 
-                voluntarios 
+                voluntarios,
+                participacoes 
             } = payload.pesquisadores;
             return {
                 coordenador,
                 bolsistasAtuais, 
                 bolsistasAnteriores, 
                 voluntarios,
+                participacoes,
                 isLoading: false
             };
         default:
