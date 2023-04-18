@@ -47,7 +47,7 @@ export default function Artistas() {
                     <Grid container spacing={5}>
                         {artists?.length > 0 ? artists.map(i => (
                             <Grid item md={4} key={i._id}>
-                                <InfoCard artista={i} goToArtist={goToArtist} />
+                                <InfoCard artista={i} goToArtist={goToArtist} active={i.active} />
                             </Grid>
                         ))
                             : <p>Desculpe, não temos nenhum resultado para sua busca.</p>}

@@ -21,7 +21,7 @@ export const Filter = ({ letters = DefaultLetters, filterFunction }) => {
         <div className='abc_filter'>
             {letters?.map((item, index) => (
                 <button 
-                    className={currentLetter === item && 'active-button'}
+                    className={currentLetter === item ? 'active-button' : ''}
                     key={index} 
                     onClick={() => filtrar(item)}
                 >

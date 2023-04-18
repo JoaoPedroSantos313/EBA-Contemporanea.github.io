@@ -3,3 +3,12 @@ main {
     max-width: 1024px;
     margin: 115px auto;
 }
+
+.loading_all {
+    max-width: 1024px;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 50px auto;
+}

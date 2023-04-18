@@ -23,6 +23,7 @@ export const Entrevistas = () => {
                             }} 
                             goToArtist={(id) => navigate.push('#')}
                             videoEmbedLink='https://www.youtube.com/embed/HBxn56l9WcU'
+                            active={true}
                         />
                     </Grid>
                 ))}

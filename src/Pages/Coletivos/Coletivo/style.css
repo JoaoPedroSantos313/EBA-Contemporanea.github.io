@@ -35,6 +35,11 @@ button {
     margin-bottom: 80px;
 }
 
+.participante button {
+    border: none;
+    box-shadow: none;
+}
+
 .participante h3 {
     font-size: 20px;
     margin-bottom: 15px;
@@ -83,4 +88,10 @@ button {
 .button_hover:hover, .button_hover:hover * {
     color: #D60000;
     transition: ease all 0.5s;
+}
+
+.coletivo_banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
