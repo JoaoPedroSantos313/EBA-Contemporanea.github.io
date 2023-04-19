@@ -44,7 +44,8 @@ export const Coletivos = () => {
                                     artista={{
                                         publicId: coletivo.publicId,
                                         nome: coletivo.nomeColetivo,
-                                        fotoCard: coletivo.fotoCard
+                                        fotoCard: coletivo.fotoCard,
+                                        active: coletivo?.active
                                     }}
                                     publicId={coletivo.publicId}
                                     nome={coletivo.nomeColetivo}

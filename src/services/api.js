@@ -7,7 +7,7 @@ const apiSufix = {
 }
 
 const api = axios.create({
-    baseURL: "https://ebac.fly.dev",
+    baseURL: 'http://localhost:4000' // "https://ebac.fly.dev",
 });
 
 export {
