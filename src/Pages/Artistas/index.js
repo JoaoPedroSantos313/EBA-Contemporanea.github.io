@@ -17,7 +17,8 @@ export default function Artistas() {
         filterLetters,
         currentPage,
         changePage,
-        setCurrentArtist
+        setCurrentArtist,
+        selectedLetter
     } = useArtist();
 
     useEffect(() => {
@@ -25,7 +26,7 @@ export default function Artistas() {
     }, []);
 
     const handlePagination = (e, page) => {
-        changePage(page);
+        changePage(page, selectedLetter);
     }
 
     const goToArtist = (id) => {

@@ -6,8 +6,15 @@ const apiSufix = {
     coletivo: 'coletivos',
 }
 
+const url = {
+    prod: "https://ebac.fly.dev",
+    local: "http://localhost:4000"
+}
+
+const currentUrl = window.location.href.indexOf("localhost") > -1 ? url.prod : url.local;
+
 const api = axios.create({
-    baseURL: 'http://localhost:4000' // "https://ebac.fly.dev",
+    baseURL: currentUrl,
 });
 
 export {

@@ -15,7 +15,8 @@ export const ArtistProvider = ({ children }) => {
             payload: {
                 artists: apiResponse?.artists,
                 totalPages: apiResponse?.totalPages,
-                allIds: apiResponse?.allIds
+                allIds: apiResponse?.allIds,
+                selectedLetter: search,
             }
         });
 
@@ -51,13 +52,14 @@ export const ArtistProvider = ({ children }) => {
         })
     }
 
-    const changePage = (page) => {
-        getPaginatedArtists(page, '');
+    const changePage = (page, search = '') => {
+        getPaginatedArtists(page, search);
 
         dispatch({
             type: cases.SET_PAGE,
             payload: {
                 page,
+                selectedLetter: search
             }
         });
     };

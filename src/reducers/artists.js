@@ -13,7 +13,8 @@ const initialState = {
     currentArtist: {},
     filterLetters: [],
     allIds: document.cookie.allIds || [],
-    navigation: { previous: 0, next: 0 }
+    navigation: { previous: 0, next: 0 },
+    selectedLetter: ''
 };
 
 const ArtistReducer = (state, action) => {
@@ -32,12 +33,14 @@ const ArtistReducer = (state, action) => {
                 isLoading: false,
                 artists: payload.artists,
                 totalPages: payload.totalPages,
-                allIds: payload.allIds
+                allIds: payload.allIds,
+                selectedLetter: payload.selectedLetter,
             };
         case cases.SET_PAGE:
             return {
                 ...state,
                 currentPage: payload.page,
+                selectedLetter: payload.selectedLetter
             };
         case cases.GET_FILTER_LETTERS:
             return {
