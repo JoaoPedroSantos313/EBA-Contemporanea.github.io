@@ -14,7 +14,7 @@ const url = {
 const currentUrl = window.location.href.indexOf("localhost") > -1 ? url.prod : url.local;
 
 const api = axios.create({
-    baseURL: currentUrl,
+    baseURL: url.prod,
 });
 
 export {
