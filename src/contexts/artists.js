@@ -8,8 +8,8 @@ export const ArtistProvider = ({ children }) => {
     const [state, dispatch] = useReducer(ArtistReducer, initialState);
 
     const getPaginatedArtists = async (page, search) => {
-        let apiResponse;
-        await getPaginatedArtistas(page, search).then(res => apiResponse = res.data);
+        const apiResponse = await getPaginatedArtistas(page, search).then(res => res.data);
+        
         dispatch({
             type: cases.GET_ARTISTS,
             payload: {
@@ -17,6 +17,7 @@ export const ArtistProvider = ({ children }) => {
                 totalPages: apiResponse?.totalPages,
                 allIds: apiResponse?.allIds,
                 selectedLetter: search,
+                filterTypes: apiResponse?.filterTypes
             }
         });
 
@@ -29,19 +30,19 @@ export const ArtistProvider = ({ children }) => {
     };
 
     const getAllArtists = async () => {
-        let apiResponse;
-        await getAllArtistas().then(res => apiResponse = res.data);
+        const apiResponse = await getAllArtistas().then(res => res.data);
+
         dispatch({
             type: cases.GET_ARTISTS,
             payload: {
-                artists, totalPages
+                artists: apiResponse.artists,
+                totalPages
             }
         });
     }
 
     const getArtist = async (id) => {
-        let apiResponse;
-        await getArtista(id).then(res => apiResponse = res.data);
+        const apiResponse = await getArtista(id).then(res => res.data);
 
         dispatch({
             type: cases.SET_CURRENT_ARTIST,
@@ -73,13 +74,59 @@ export const ArtistProvider = ({ children }) => {
         })
     }
 
+    const querySearchArtist = async (query) => {
+        const apiResponse = await getAllArtistas().then(res => res.data); 
+        const allArtists = apiResponse.artists;
+        const searchQuery = new RegExp(query, 'i');
+        const filteredArtists = allArtists.filter(artist => searchQuery.test(artist.nome));
+
+        dispatch({
+            type: cases.GET_ARTISTS,
+            payload: {
+                artists: filteredArtists,
+                totalPages: 1,
+                allIds: apiResponse.allIds,
+                selectedLetter: '',
+                filterTypes: apiResponse.filterTypes,
+            }
+        });
+    };
+
+    const typeSearchArtist = async (type) => {
+        if(type != "") {
+            const apiResponse = await getAllArtistas().then(res => res.data); 
+            const allArtists = apiResponse.artists;
+    
+            const artistsWithStudyArea = allArtists.filter(artist => artist.estudos && artist.estudos.length > 0);
+            
+            const filteredArtists = artistsWithStudyArea.filter(artist =>
+                artist.estudos.some(estudo => estudo.area == type)
+            );
+    
+            dispatch({
+                type: cases.GET_ARTISTS,
+                payload: {
+                    artists: filteredArtists,
+                    totalPages: 1,
+                    allIds: apiResponse.allIds,
+                    selectedLetter: '',
+                    filterTypes: apiResponse.filterTypes,
+                }
+            });
+        } else {
+            getPaginatedArtists();
+        }
+    };
+
     const value = {
         ...state,
         getAllArtists,
         getArtist,
         getPaginatedArtists,
         changePage,
-        setCurrentArtist
+        setCurrentArtist,
+        querySearchArtist,
+        typeSearchArtist
     };
     return <ArtistContext.Provider value={value}>{children}</ArtistContext.Provider>;
 };

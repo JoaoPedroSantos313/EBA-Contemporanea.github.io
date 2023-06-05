@@ -2,7 +2,8 @@ const cases = {
     GET_ARTISTS: 'GET_ARTISTS',
     SET_PAGE: 'SET_PAGE',
     GET_FILTER_LETTERS: 'GET_FILTER_LETTERS',
-    SET_CURRENT_ARTIST: 'SET_CURRENT_ARTIST'
+    SET_CURRENT_ARTIST: 'SET_CURRENT_ARTIST',
+    UPDATE_LOADING: 'UPDATE_LOADING'
 };
 
 const initialState = {
@@ -14,7 +15,8 @@ const initialState = {
     filterLetters: [],
     allIds: document.cookie.allIds || [],
     navigation: { previous: 0, next: 0 },
-    selectedLetter: ''
+    selectedLetter: '',
+    filterTypes: [],
 };
 
 const ArtistReducer = (state, action) => {
@@ -27,6 +29,11 @@ const ArtistReducer = (state, action) => {
     })
 
     switch (type) {
+        case cases.UPDATE_LOADING: 
+            return {
+                ...state,
+                isLoading: payload.isLoading,
+            };
         case cases.GET_ARTISTS:
             return {
                 ...state,
@@ -34,22 +41,26 @@ const ArtistReducer = (state, action) => {
                 artists: payload.artists,
                 totalPages: payload.totalPages,
                 allIds: payload.allIds,
-                selectedLetter: payload.selectedLetter,
+                selectedLetter: payload?.selectedLetter,
+                filterTypes: payload?.filterTypes,
             };
         case cases.SET_PAGE:
             return {
                 ...state,
+                isLoading: false,
                 currentPage: payload.page,
                 selectedLetter: payload.selectedLetter
             };
         case cases.GET_FILTER_LETTERS:
             return {
                 ...state,
+                isLoading: false,
                 filterLetters: payload.filterLetters,
             };
         case cases.SET_CURRENT_ARTIST:
             return {
                 ...state,
+                isLoading: false,
                 currentArtist: payload.currentArtist,
                 navigation: payload.navigation,
                 isLoading: false,
