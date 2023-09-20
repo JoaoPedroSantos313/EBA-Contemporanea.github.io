@@ -4,6 +4,7 @@ const apiSufix = {
     artista: 'artista',
     pesquisador: 'pesquisadores',
     coletivo: 'coletivos',
+    home: 'homepage'
 }
 
 const url = {

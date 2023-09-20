@@ -49,6 +49,10 @@ button {
     color: #D60000;
 }
 
+.participante .disabled {
+    pointer-events: none;
+}
+
 .sobre {
     font-size: 20px;
     line-height: 36px;

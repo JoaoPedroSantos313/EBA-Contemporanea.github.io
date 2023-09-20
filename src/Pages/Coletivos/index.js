@@ -36,7 +36,9 @@ export const Coletivos = () => {
             )
             : (
                 <main>
-                    <Filter />
+                    <div className='abc-filter'>
+                        <Filter />
+                    </div>
                     <Grid container spacing={5}>
                         {coletivos.map(coletivo => (
                             <Grid item md={4} key={coletivo.publicId}>

@@ -54,7 +54,7 @@ const Coletivo = () => {
                     <Grid container className='participante_container'>
                         {currentColetivo.participantes.map((p, index) => (
                             <Grid item md={3} key={index} className="participante">
-                                <button onClick={() => goToParticipant(p.publicId)}>
+                                <button className={!p.publicId && 'disabled'} onClick={() => goToParticipant(p.publicId)}>
                                     <h3>{p.nome}</h3>
                                 </button>
                             </Grid>
@@ -70,7 +70,7 @@ const Coletivo = () => {
                     <p className="sobre">
                         {currentColetivo.sobre.texto}
                         <br /><br />
-                        Escrito por: {currentColetivo.sobre.autor}
+                        Escrito por: <b>{currentColetivo.sobre.autor}</b>
                     </p>
                 </>
                 )}
