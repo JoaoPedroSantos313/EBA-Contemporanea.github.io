@@ -72,7 +72,7 @@ a:hover #logo2 {
 .social_media_icon {
 	width: 26px;
 	transition: translateY 1s;
-	color: black;
+	color: #222;
 	margin-left: 25px;
     transform: scale(1);
     transition: ease all 0.2s;

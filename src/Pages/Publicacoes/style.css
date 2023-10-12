@@ -26,3 +26,16 @@ main {
     font-size: 20px;
     color: #333;
 }
+
+.publicacao-container {
+    margin: 40px 0;
+}
+
+.publicacao-year-title {
+    margin-bottom: 40px;
+}
+
+.collapse-container {
+    display: flex;
+    gap: 40px;
+}

@@ -3,19 +3,18 @@ const cases = {
 };
 
 const initialState = {
-    data: { 
-        firstParagraph: { 
-            text: '', 
-            title: '',
-            buttonLink: ''
-        },
-        secondParagraph: { 
-            text: '', 
-            title: '',
-            buttonLink: ''
-        },
-        galleryImages: []
-    }
+    firstParagraph: { 
+        text: '', 
+        title: '',
+        buttonLink: ''
+    },
+    secondParagraph: { 
+        text: '', 
+        title: '',
+        buttonLink: ''
+    },
+    galleryImages: [],
+    headerLinks: [],
 }
 
 const HomepageReducers = (state = initialState, action) => {

@@ -22,7 +22,7 @@ export const ColetivosProvider = ({ children }) => {
     const getSingleColetivo = async (id) => {
         let apiResponse;
         await getColetivo(id).then(res => apiResponse = res.data);
-        console.log(apiResponse);
+        
         dispatch({
             type: cases.SET_CURRENT_COLETIVO,
             payload: {

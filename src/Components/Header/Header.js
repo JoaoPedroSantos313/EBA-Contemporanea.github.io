@@ -4,8 +4,24 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import useHomepage from '../../contexts/homepage';
+import { useEffect, useState } from 'react';
 
 function Header() {
+    const { headerLinks } = useHomepage();
+    const [youtube, setYoutube] = useState({ hasLink: false });
+    const [instagram, setInstagram] = useState({ hasLink: false });
+    
+    useEffect(() => {
+        headerLinks.map(item => {
+            if(item.name == 'youtube') {
+                setYoutube({ ...item, hasLink: true });
+            } else if(item.name == 'instagram') {
+                setInstagram({ ...item, hasLink: true });
+            };
+        })
+    }, [headerLinks]);
+
     return (
         <header className="container_">
             <div className='inner_container'>
@@ -32,15 +48,15 @@ function Header() {
                 </ul>
 
                 <div className="social_media">
-                    <a href="#" target="_blank" className='social_media_icon'>
+                   {youtube.hasLink && (<a href={youtube.link} target="_blank" className='social_media_icon'>
                         <img src='/btnYoutube.svg' width="100%" />
-                    </a>
+                    </a>)}
                     <a href="mailto:ebacontemporanea@gmail.com" target="_blank" className='social_media_icon'>
                         <FontAwesomeIcon icon={faEnvelope} />
                     </a>
-                    <a href="#" target="_blank" className='social_media_icon'>
+                    {instagram.hasLink && (<a href={instagram.link} target="_blank" className='social_media_icon'>
                         <FontAwesomeIcon icon={faInstagram} />
-                    </a>
+                    </a>)}
 
                 </div>
             </div>

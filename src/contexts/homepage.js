@@ -11,7 +11,9 @@ export const HomepageProvider = ({ children }) => {
         let response;
         
         await getHomepageInformation()
-            .then(res => response = res)
+            .then(res => {
+                response = res.data.data[0];
+            })
             .catch(err => console.error(err));
 
         dispatch({

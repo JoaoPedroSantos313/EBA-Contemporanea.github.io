@@ -11,7 +11,7 @@ const Slider = ({ imgs }) => {
                 alt="slide-img"
                 height="100%"
             />
-            {i?.nome && <div className='subtitle'><p>{i.nome}</p></div>}
+            {i?.name && <div className='subtitle'><p>{i.name}</p></div>}
         </>
     );
 
