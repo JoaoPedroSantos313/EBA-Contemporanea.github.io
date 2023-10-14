@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react';
 import Home_post from '../../Components/home_post';
 import Slider from '../../Components/Slider';
-import img1 from '../../Components/Slider/Imgs/img1.jpg'
-import img2 from '../../Components/Slider/Imgs/img2.jpg'
-import img3 from '../../Components/Slider/Imgs/img3.jpg'
-import img4 from '../../Components/Slider/Imgs/img4.png'
 import './Home.css';
 import useHomepage from '../../contexts/homepage';
 
